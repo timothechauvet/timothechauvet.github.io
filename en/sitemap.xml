@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>www.timothechau.vet/categories/blog/</loc>
+    <lastmod>2018-12-31T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="www.timothechau.vet/fr/categories/blog/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="www.timothechau.vet/categories/blog/"
+                />
+  </url>
+  
+  <url>
+    <loc>www.timothechau.vet/categories/</loc>
+    <lastmod>2018-12-31T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="www.timothechau.vet/fr/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="www.timothechau.vet/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>www.timothechau.vet/tags/hugo/</loc>
+    <lastmod>2018-12-31T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="www.timothechau.vet/fr/tags/hugo/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="www.timothechau.vet/tags/hugo/"
+                />
+  </url>
+  
+  <url>
+    <loc>www.timothechau.vet/tags/i18n/</loc>
+    <lastmod>2018-12-31T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="www.timothechau.vet/fr/tags/i18n/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="www.timothechau.vet/tags/i18n/"
+                />
+  </url>
+  
+  <url>
+    <loc>www.timothechau.vet/posts/</loc>
+    <lastmod>2018-12-31T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="www.timothechau.vet/fr/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="www.timothechau.vet/posts/"
+                />
+  </url>
+  
+  <url>
+    <loc>www.timothechau.vet/tags/</loc>
+    <lastmod>2018-12-31T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="www.timothechau.vet/fr/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="www.timothechau.vet/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>www.timothechau.vet/posts/test/</loc>
+    <lastmod>2018-12-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>www.timothechau.vet/</loc>
+    <lastmod>2018-12-31T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="www.timothechau.vet/fr/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="www.timothechau.vet/"
+                />
+  </url>
+  
+</urlset>

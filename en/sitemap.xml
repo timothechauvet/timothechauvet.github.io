@@ -3,112 +3,112 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://timothechau.vet/categories/blog/</loc>
+    <loc>timothechauvet.github.io/categories/blog/</loc>
     <lastmod>2018-12-31T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://timothechau.vet/fr/categories/blog/"
+                href="timothechauvet.github.io/fr/categories/blog/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://timothechau.vet/categories/blog/"
+                href="timothechauvet.github.io/categories/blog/"
                 />
   </url>
   
   <url>
-    <loc>https://timothechau.vet/categories/</loc>
+    <loc>timothechauvet.github.io/categories/</loc>
     <lastmod>2018-12-31T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://timothechau.vet/fr/categories/"
+                href="timothechauvet.github.io/fr/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://timothechau.vet/categories/"
+                href="timothechauvet.github.io/categories/"
                 />
   </url>
   
   <url>
-    <loc>https://timothechau.vet/tags/hugo/</loc>
+    <loc>timothechauvet.github.io/tags/hugo/</loc>
     <lastmod>2018-12-31T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://timothechau.vet/fr/tags/hugo/"
+                href="timothechauvet.github.io/fr/tags/hugo/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://timothechau.vet/tags/hugo/"
+                href="timothechauvet.github.io/tags/hugo/"
                 />
   </url>
   
   <url>
-    <loc>https://timothechau.vet/tags/i18n/</loc>
+    <loc>timothechauvet.github.io/tags/i18n/</loc>
     <lastmod>2018-12-31T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://timothechau.vet/fr/tags/i18n/"
+                href="timothechauvet.github.io/fr/tags/i18n/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://timothechau.vet/tags/i18n/"
+                href="timothechauvet.github.io/tags/i18n/"
                 />
   </url>
   
   <url>
-    <loc>https://timothechau.vet/posts/</loc>
+    <loc>timothechauvet.github.io/posts/</loc>
     <lastmod>2018-12-31T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://timothechau.vet/fr/posts/"
+                href="timothechauvet.github.io/fr/posts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://timothechau.vet/posts/"
+                href="timothechauvet.github.io/posts/"
                 />
   </url>
   
   <url>
-    <loc>https://timothechau.vet/tags/</loc>
+    <loc>timothechauvet.github.io/tags/</loc>
     <lastmod>2018-12-31T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://timothechau.vet/fr/tags/"
+                href="timothechauvet.github.io/fr/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://timothechau.vet/tags/"
+                href="timothechauvet.github.io/tags/"
                 />
   </url>
   
   <url>
-    <loc>https://timothechau.vet/posts/test/</loc>
+    <loc>timothechauvet.github.io/posts/test/</loc>
     <lastmod>2018-12-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://timothechau.vet/</loc>
+    <loc>timothechauvet.github.io/</loc>
     <lastmod>2018-12-31T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://timothechau.vet/fr/"
+                href="timothechauvet.github.io/fr/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://timothechau.vet/"
+                href="timothechauvet.github.io/"
                 />
   </url>
   

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>TimothéChau.vet</title>
-    <link>www.timothechau.vet/</link>
+    <link>timothechau.vet/</link>
     <description>Recent content on TimothéChau.vet</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 31 Dec 2018 00:00:00 +0000</lastBuildDate><atom:link href="www.timothechau.vet/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 31 Dec 2018 00:00:00 +0000</lastBuildDate><atom:link href="timothechau.vet/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Test</title>
-      <link>www.timothechau.vet/posts/test/</link>
+      <link>timothechau.vet/posts/test/</link>
       <pubDate>Mon, 31 Dec 2018 00:00:00 +0000</pubDate>
       
-      <guid>www.timothechau.vet/posts/test/</guid>
+      <guid>timothechau.vet/posts/test/</guid>
       <description>Nothing to see !</description>
     </item>
     

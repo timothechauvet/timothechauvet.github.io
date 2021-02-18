@@ -3,112 +3,112 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>www.timothechau.vet/fr/categories/blog/</loc>
+    <loc>timothechau.vet/fr/categories/blog/</loc>
     <lastmod>2018-12-31T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="www.timothechau.vet/categories/blog/"
+                href="timothechau.vet/categories/blog/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="www.timothechau.vet/fr/categories/blog/"
+                href="timothechau.vet/fr/categories/blog/"
                 />
   </url>
   
   <url>
-    <loc>www.timothechau.vet/fr/categories/</loc>
+    <loc>timothechau.vet/fr/categories/</loc>
     <lastmod>2018-12-31T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="www.timothechau.vet/categories/"
+                href="timothechau.vet/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="www.timothechau.vet/fr/categories/"
+                href="timothechau.vet/fr/categories/"
                 />
   </url>
   
   <url>
-    <loc>www.timothechau.vet/fr/tags/hugo/</loc>
+    <loc>timothechau.vet/fr/tags/hugo/</loc>
     <lastmod>2018-12-31T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="www.timothechau.vet/tags/hugo/"
+                href="timothechau.vet/tags/hugo/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="www.timothechau.vet/fr/tags/hugo/"
+                href="timothechau.vet/fr/tags/hugo/"
                 />
   </url>
   
   <url>
-    <loc>www.timothechau.vet/fr/tags/i18n/</loc>
+    <loc>timothechau.vet/fr/tags/i18n/</loc>
     <lastmod>2018-12-31T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="www.timothechau.vet/tags/i18n/"
+                href="timothechau.vet/tags/i18n/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="www.timothechau.vet/fr/tags/i18n/"
+                href="timothechau.vet/fr/tags/i18n/"
                 />
   </url>
   
   <url>
-    <loc>www.timothechau.vet/fr/posts/</loc>
+    <loc>timothechau.vet/fr/posts/</loc>
     <lastmod>2018-12-31T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="www.timothechau.vet/posts/"
+                href="timothechau.vet/posts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="www.timothechau.vet/fr/posts/"
+                href="timothechau.vet/fr/posts/"
                 />
   </url>
   
   <url>
-    <loc>www.timothechau.vet/fr/tags/</loc>
+    <loc>timothechau.vet/fr/tags/</loc>
     <lastmod>2018-12-31T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="www.timothechau.vet/tags/"
+                href="timothechau.vet/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="www.timothechau.vet/fr/tags/"
+                href="timothechau.vet/fr/tags/"
                 />
   </url>
   
   <url>
-    <loc>www.timothechau.vet/fr/posts/test/</loc>
+    <loc>timothechau.vet/fr/posts/test/</loc>
     <lastmod>2018-12-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>www.timothechau.vet/fr/</loc>
+    <loc>timothechau.vet/fr/</loc>
     <lastmod>2018-12-31T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="www.timothechau.vet/"
+                href="timothechau.vet/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="www.timothechau.vet/fr/"
+                href="timothechau.vet/fr/"
                 />
   </url>
   

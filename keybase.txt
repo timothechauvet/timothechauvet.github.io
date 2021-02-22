@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/timothechauvet
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://timothechau.vet
+  * I am timothechauvet (https://keybase.io/timothechauvet) on keybase.
+  * I have a public key ASD9qf7eFP4h3a3RyhTngqdCoFRGrzKoYjxl6ajYOIrLnQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120e1d9dd2041d9b8ab84ee1605719abeee734c6e267c956580154ea21f03f9703d0a",
+      "host": "keybase.io",
+      "kid": "0120fda9fede14fe21ddadd1ca14e782a742a05446af32a8623c65e9a8d8388acb9d0a",
+      "uid": "a15279c7ae288f7b190e7d47ff10bf19",
+      "username": "timothechauvet"
+    },
+    "merkle_root": {
+      "ctime": 1613984833,
+      "hash": "9534323f5a2d3759e390598dc1dbcf280b8389f1d7f78559b8bb00205c573d179cf8ed7dfe384d019c42e5dd7d8dc4c31075817a6343e8540719be86db5515c1",
+      "hash_meta": "09923b83c82d80e9d73a031c2fbf7f42664128353c29ba81395e0a9e5875f88e",
+      "seqno": 19186498
+    },
+    "service": {
+      "entropy": "1Tvc95iB6Cuc0UqhbgMszPAF",
+      "hostname": "timothechau.vet",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.6.0"
+  },
+  "ctime": 1613984895,
+  "expire_in": 504576000,
+  "prev": "12742e22e777de68e64dace798ba0fb7966fa531dd311a8201761c5131ddad05",
+  "seqno": 12,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg/an+3hT+Id2t0coU54KnQqBURq8yqGI8Zemo2DiKy50Kp3BheWxvYWTESpcCDMQgEnQuIud33mjmTaznmLoPt5ZvpTHdMRqCAXYcUTHdrQXEIMvJufpVOHN4r+Mo1pHbuRGeYWQCvggCFQQoOYnaszKzAgHCo3NpZ8RAQEZXvPc1QT4yiA3qlyxpd5mcGgx7SfXOwZvE+dRct/4UOv1+vtfEziWoACjSENkChhqhqqn/MWdu7Jbm8dSFCKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIAbzw7qSHoi/mAh7WbDiYYPkqP/hpKRpFya86FlTHbE+o3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/timothechauvet
+
+==================================================================

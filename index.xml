@@ -1,31 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Timothé Chauvet</title>
-    <link>https://timothechau.vet/</link>
-    <description>Recent content on Timothé Chauvet</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Sat, 20 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://timothechau.vet/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Portfolio</title>
-      <link>https://timothechau.vet/portfolio/portfolio/</link>
-      <pubDate>Sat, 20 Feb 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://timothechau.vet/portfolio/portfolio/</guid>
-      <description>My portfolioHello, my name is Timothé Chauvet. I&amp;rsquo;m a 🇫🇷 4th year student at Efrei Paris for a Master degree in computer science engineering, studying Digital Transformation &amp;amp; Cloud Services.
-I love writing for the student newspaper, music, discovering the world and learning new stuff.
-Websitesnamastefrei.frkanon-efrei.fr</description>
-    </item>
-    
-    <item>
-      <title>Test</title>
-      <link>https://timothechau.vet/posts/test/</link>
-      <pubDate>Mon, 31 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://timothechau.vet/posts/test/</guid>
-      <description>Nothing to see !</description>
-    </item>
-    
-  </channel>
-</rss>

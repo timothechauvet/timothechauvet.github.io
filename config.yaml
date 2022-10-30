@@ -1,0 +1,119 @@
+baseURL: https://timothechau.vet/
+
+title: "Timothé Chauvet"
+theme: "toha"
+
+# Manage languages
+# Doc : https://gohugo.io/content-management/multilingual/
+languageCode: fr
+defaultContentLanguage: fr
+
+languages:
+  fr:
+    # contentDir: content/french
+    languageName: Français
+    weight: 1
+  en:
+    # contentDir: content/english
+    languageName: English
+    weight: 2
+
+# Raw HTML in Markdown
+markup:
+  goldmark:
+    renderer:
+      unsafe: false
+  tableOfContents:
+    startLevel: 2
+    endLevel: 4
+    ordered: false
+
+# RSS rendering
+outputs:
+  home:
+  - HTML
+  - RSS
+  - JSON
+
+# Flags
+enableEmoji: true
+enableRobotsTXT: false
+
+  # # Bottom
+  # social:
+  #   - identifier: linkedin
+  #     name: LinkedIn
+  #     url: https://www.linkedin.com/in/timothechauvet
+  #     weight: 1
+  #   - identifier: github
+  #     name: GitHub
+  #     url: https://www.github.com/timothechauvet
+  #     weight: 2
+  #   - identifier: twitter
+  #     name: Twitter
+  #     url: https://twitter.com/TimotheChauvet
+  #     weight: 3
+  #   - identifier: email
+  #     name: Email
+  #     url: mailto:timothe@chauvet.dev
+  #     weight: 4
+  #   - identifier: rss
+  #     name: RSS
+  #     url: https://timothechau.vet/posts/index.xml
+  #     weight: 5
+
+# Site parameters
+params:
+  # GitHub repo URL and branch of your site
+  gitRepo: https://github.com/timothechauvet/timothechauvet.github.io
+  gitBranch: master
+
+  # Background image by default
+  # background: /images/site/background.jpg
+  
+  # Enable dark theme
+  darkMode:
+    provider: darkreader
+    enable: true
+    default: system
+
+  # Enable features
+  features:
+    # Site categories
+    portfolio:
+      enable: true
+    blog:
+      enable: true
+      shareButtons:
+        facebook: true
+        twitter: true
+        linkedin: true
+        email: true
+    notes:
+      enable: false
+    comment:
+      enable: false
+    analytics:
+      enable: true
+      goatcounter:
+        code: 123
+    
+    # Flags
+    enableTOC: true
+    enableTags: false
+    showFlags: true
+
+    # Footer
+    footer:
+      enable: true
+      navigation:
+        enable: true
+        customMenus: false
+      contactMe:
+        enable: true
+      credentials:
+        enable: true
+      newsletter:
+        enable: false
+      disclaimer:
+        enable: true

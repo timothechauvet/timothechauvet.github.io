@@ -1,0 +1,43 @@
+# Section informations
+section:
+  name: Expériences
+  id: experiences
+  enable: true
+  weight: 3
+  showOnNavbar: false
+  hideTitle: false 
+
+# Experiences
+experiences:
+- company:
+    name: Devoteam M Cloud
+    url: https://mcloud.devoteam.com/fr/
+    location: Levallois-Perret
+    overview: Devoteam M Cloud est le leader du conseil et du service aux clouds Microsoft, élu partenaire de l'année en 2021 
+  positions:
+  - designation: Consultant Cloud Engineer / DevOps
+    start: Oct 2022
+    responsibilities:
+    - Cloud Engineer Azure actuellement en intercontrat
+    - Formation aux certifications DP-900 et AZ-500
+
+  - designation: Stagiaire DevOps Engineer
+    start: Avr 2022
+    end: Oct 2022
+    responsibilities:
+    - Développement de modules Terraform sur AzureRM
+    - Passage de certifications et formation à la AZ-900 en interne
+    - Accompagnement d'un ingénieur avant-vente
+
+- company:
+    name: Agirc-Arrco
+    url: https://www.agirc-arrco.fr/
+    location: Paris
+    overview: Agirc-Arrco est le régime de mutuelle complémentaire de 56 million de français et françaises
+  positions:
+  - designation: Stagiaire Développement Full-Stack
+    start: Avr 2021
+    end: Sep 2021
+    responsibilities:
+    - Développement d'outils d'accompagnement de projets
+    - Web full-stack avec Vue.js, Boostrap, Grafana, PHP et PostgreSQL

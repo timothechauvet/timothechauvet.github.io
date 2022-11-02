@@ -7,7 +7,6 @@ theme: "toha"
 # Doc : https://gohugo.io/content-management/multilingual/
 languageCode: fr
 defaultContentLanguage: fr
-
 languages:
   fr:
     # contentDir: content/french
@@ -22,7 +21,7 @@ languages:
 markup:
   goldmark:
     renderer:
-      unsafe: false
+      unsafe: true
   tableOfContents:
     startLevel: 2
     endLevel: 4
@@ -69,7 +68,7 @@ params:
   gitBranch: master
 
   # Background image by default
-  # background: /images/site/background.jpg
+  background: images/background/background.png
   
   # Enable dark theme
   darkMode:
@@ -90,13 +89,13 @@ params:
         linkedin: true
         email: true
     notes:
-      enable: false
+      enable: true
     comment:
       enable: false
     analytics:
       enable: true
       goatcounter:
-        code: 123
+        code: timothechauvet
     
     # Flags
     enableTOC: true

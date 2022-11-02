@@ -1,16 +1,20 @@
 # Informations
-name: "Timothé Chauvet"
-nickname: "Timothé Chauvet"
+name: Timothé Chauvet
+nickname: Timothé Chauvet
 
 # Greetings & background
 # greeting: "👋 je suis"
-image: "images/author/tim.jpg"
+image: images/author/tim.jpg
 
 # Footer contact
 contactInfo:
-  email: "timothe@chauvet.dev"
-  github: timothechauvet
+  email: timothe@chauvet.dev
   linkedin: timothechauvet
+  twitter: 
+    icon: twitter
+    url: https://twitter.com/timothechauvet
+    text: "@TimotheChauvet"
+  github: timothechauvet
 
 # Blinking text
 summary:

@@ -68,7 +68,7 @@ params:
   gitBranch: master
 
   # Background image by default
-  background: images/background/background.png
+  background: images/background/background.jpg
   
   # Enable dark theme
   darkMode:

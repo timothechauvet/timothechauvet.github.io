@@ -1,6 +1,6 @@
 # Hugo website using Toha theme
 
-[![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fhugo-toha%2Ftoha%2Fbadge%3Fref%3Dmain&style=flat)](https://actions-badge.atrox.dev/hugo-toha/toha/goto?ref=main)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/timothechauvet/timothechauvet.github.io/Deploy%20Hugo%20site%20to%20Pages?label=deployment&logo=github)
 ![Repository Size](https://img.shields.io/github/repo-size/timothechauvet/timothechauvet.github.io)
 ![Contributor](https://img.shields.io/github/contributors/timothechauvet/timothechauvet.github.io)
 ![Last Commit](https://img.shields.io/github/last-commit/timothechauvet/timothechauvet.github.io)

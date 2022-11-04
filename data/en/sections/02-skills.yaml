@@ -1,0 +1,34 @@
+# Section informations
+section:
+  name: Skills
+  id: skills
+  enable: true
+  weight: 2
+  showOnNavbar: false
+  hideTitle: false
+
+# Skills
+skills:
+- name: Azure
+  logo: /images/skills/azure.png
+  summary: "I have over 6 months of experience with Azure thanks to my internship at Devoteam M Cloud, I also discovered the services [with my certifications](#about) 💙"
+
+- name: Terraform
+  logo: /images/skills/terraform.png
+  summary: "[I'm Terraform certified](#about) and have been working on developing IaC modules on Azure for my internship at Devoteam M Cloud 👷"
+
+- name: GitHub Actions
+  logo: /images/skills/github.png
+  summary: "I'm also [GitHub certified](#about) and for my internship at Devoteam M Cloud I configured a CI/CD pipeline from a Terraform design to Azure. I also have a CI/CD workflow [for my personal site](https://github.com/timothechauvet/timothechauvet.github.io/actions/workflows/pages.yml) 🐙"
+
+- name: Linux
+  logo: /images/skills/linux.png
+  summary: "I have been working in Linux/UNIX environment since college and have been able to complete several school assignments in these environments (Ubuntu/Mint, MacOS, CentOS, Fedora, Arch) 🐧"
+
+- name: Cloud Computing
+  logo: /images/skills/cloud.png
+  summary: "In addition to my favorite cloud providers, I have also had the opportunity to work with other clouds (Oracle OCI, Google GCP, Amazon AWS, OVH) ☁️"
+
+- name: Dev
+  logo: /images/skills/vscode.png
+  summary: "Beyond developing Terraform modules, I also had the opportunity to develop in different languages (Python, JS, Java, PHP, mobile dev...) 💻"

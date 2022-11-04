@@ -1,0 +1,97 @@
+# Section informations
+section:
+  name: About
+  id: about
+  enable: true
+  weight: 1
+  showOnNavbar: false
+
+# Professional informations
+designation: Cloud Engineer
+company:
+  name: Devoteam M Cloud
+  url: https://mcloud.devoteam.com/fr/
+summary: I am a recent graduate of [Efrei](https://efrei.fr/), the digital school, with a degree in Computer Engineering (2022) 🎓 I aspire to become the most certified Junior Cloud Engineer of my generation 🏅 My goal is to provide the best of myself to the companies I work for!
+socialLinks:
+- name: Email
+  icon: fas fa-envelope
+  url: timothe@chauvet.dev
+
+- name: Github
+  icon: fab fa-github
+  url: https://www.github.com/timothechauvet
+
+- name: LinkedIn
+  icon: fab fa-linkedin
+  url: https://www.linkedin.com/in/timothechauvet/?locale=en_US
+
+- name: Twitter
+  icon: fab fa-twitter
+  url: https://twitter.com/TimotheChauvet
+
+# Buttons
+resourceLinks:
+# - title: Mon dossier de compétences
+#   url: "files/D2C Timothé.pdf"
+
+# Certifications & skills
+badges:
+- type: certification
+  name: Azure Administrator Associate
+  url: https://www.credly.com/badges/6bcc3e08-70bd-421e-83c0-922e8ac13fe4/public_url
+  badge: https://images.credly.com/size/220x220/images/336eebfc-0ac3-4553-9a67-b402f491f185/azure-administrator-associate-600x600.png
+
+- type: certification
+  name: Azure Developer Associate
+  url: https://www.credly.com/badges/d9ed6546-4963-40f9-9486-4abd25db2db4/public_url
+  badge: https://images.credly.com/size/220x220/images/63316b60-f62d-4e51-aacc-c23cb850089c/azure-developer-associate-600x600.png
+
+- type: certification
+  name: Security, Compliance, and Identity Fundamentals
+  url: https://www.credly.com/badges/dc30f249-9759-4b08-99c8-d575e73083c5/public_url
+  badge: https://images.credly.com/size/220x220/images/fc1352af-87fa-4947-ba54-398a0e63322e/security-compliance-and-identity-fundamentals-600x600.png
+
+- type: certification
+  name: Azure Data Fundamentals
+  url: https://www.credly.com/badges/8d7f1485-4228-4fcb-bfe1-bbbf8b003401/public_url
+  badge: https://images.credly.com/size/220x220/images/70eb1e3f-d4de-4377-a062-b20fb29594ea/azure-data-fundamentals-600x600.png
+
+- type: certification
+  name: Azure Fundamentals
+  url: https://www.credly.com/badges/cdf7b089-dab7-4a57-8ca2-4dd94ff4cd9b/public_url
+  badge: https://images.credly.com/size/220x220/images/be8fcaeb-c769-4858-b567-ffaaa73ce8cf/image.png
+
+- type: certification
+  name: Terraform Associate (002)
+  url: https://www.credly.com/badges/1b1413aa-e5d7-42d3-a45e-239972952527/public_url
+  badge: https://images.credly.com/size/220x220/images/99289602-861e-4929-8277-773e63a2fa6f/image.png
+
+- type: certification
+  name: GitHub Administration
+  url: https://www.credly.com/badges/e31b2e7f-81ec-4f41-a4fb-fc267bf307a5/public_url
+  badge: https://images.credly.com/size/220x220/images/2787e1d9-afd8-4226-8558-52a4d0fff528/image.png
+
+- type: certification
+  name: AWS Certified Cloud Practitioner
+  url: https://www.credly.com/badges/1cf1a2be-88a6-4bc4-838a-1bee1208e604/public_url
+  badge: https://images.credly.com/size/220x220/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png
+
+- type: certification
+  name: Oracle Cloud Infrastructure Foundations 2021 Associate
+  url: https://catalog-education.oracle.com/pls/certview/sharebadge?id=9D5F26B9D773A654CC834E7591195BD4C57E76A756F000876121C684F57015BE
+  badge: ../images/about/oracle.jpg
+
+- type: certification
+  name: Handimanagement
+  url: ../files/Label Handimanagement.pdf
+  badge: ../images/about/handimanagement.png
+
+- type: certification
+  name: TOEIC 950/990
+  url: ../images/about/toeic_ticket.png
+  badge: ../images/about/toeic_logo.png
+
+- type: certification
+  name: Projet Voltaire
+  url: /
+  badge: ../images/about/voltaire.png

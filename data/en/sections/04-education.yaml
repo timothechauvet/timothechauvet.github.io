@@ -1,0 +1,70 @@
+# Section informations
+section:
+  name: Education
+  id: education
+  enable: true
+  weight: 4
+  showOnNavbar: false
+  hideTitle: false
+
+# Education experiences
+degrees:
+- name: Diploma in computer engineering
+  icon: fa-robot
+  timeframe: 2017-2022
+  institution:
+    name: Efrei Paris Panthéon Assas Université
+    url: https://efrei.fr
+  
+  takenCourses: 
+    showGrades: false
+    collapseAfter: 5
+    courses:
+    - name: Advanced Cloud Computing
+    - name: Cloud Integration
+    - name: Security Management
+    - name: IS Security
+    - name: Web Services
+    - name: Enterprise Resource Planning
+    - name: Advanced Databases
+    - name: Digital Transformation
+    - name: IS modeling
+    - name: Conflicts Resolution
+    - name: Negociation
+    - name: Machine Learning basics
+    - name: Big Data basics
+    - name: IoT basics
+    - name: Chinese
+  
+  extracurricularActivities:
+  - President of the School Journal
+  - Co-founder of the South Asian and feminist/LGBTQI+ associations
+  - Communications Manager for the board game and wine clubs
+  - Collaboration with the administrative team for cohesion
+
+- name: Italian courses
+  icon: fa-pizza-slice
+  timeframe: Sep 2021
+  institution:
+    name: ABC Scuola
+    url: https://abcschool.com/en/
+  takenCourses: 
+    showGrades: false
+    collapseAfter: 5
+    courses:
+    - name: Italian
+
+- name: Immersion abroad
+  icon: fa-earth-asia
+  timeframe: Sep - Dec 2019
+  institution:
+    name: Southeast University 东南大学
+    url: https://www.seu.edu.cn/english/
+  takenCourses: 
+    showGrades: false
+    collapseAfter: 2
+    courses:
+    - name: Java
+    - name: UML
+    - name: Databases
+    - name: Operating Systems & Linux

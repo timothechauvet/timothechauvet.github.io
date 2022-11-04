@@ -19,7 +19,12 @@ For more details about the features please visit [here](https://toha-guides.netl
 
 ## GoatCounter metrics
 
-My website is using [arp242's GoatCounter](https://github.com/arp242/goatcounter) for the metrics. All metrics are publicly available from the following URL : [timothechauvet.goatcounter.com/](https://timothechauvet.goatcounter.com/). 
+My website is using [arp242's GoatCounter](https://github.com/arp242/goatcounter) for the metrics. All metrics are publicly available from the following URL : [stats.timothechau.vet](https://stats.timothechau.vet/). 
+
+As GoatCounter is engineered around non-identifiable metrics of visitors, it *probably* doesn't apply to the GDPR legislation which doesn't concern :
+>anonymous information, namely information which does not relate to an identified or identifiable natural person or to personal data rendered anonymous in such a manner that the data subject is not or no longer identifiable.
+
+More information [on that page](https://stats.timothechau.vet/help/gdpr).
 
 The tool is registered under a custom version of the [EUPL 1.2 license](https://github.com/arp242/goatcounter/blob/master/LICENSE).
 

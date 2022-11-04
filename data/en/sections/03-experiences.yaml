@@ -1,0 +1,43 @@
+# Section informations
+section:
+  name: Experiences
+  id: experiences
+  enable: true
+  weight: 3
+  showOnNavbar: false
+  hideTitle: false 
+
+# Experiences
+experiences:
+- company:
+    name: Devoteam M Cloud
+    url: https://mcloud.devoteam.com/fr/
+    location: Levallois-Perret
+    overview: Devoteam M Cloud is the leader in consulting and services for Microsoft clouds, elected Partner of the Year in 2021 
+  positions:
+  - designation: Cloud Engineer / DevOps consultant
+    start: Oct 2022
+    responsibilities:
+    - Azure Cloud Engineer Azure currently in inter-contract
+    - DP-900 and AZ-500 certification training
+
+  - designation: DevOps Engineer intern
+    start: Apr 2022
+    end: Oct 2022
+    responsibilities:
+    - Development of Terraform modules on AzureRM
+    - Self-trained certification and in-house training for the AZ-900 certification
+    - Support from a pre-sales engineer
+
+- company:
+    name: Agirc-Arrco
+    url: https://www.agirc-arrco.fr/
+    location: Paris
+    overview: Agirc-Arrco is the complementary retirement fund for 56 million French people
+  positions:
+  - designation: Full-Stack developer intern
+    start: Apr 2021
+    end: Sep 2021
+    responsibilities:
+    - Development of project support tools
+    - Full-stack web with Vue.js, Boostrap, Grafana, PHP and PostgreSQL

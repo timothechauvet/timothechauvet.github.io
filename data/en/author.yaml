@@ -1,0 +1,28 @@
+# Informations
+name: Timothé Chauvet
+nickname: Timothé Chauvet
+
+# Greetings & background
+# greeting: "👋 I am"
+image: images/author/tim.jpg
+
+# Footer contact
+contactInfo:
+  email: timothe@chauvet.dev
+  linkedin: timothechauvet
+  twitter: 
+    icon: twitter
+    url: https://twitter.com/timothechauvet
+    text: "@TimotheChauvet"
+  github: timothechauvet
+
+# Blinking text
+summary:
+  - ❤️ DevOps
+  - ❤️ Cloud
+  - ❤️ Open Source Software
+  - ❤️ Electronic music
+  - ❤️ Learn new languages 🇬🇧 🇨🇳 🇪🇸 🇮🇹
+  - ❤️ Azure
+  - ❤️ GitHub
+  - ❤️ Design

@@ -6,6 +6,8 @@
 ![Last Commit](https://img.shields.io/github/last-commit/timothechauvet/timothechauvet.github.io)
 ![Open Pull Requests](https://img.shields.io/github/issues-pr/timothechauvet/timothechauvet.github.io?color=yellowgreen)
 
+![Cover Timothé Chauvet with on the right side the red and yellow logo forming two ellipses in the shape of an heart, on the left side a text saying Personal Website, and on the background myself](/assets/images/cover/readme.jpg)
+
 A [Hugo](https://gohugo.io/) website for my personal visit card and blog. 
 
 **It is accessible from the following URL : [timothechau.vet](https://timothechau.vet)**

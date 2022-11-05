@@ -9,11 +9,9 @@ languageCode: fr
 defaultContentLanguage: fr
 languages:
   fr:
-    # contentDir: content/french
     languageName: Français
     weight: 1
   en:
-    # contentDir: content/english
     languageName: English
     weight: 2
 
@@ -38,36 +36,13 @@ outputs:
 enableEmoji: true
 enableRobotsTXT: false
 
-  # # Bottom
-  # social:
-  #   - identifier: linkedin
-  #     name: LinkedIn
-  #     url: https://www.linkedin.com/in/timothechauvet
-  #     weight: 1
-  #   - identifier: github
-  #     name: GitHub
-  #     url: https://www.github.com/timothechauvet
-  #     weight: 2
-  #   - identifier: twitter
-  #     name: Twitter
-  #     url: https://twitter.com/TimotheChauvet
-  #     weight: 3
-  #   - identifier: email
-  #     name: Email
-  #     url: mailto:timothe@chauvet.dev
-  #     weight: 4
-  #   - identifier: rss
-  #     name: RSS
-  #     url: https://timothechau.vet/posts/index.xml
-  #     weight: 5
-
 # Site parameters
 params:
-  # GitHub repo URL and branch of your site
+  # GitHub repo URL
   gitRepo: https://github.com/timothechauvet/timothechauvet.github.io
   gitBranch: master
 
-  # Background image by default
+  # Background image
   background: images/background/background.jpg
 
   # Favicon & Logo
@@ -94,6 +69,8 @@ params:
         twitter: true
         linkedin: true
         email: true
+        mastodon: true
+        tumblr: true
     notes:
       enable: false
     comment:
@@ -113,7 +90,7 @@ params:
       enable: true
       navigation:
         enable: true
-        customMenus: false
+        customMenus: true
       contactMe:
         enable: true
       credentials:

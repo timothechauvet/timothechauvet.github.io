@@ -40,10 +40,13 @@ My website is using GitHub Actions for its Continuous Deployment capabilities. M
 ## To-do list
 
 - [x] French landing page
-- [ ] English landing page
-- [ ] First blog post
 - [x] Readme file
+- [x] English landing page
+- [x] Logo
+- [ ] First blog post
 - [ ] Bug template
+- [ ] Privacy Policy & GDPR compliance
+- [ ] Lighthouse compliance
 
 ## Contributing
 

@@ -69,6 +69,12 @@ params:
 
   # Background image by default
   background: images/background/background.jpg
+
+  # Favicon & Logo
+  logo:
+    main: /images/logo/favicon.png
+    inverted: /images/logo/favicon.png
+    favicon: /images/logo/favicon.png
   
   # Enable dark theme
   darkMode:

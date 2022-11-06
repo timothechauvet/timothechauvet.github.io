@@ -59,7 +59,7 @@ jobs:
   # Deployment job
   deploy:
     # Condition to deploy only if commit contains "deploy"
-    if: contains(github.event.head_commit.message, 'deploy'))
+    if: contains(github.event.head_commit.message, 'deploy')
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

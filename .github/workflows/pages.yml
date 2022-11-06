@@ -27,7 +27,7 @@ jobs:
   # Build job
   build:
     # Condition to deploy only if commit contains "deploy"
-    if: contains(github.event.head_commit.message, 'deploy'))
+    if: contains(github.event.head_commit.message, 'deploy')
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.105.0

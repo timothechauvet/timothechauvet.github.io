@@ -37,6 +37,11 @@ resourceLinks:
 # Certifications & skills
 badges:
 - type: certification
+  name: Azure Security Engineer
+  url: https://www.credly.com/badges/e1b2516c-779e-41d7-a41b-dea126accaac/public_url
+  badge: https://images.credly.com/size/220x220/images/1ad16b6f-2c71-4a2e-ae74-ec69c4766039/azure-security-engineer-associate600x600.png
+
+- type: certification
   name: Azure Administrator Associate
   url: https://www.credly.com/badges/6bcc3e08-70bd-421e-83c0-922e8ac13fe4/public_url
   badge: https://images.credly.com/size/220x220/images/336eebfc-0ac3-4553-9a67-b402f491f185/azure-administrator-associate-600x600.png

@@ -37,66 +37,66 @@ resourceLinks:
 # Certifications & skills
 badges:
 - type: certification
-  name: Azure Security Engineer
+  name: Azure Security Engineer (AZ-500)
   url: https://www.credly.com/badges/e1b2516c-779e-41d7-a41b-dea126accaac/public_url
-  badge: https://images.credly.com/size/220x220/images/1ad16b6f-2c71-4a2e-ae74-ec69c4766039/azure-security-engineer-associate600x600.png
+  badge: ../images/about/az-500.webp
 
 - type: certification
-  name: Azure Administrator Associate
+  name: Azure Administrator Associate (AZ-104)
   url: https://www.credly.com/badges/6bcc3e08-70bd-421e-83c0-922e8ac13fe4/public_url
-  badge: https://images.credly.com/size/220x220/images/336eebfc-0ac3-4553-9a67-b402f491f185/azure-administrator-associate-600x600.png
+  badge: ../images/about/az-104.webp
 
 - type: certification
-  name: Azure Developer Associate
+  name: Azure Developer Associate (AZ-204)
   url: https://www.credly.com/badges/d9ed6546-4963-40f9-9486-4abd25db2db4/public_url
-  badge: https://images.credly.com/size/220x220/images/63316b60-f62d-4e51-aacc-c23cb850089c/azure-developer-associate-600x600.png
+  badge: ../images/about/az-204.webp
 
 - type: certification
-  name: Security, Compliance, and Identity Fundamentals
+  name: Security, Compliance, and Identity Fundamentals (SC-900)
   url: https://www.credly.com/badges/dc30f249-9759-4b08-99c8-d575e73083c5/public_url
-  badge: https://images.credly.com/size/220x220/images/fc1352af-87fa-4947-ba54-398a0e63322e/security-compliance-and-identity-fundamentals-600x600.png
+  badge: ../images/about/sc-900.webp
 
 - type: certification
-  name: Azure Data Fundamentals
+  name: Azure Data Fundamentals (DP-900)
   url: https://www.credly.com/badges/8d7f1485-4228-4fcb-bfe1-bbbf8b003401/public_url
-  badge: https://images.credly.com/size/220x220/images/70eb1e3f-d4de-4377-a062-b20fb29594ea/azure-data-fundamentals-600x600.png
+  badge: ../images/about/dp-900.webp
 
 - type: certification
-  name: Azure Fundamentals
+  name: Azure Fundamentals (AZ-900)
   url: https://www.credly.com/badges/cdf7b089-dab7-4a57-8ca2-4dd94ff4cd9b/public_url
-  badge: https://images.credly.com/size/220x220/images/be8fcaeb-c769-4858-b567-ffaaa73ce8cf/image.png
+  badge: ../images/about/az-900.webp
 
 - type: certification
   name: Terraform Associate (002)
   url: https://www.credly.com/badges/1b1413aa-e5d7-42d3-a45e-239972952527/public_url
-  badge: https://images.credly.com/size/220x220/images/99289602-861e-4929-8277-773e63a2fa6f/image.png
+  badge: ../images/about/hashicorp-terraform.webp
 
 - type: certification
   name: GitHub Administration
   url: https://www.credly.com/badges/e31b2e7f-81ec-4f41-a4fb-fc267bf307a5/public_url
-  badge: https://images.credly.com/size/220x220/images/2787e1d9-afd8-4226-8558-52a4d0fff528/image.png
+  badge: ../images/about/github-admin.webp
 
 - type: certification
   name: AWS Certified Cloud Practitioner
   url: https://www.credly.com/badges/1cf1a2be-88a6-4bc4-838a-1bee1208e604/public_url
-  badge: https://images.credly.com/size/220x220/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png
+  badge: ../images/about/aws-cloud-practitioner.webp
 
 - type: certification
   name: Oracle Cloud Infrastructure Foundations 2021 Associate
   url: https://catalog-education.oracle.com/pls/certview/sharebadge?id=9D5F26B9D773A654CC834E7591195BD4C57E76A756F000876121C684F57015BE
-  badge: ../images/about/oracle.jpg
+  badge: ../images/about/oracle.webp
 
 - type: certification
   name: Handimanagement
   url: ../files/Label Handimanagement.pdf
-  badge: ../images/about/handimanagement.png
+  badge: ../images/about/handimanagement.webp
 
 - type: certification
   name: TOEIC 950/990
-  url: ../images/about/toeic_ticket.png
-  badge: ../images/about/toeic_logo.png
+  url: ../images/about/toeic_ticket.webp
+  badge: ../images/about/toeic_logo.webp
 
 - type: certification
   name: Projet Voltaire
   url: /
-  badge: ../images/about/voltaire.png
+  badge: ../images/about/voltaire.webp

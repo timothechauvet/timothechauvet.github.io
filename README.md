@@ -45,10 +45,10 @@ My website is using GitHub Actions for its Continuous Deployment capabilities. M
 - [x] Readme file
 - [x] English landing page
 - [x] Logo
+- [x] Lighthouse compliance
 - [ ] First blog post
 - [ ] Bug template
 - [ ] Privacy Policy & GDPR compliance
-- [ ] Lighthouse compliance
 
 ## Contributing
 

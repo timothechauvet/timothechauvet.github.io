@@ -15,6 +15,10 @@ contactInfo:
     url: https://twitter.com/timothechauvet
     text: "@TimotheChauvet"
   github: timothechauvet
+  mastodon:
+    icon: mastodon
+    url: https://h4.io/@timothechauvet
+    text: "@TimotheChauvet"
 
 # Blinking text
 summary:

@@ -37,6 +37,11 @@ resourceLinks:
 # Certifications & skills
 badges:
 - type: certification
+  name: Azure DevOps Engineer (AZ-400)
+  url: https://www.credly.com/badges/09cbfc6c-2b53-40f9-96c0-c4cd08ef607f/public_url
+  badge: ../images/about/az-400.webp
+
+- type: certification
   name: Azure Security Engineer (AZ-500)
   url: https://www.credly.com/badges/e1b2516c-779e-41d7-a41b-dea126accaac/public_url
   badge: ../images/about/az-500.webp
@@ -45,11 +50,6 @@ badges:
   name: Azure Administrator Associate (AZ-104)
   url: https://www.credly.com/badges/6bcc3e08-70bd-421e-83c0-922e8ac13fe4/public_url
   badge: ../images/about/az-104.webp
-
-- type: certification
-  name: Azure Developer Associate (AZ-204)
-  url: https://www.credly.com/badges/d9ed6546-4963-40f9-9486-4abd25db2db4/public_url
-  badge: ../images/about/az-204.webp
 
 - type: certification
   name: Security, Compliance, and Identity Fundamentals (SC-900)

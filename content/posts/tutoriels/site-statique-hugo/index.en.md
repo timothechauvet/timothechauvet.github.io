@@ -1,6 +1,6 @@
 ---
 title: "Héberger son site perso pour 0€ 💸"
-date: 2022-12-12
+date: 2023-01-05
 hero: mascot.webp
 description: The first article on my site, what a deal
 theme: Toha

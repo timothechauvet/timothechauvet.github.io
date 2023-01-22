@@ -1,4 +1,4 @@
-# Hugo website using Toha theme
+# Hugo website using Toha theme 
 
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/timothechauvet/timothechauvet.github.io/Deploy%20Hugo%20site%20to%20Pages?label=deployment&logo=github)
 ![Repository Size](https://img.shields.io/github/repo-size/timothechauvet/timothechauvet.github.io)

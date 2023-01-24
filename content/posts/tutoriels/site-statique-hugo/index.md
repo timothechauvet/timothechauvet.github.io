@@ -110,7 +110,7 @@ Vous devez ouvrir PowerShell en mode administrateur :
 4. Appuyez sur <kbd>Oui</kbd>
 5. Lancez ces commandes :
 
-```PowerShell
+```bash
   # Installer Chocolatey, le gestionnaire de paquets supporté par Hugo et que nous allons utiliser pour les autres logiciels. Très utile pour vos autres projets
   Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
@@ -169,8 +169,12 @@ Si jamais vous avez un problème dans l'une de ces étapes (peu importe Windows/
 
 # Étape 2 • Créer un repository sur GitHub et le cloner en local
 
+### a. Créer un compte GitHub
 Premièrement, créez un compte sur [github.com](https://github.com) et consciencieusement [ajouté l'authentification en plusieurs étapes (MFA)](https://docs.github.com/fr/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication), et **notez bien votre pseudo**.
 
+</br>
+
+### b. Créer un nouveau repository
 Sur la page d'accueil, appuyez sur le bouton vert [<kbd><i class="fa-solid fa-book"></i> New</kbd>](https://github.com/new).
 
 Sur la page, "Create a new repository" apparaît. Remplissez des informations
@@ -183,9 +187,115 @@ Et appuyez sur <kbd>Create repository</kbd>.
 
 Une fois votre repository créé, allez dessus et notez l'URL, par exemple [https://github.com/timothechauvet/timothechauvet.github.io](https://github.com/timothechauvet/timothechauvet.github.io)
 
-Maintenant vous allez devoir 
+</br>
 
+### c. Cloner le repository en local
+Maintenant vous allez devoir revenir sur votre terminal/PowerShell (sauf si vous avez GitHub Desktop ou un équivalent). Pas besoin de lancer PowerShell en mode administrateur cette fois si vous êtes sur Windows.
 
+Déplacez-vous dans le dossier de votre choix (par exemple `cd ./Documents`) et entrez les commandes :
+```bash
+# Cloner le repository sur votre ordinateur
+git clone https://github.com/{votre_pseudo}/{votre_pseudo}.github.io
+
+# Vous déplacer dans le dossier du repository
+# Astuce 💡 : écrivez les 3 premières lettres de votre pseudo et appuyez sur Tab 
+# pour remplir le reste tout seul
+cd {votre_pseudo}.github.io
+
+# Ouvrir le dossier dans Visual Studio Code si vous l'avez installé
+code .
+```
+
+</br>
+</br>
+
+### d. Initialiser Hugo
+Dans Visual Studio Code (Vscode pour faire + rapide <sub>notez l'usage du "+" pour aller encore + rapidement</sub>), remarquez que le projet est vide. C'est normal, il faut d'abord que Hugo installe le projet dans le dossier actuel. 
+
+Dans le terminal, lancez :
+```bash
+hugo new site . -f yaml
+```
+
+</br>
+
+Trois choses : `hugo new site` va générer un site vide, `.` indique que le site se trouve dans le dossier actuel, et `-f yaml` indique que les fichiers de configuration utiliseront le format [YAML](https://yaml.org/), un moyen de sauvegarder des données que j'apprécie davantage que [TOML](https://toml.io/en/) utilisé par défaut, et que j'utiliserai pour ce tutoriel. C'est tout à fait optionnel et vous pouvez refaire la commande sans ça si vous préférez.
+
+</br>
+
+### e. Push le code sur GitHub
+
+Maintenant que le site commence à venir, on va d'abord le sauvegarder sur GitHub. 
+
+Dans le terminal, lancez :
+```bash
+# Indexer tous les fichiers 
+git add .
+
+# Faire un commit des fichiers indexés
+git commit -m "Premier commit"
+
+# Pousser le code
+git push
+```
+
+Si tout se passe bien, vous devriez être invité à vous connecter à GitHub. [Sinon, suivez ce tutoriel de GitHub](https://docs.github.com/fr/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
+
+Une fois le code poussé avec *push*, vous pouvez retourner sur votre repository pour constater les changements
+
+</br>
+
+### f. Voir ce que ça donne
+
+Revenons sur votre site, on va voir ensemble ce que ça donne. Lancez la commande suivante :
+
+```bash
+hugo serve
+```
+
+</br>
+
+Sur votre [navigateur internet de haute qualité](https://firefox.com), allez sur [https://localhost:1313](https://localhost:1313) (ou bien ce qui est indiqué après "Web Server is available at https://localhost:XXXX" dans le terminal) 
+
+`Page Not Found`
+
+Pas très palpitant pour un super blog. Pas de panique c'est normal, il faut d'abord installer un thème.
+
+</br>
+</br>
+
+# Étape 3 • Trouver et installer un thème
+
+### a. Trouver un thème
+
+Maintenant que votre super blog est sur GitHub, il va falloir l'habiller. Allez sur [le site des thèmes de Hugo](https://themes.gohugo.io/) et trouvez ce qu'il vous plait. Alternativement, vous pouvez trouver ces mêmes projets et peut-être davantage directement [en les cherchant sur GitHub](https://github.com/topics/hugo-theme).
+
+Personnellement j'utilise [Toha d'Emruz Hossain](https://github.com/hugo-toha/toha). Une fois votre thème trouvé, appuyez sur <kbd>Download</kbd> pour aller sur le repository Git du thème
+
+</br>
+</br>
+
+### b. Ajouter un sous-module Git
+
+Vous voilà avec un magnifique thème pour votre blog ✨
+
+Maintenant que vous êtes sur le repository du thème, il va falloir l'ajouter à votre site. Pour ce faire, lancer dans le terminal (qui doit toujours être dans le dossier du site) :
+```bash
+git submodule add https://github.com/{votre_thème} themes/{votre_thème}
+# Par exemple : git submodule add https://github.com/hugo-toha/toha themes/toha
+```
+
+</br>
+</br>
+
+Ajouter un sous-module, avec la commande `git submodule add`, revient à ajouter un projet Git dans un même projet Git. Ainsi, pour chacune des mises à jour du créateur de votre thème, celles-ci se reflèteront sur votre propre site. Pratique non ?
+
+</br>
+</br>
+
+### b bis. Alternativement : ajouter le thème manuellement
+
+Il est aussi possible que certaines mises à jour puissent casser votre site. Personnellement ça ne m'est jamais arrivé, mais si vous voulez télécharger le thème depuis une version très spécifique, il vous suffit de télécharger le repository (depuis le bouton <kbd><i class="fa-solid fa-code"></i> Code</kbd> puis <kbd><i class="fa-regular fa-file-zipper"></i> Download ZIP</kbd>). Ensuite, il faut extraire le contenu de l'archive .zip dans le dossier `themes` puis dans un sous-dossier du même nom.
 
 ---
 

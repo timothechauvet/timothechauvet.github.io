@@ -297,6 +297,11 @@ Ajouter un sous-module, avec la commande `git submodule add`, revient à ajouter
 
 Il est aussi possible que certaines mises à jour puissent casser votre site. Personnellement ça ne m'est jamais arrivé, mais si vous voulez télécharger le thème depuis une version très spécifique, il vous suffit de télécharger le repository (depuis le bouton <kbd><i class="fa-solid fa-code"></i> Code</kbd> puis <kbd><i class="fa-regular fa-file-zipper"></i> Download ZIP</kbd>). Ensuite, il faut extraire le contenu de l'archive .zip dans le dossier `themes` puis dans un sous-dossier du même nom.
 
+</br>
+</br>
+
+### c. Ajouter le thème à la configuration
+
 ---
 
 

@@ -255,7 +255,7 @@ hugo serve
 
 </br>
 
-Sur votre [navigateur internet de haute qualité](https://firefox.com), allez sur [https://localhost:1313](https://localhost:1313) (ou bien ce qui est indiqué après "Web Server is available at https://localhost:XXXX" dans le terminal) 
+Sur votre [navigateur internet de haute qualité](https://firefox.com), allez sur l'URL localhost indiqué après "Web Server is available at https://localhost:XXXX" 
 
 `Page Not Found`
 
@@ -295,12 +295,14 @@ Ajouter un sous-module, avec la commande `git submodule add`, revient à ajouter
 
 ### b bis. Alternativement : ajouter le thème manuellement
 
-Il est aussi possible que certaines mises à jour puissent casser votre site. Personnellement ça ne m'est jamais arrivé, mais si vous voulez télécharger le thème depuis une version très spécifique, il vous suffit de télécharger le repository (depuis le bouton <kbd><i class="fa-solid fa-code"></i> Code</kbd> puis <kbd><i class="fa-regular fa-file-zipper"></i> Download ZIP</kbd>). Ensuite, il faut extraire le contenu de l'archive .zip dans le dossier `themes` puis dans un sous-dossier du même nom.
+Il est aussi possible que certaines mises à jour puissent casser votre site. Personnellement ça ne m'est jamais arrivé, mais si vous voulez télécharger le thème depuis une version très spécifique, il vous suffit de télécharger le repository (depuis le bouton <kbd><i class="fa-solid fa-code"></i> Code</kbd> puis <kbd><i class="fa-regular fa-file-zipper"></i> Download ZIP</kbd>). Ensuite, il faut extraire le contenu de l'archive .zip dans le dossier `themes\nom_de_votre_thème` (exemple : themes\toha).
 
 </br>
 </br>
 
 ### c. Ajouter le thème à la configuration
+
+
 
 ---
 

@@ -110,7 +110,7 @@ Vous devez ouvrir PowerShell en mode administrateur :
 4. Appuyez sur <kbd>Oui</kbd>
 5. Lancez ces commandes :
 
-```bash
+```powershell
   # Installer Chocolatey, le gestionnaire de paquets supporté par Hugo et que nous allons utiliser pour les autres logiciels. Très utile pour vos autres projets
   Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
@@ -137,7 +137,7 @@ Vous devez ouvrir votre terminal :
 2. Tapez "Terminal.app" et cliquez dessus
 3. Lancez ces commandes :
 
-```bash
+```powershell
   # Installer Homebrew, le gestionnaire de paquets supporté par de nombreux logiciels. Très utile pour vos autres projets
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
@@ -193,7 +193,7 @@ Une fois votre repository créé, allez dessus et notez l'URL, par exemple [http
 Maintenant vous allez devoir revenir sur votre terminal/PowerShell (sauf si vous avez GitHub Desktop ou un équivalent). Pas besoin de lancer PowerShell en mode administrateur cette fois si vous êtes sur Windows.
 
 Déplacez-vous dans le dossier de votre choix (par exemple `cd ./Documents`) et entrez les commandes :
-```bash
+```powershell
 # Cloner le repository sur votre ordinateur
 git clone https://github.com/{votre_pseudo}/{votre_pseudo}.github.io
 
@@ -210,10 +210,11 @@ code .
 </br>
 
 ### d. Initialiser Hugo
+
 Dans Visual Studio Code (Vscode pour faire + rapide <sub>notez l'usage du "+" pour aller encore + rapidement</sub>), remarquez que le projet est vide. C'est normal, il faut d'abord que Hugo installe le projet dans le dossier actuel. 
 
 Dans le terminal, lancez :
-```bash
+```powershell
 hugo new site . -f yaml
 ```
 
@@ -223,12 +224,44 @@ Trois choses : `hugo new site` va générer un site vide, `.` indique que le sit
 
 </br>
 
-### e. Push le code sur GitHub
+### e. Configurer .gitignore
+
+Git est plutôt logique, il envoie tous les fichiers du dossier où vous êtes vers GitHub quand vous lui demandez. L'idéal serait de n'envoyer que les fichiers nécessaires pour ne pas encombrer GitHub de fichiers temporaires ou qui contiennent des informations sensibles. C'est là où le fichier `.gitignore` entre en jeu, celui-ci va empêcher des fichiers, dossiers et extensions d'être sauvegardés par Git, et donc d'être publiés sur votre repository GitHub.
+
+Dans Visual Studio Code, dans l'onglet Explorateur, Créez un nouveau fichier à la racine du dossier, appelez-le ".gitignore" et modifiez-le pour ajouter ces lignes :
+
+```php
+# Fichiers générés par le thème et votre système
+node_modules
+.DS_Store
+dist
+tmp
+
+# Fichiers générés par Hugo
+/public/
+/resources/_gen/
+/assets/jsconfig.json
+hugo_stats.json
+
+# Exécutables
+hugo.exe
+hugo.darwin
+hugo.linux
+
+# Verrou de modification
+/.hugo_build.lock
+```
+
+Vous verrez peut-être déjà des dossiers dans l'onglet explorateur se griser. Ça veut dire qu'ils ont été ignorés
+
+</br>
+
+### f. Push le code sur GitHub
 
 Maintenant que le site commence à venir, on va d'abord le sauvegarder sur GitHub. 
 
 Dans le terminal, lancez :
-```bash
+```powershell
 # Indexer tous les fichiers 
 git add .
 
@@ -245,17 +278,11 @@ Une fois le code poussé avec *push*, vous pouvez retourner sur votre repository
 
 </br>
 
-### f. Voir ce que ça donne
+### g. Voir ce que ça donne
 
-Revenons sur votre site, on va voir ensemble ce que ça donne. Lancez la commande suivante :
+Revenons sur votre site, on va voir ensemble ce que ça donne. Lancez la commande `hugo serve` dans votre terminal.
 
-```bash
-hugo serve
-```
-
-</br>
-
-Sur votre [navigateur internet de haute qualité](https://firefox.com), allez sur l'URL localhost indiqué après "Web Server is available at https://localhost:XXXX" 
+Sur votre [navigateur internet de haute qualité](https://firefox.com), allez sur l'URL <u>localhost</u> indiqué après "Web Server is available at https://localhost:XXXX" 
 
 `Page Not Found`
 
@@ -280,12 +307,11 @@ Personnellement j'utilise [Toha d'Emruz Hossain](https://github.com/hugo-toha/to
 Vous voilà avec un magnifique thème pour votre blog ✨
 
 Maintenant que vous êtes sur le repository du thème, il va falloir l'ajouter à votre site. Pour ce faire, lancer dans le terminal (qui doit toujours être dans le dossier du site) :
-```bash
-git submodule add https://github.com/{votre_thème} themes/{votre_thème}
+```powershell
+git submodule add https://github.com/{votre_theme} themes/{votre_theme}
 # Par exemple : git submodule add https://github.com/hugo-toha/toha themes/toha
 ```
 
-</br>
 </br>
 
 Ajouter un sous-module, avec la commande `git submodule add`, revient à ajouter un projet Git dans un même projet Git. Ainsi, pour chacune des mises à jour du créateur de votre thème, celles-ci se reflèteront sur votre propre site. Pratique non ?
@@ -302,6 +328,35 @@ Il est aussi possible que certaines mises à jour puissent casser votre site. Pe
 
 ### c. Ajouter le thème à la configuration
 
+Ouvrez le fichier `config.yaml` et ajoutez ces lignes :
+
+```yaml
+baseURL: https://votrepseudo.github.io
+languageCode: fr-fr
+title: "46000% sport l'actu sportive"
+theme: lenomdevotrethème
+```
+
+Relancez ensuite la commande `hugo serve` dans le terminal, cliquez sur le lien localhost:XXXX indiqué et voilà !
+
+<p align="center">
+  <img src="hugo-terminal-vide.png" alt="Capture d'écran du thème Terminal vide" width="500"/>
+  <p style="text-align: center;"><i>Exemple avec le thème <a href="https://github.com/panr/hugo-theme-terminal">Terminal</a></i></p>
+</p>
+
+Revenez dans le terminal et exécutez les commandes pour envoyer vos modifications à GitHub
+
+Dans le terminal, lancez :
+```powershell
+# Indexer tous les fichiers 
+git add .
+
+# Faire un commit des fichiers indexés
+git commit -m "Premier commit"
+
+# Pousser le code
+git push
+```
 
 
 ---

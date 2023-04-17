@@ -1,8 +1,0 @@
-# Update dependencies
-version: 2
-updates:
-  # Submodules
-  - package-ecosystem: "gitsubmodule" 
-    directory: "/" 
-    schedule:
-      interval: "weekly"

@@ -3,6 +3,7 @@ node_modules
 .DS_Store
 dist
 tmp
+package-lock.json
 
 # Generated files by hugo
 /public/

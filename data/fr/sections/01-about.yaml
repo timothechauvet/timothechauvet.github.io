@@ -30,9 +30,9 @@ socialLinks:
   url: https://twitter.com/TimotheChauvet
 
 # Buttons
-resourceLinks:
-- title: Mon dossier de compétences
-  url: "files/D2C Timothé.pdf"
+# resourceLinks:
+# - title: Mon dossier de compétences
+#   url: "files/D2C Timothé.pdf"
 
 # Certifications & skills
 badges:

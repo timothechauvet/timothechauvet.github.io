@@ -77,8 +77,6 @@ params:
       enable: false
     analytics:
       enable: true
-      goatcounter:
-        code: timothechauvet
     
     # Flags
     enableTOC: true

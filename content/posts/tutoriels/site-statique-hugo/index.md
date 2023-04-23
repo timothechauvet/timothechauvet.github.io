@@ -1,6 +1,6 @@
 ---
 title: "Héberger son site perso pour 0€ 💸"
-date: 2023-01-05
+date: 2023-04-24
 hero: mascot.webp
 description: Héberger son site statique Hugo avec GitHub Pages et Actions pour pas un rond
 theme: Toha

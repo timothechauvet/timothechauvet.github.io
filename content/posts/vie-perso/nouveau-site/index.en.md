@@ -1,6 +1,6 @@
 ---
 title: "My new website/blog/CV/portfolio ✨"
-date: 2022-11-05
+date: 2023-04-24
 hero: elephants.webp
 description: The first article on my site, what a deal
 theme: Toha

@@ -1,6 +1,6 @@
 ---
 title: "Host your blog for 0€ 💸"
-date: 2023-01-05
+date: 2023-04-24
 hero: mascot.webp
 description: Host your Hugo static site with GitHub Pages and Actions for nothing
 theme: Toha

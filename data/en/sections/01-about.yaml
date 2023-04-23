@@ -77,6 +77,11 @@ badges:
   badge: ../images/about/github-admin.webp
 
 - type: certification
+  name: GitHub Actions
+  url: https://www.credly.com/badges/7e8689c8-4ebc-4470-b219-baca493a83db/public_url
+  badge: ../images/about/github-actions.webp
+  
+- type: certification
   name: AWS Certified Cloud Practitioner
   url: https://www.credly.com/badges/1cf1a2be-88a6-4bc4-838a-1bee1208e604/public_url
   badge: ../images/about/aws-cloud-practitioner.webp

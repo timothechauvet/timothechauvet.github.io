@@ -11,7 +11,7 @@ section:
 skills:
 - name: Azure
   logo: /images/skills/azure.png
-  summary: "I have over 6 months of experience with Azure thanks to my internship at Devoteam M Cloud, I also discovered the services [with my certifications](#about) 💙"
+  summary: "I have over a year of experience with Azure thanks to my work at Devoteam M Cloud, I also discovered most of the services [with my certifications](#about) 💙"
 
 - name: Terraform
   logo: /images/skills/terraform.png
@@ -23,7 +23,7 @@ skills:
 
 - name: Linux
   logo: /images/skills/linux.png
-  summary: "I have been working in Linux/UNIX environment since college and have been able to complete several school assignments in these environments (Ubuntu/Mint, MacOS, CentOS, Fedora, Arch) 🐧"
+  summary: "I have been working in Linux/UNIX environment since college and have been able to complete several school assignments in these environments (Ubuntu/Mint, MacOS, Fedora) 🐧"
 
 - name: Cloud Computing
   logo: /images/skills/cloud.png

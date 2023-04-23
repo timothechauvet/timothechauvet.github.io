@@ -11,7 +11,7 @@ section:
 skills:
 - name: Azure
   logo: /images/skills/azure.png
-  summary: "J'ai plus de 6 mois d'expérience avec Azure grâce à mon stage chez Devoteam M Cloud et la découverte des services [avec mes certifications](#about) 💙"
+  summary: "J'ai plus d'un an d'expérience avec Azure grâce à mon travail chez Devoteam M Cloud et la découverte de certains services [avec mes certifications](#about) 💙"
 
 - name: Terraform
   logo: /images/skills/terraform.png
@@ -23,7 +23,7 @@ skills:
 
 - name: Linux
   logo: /images/skills/linux.png
-  summary: "Je travaille sous environnement Linux/UNIX depuis le collège et j'ai pu réaliser plusieurs travaux scolaires dans ces environnements (Ubuntu/Mint, MacOS, CentOS, Fedora, Arch) 🐧"
+  summary: "Je travaille sous environnement Linux/UNIX depuis le collège et j'ai pu réaliser plusieurs travaux scolaires dans ces environnements (Ubuntu/Mint, MacOS, Fedora) 🐧"
 
 - name: Cloud Computing
   logo: /images/skills/cloud.png

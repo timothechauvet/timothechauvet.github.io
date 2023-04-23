@@ -15,8 +15,14 @@ experiences:
     location: Levallois-Perret
     overview: Devoteam M Cloud is the leader in consulting and services for Microsoft clouds, elected Partner of the Year in 2021 
   positions:
-  - designation: Cloud Engineer / DevOps consultant
+  - designation: DevOps & Cloud Engineer consultant
+    start: Apr 2023
+    responsibilities:
+    - Operational work at [Carrefour](https://www.carrefour.com)
+
+  - designation: Apps Engineer consultant
     start: Oct 2022
+    end: Apr 2023
     responsibilities:
     - Web app migration assessment for [Egis](https://www.egis-group.com/)
     - FinOps move-to-cloud assessment for [Egis](https://www.egis-group.com/)

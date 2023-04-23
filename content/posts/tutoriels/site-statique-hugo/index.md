@@ -210,13 +210,15 @@ Déplacez-vous dans le dossier de votre choix (par exemple `cd ./Documents`) et 
 git clone https://github.com/{votre_pseudo}/{votre_pseudo}.github.io
 
 # Vous déplacer dans le dossier du repository
-# Astuce 💡 : écrivez les 3 premières lettres de votre pseudo et appuyez sur Tab 
-# pour remplir le reste tout seul
 cd {votre_pseudo}.github.io
 
 # Ouvrir le dossier dans Visual Studio Code si vous l'avez installé
 code .
 ```
+
+</br>
+
+Astuce 💡 : écrivez les 3 premières lettres de votre pseudo et appuyez sur Tab pour remplir le reste tout seul
 
 </br>
 </br>
@@ -307,16 +309,14 @@ Pas très palpitant pour un super blog. Pas de panique c'est normal, il faut d'a
 
 ### a. Trouver un thème
 
-Maintenant que votre super blog est sur GitHub <i class="fa-brands fa-github"></i>, il va falloir l'habiller. Allez sur [le site des thèmes de Hugo](https://themes.gohugo.io/) et trouvez ce qu'il vous plait. Alternativement, vous pouvez trouver ces mêmes projets et peut-être davantage directement [en les cherchant sur GitHub](https://github.com/topics/hugo-theme).
+Maintenant que votre super blog est sur GitHub <i class="fa-brands fa-github"></i>, il va falloir l'habiller. Allez sur [le site des thèmes de Hugo](https://themes.gohugo.io/) et trouvez ce qu'il vous plait. Alternativement, vous pouvez en trouver davantage directement [en les cherchant sur GitHub](https://github.com/topics/hugo-theme).
 
-Personnellement j'utilise [Toha d'Emruz Hossain](https://github.com/hugo-toha/toha). Une fois votre thème trouvé, appuyez sur <kbd>Download</kbd> pour aller sur le repository Git du thème
+Personnellement j'utilise [Toha d'Emruz Hossain](https://github.com/hugo-toha/toha) mais je vais utiliserle thème [Terminal de Panr](https://github.com/panr/hugo-theme-terminal) pour les exemples qui suivent. Une fois votre thème trouvé, appuyez sur <kbd>Download</kbd> pour aller sur le repository Git du thème
 
 </br>
 </br>
 
 ### b. Ajouter un sous-module Git
-
-Vous voilà avec un magnifique thème pour votre blog ✨
 
 Maintenant que vous êtes sur le repository du thème, il va falloir l'ajouter à votre site. Pour ce faire, lancer dans le terminal (toujours dans le dossier racine) :
 ```powershell
@@ -326,7 +326,7 @@ git submodule add https://github.com/{votre_theme} themes/{votre_theme}
 
 </br>
 
-Ajouter un sous-module, avec la commande `git submodule add`, revient à ajouter un projet Git dans un même projet Git. Ainsi, pas besoin de tout récupérer et de le copier chez nous. Pratique non ?
+Ajouter un sous-module avec la commande `git submodule add` revient à ajouter un projet Git dans un même projet Git. Ainsi, pas besoin de tout récupérer et de le copier chez nous. Pratique non ?
 
 </br>
 </br>
@@ -347,24 +347,23 @@ baseURL: https://votrepseudo.github.io
 languageCode: fr-fr
 title: "46000% sport l'actu sportive"
 theme: lenomdevotrethème
-# Astuce 💡 : enregistrez simplement le fichier, la commande "hugo serve"  
-# devrait automatiquement recharger le site sur https://localhost:XXXX
 ```
+</br>
+
+Astuce 💡 : enregistrez simplement le fichier, la commande "hugo serve" devrait automatiquement recharger le site sur https://localhost:XXXX
 
 </br>
 
 <p align="center">
-  <img src="hugo-terminal-vide.png" alt="Capture d'écran du thème Terminal vide" width="500"/>
+  <img src="hugo-terminal-vide.webp" alt="Capture d'écran du thème Terminal vide" width="500"/>
   <p style="text-align: center;"><i>Exemple avec le thème <a href="https://github.com/panr/hugo-theme-terminal">Terminal</a></i></p>
 </p>
 
-Votre site devrait afficher une interface plus accueillante : c'est que votre thème s'est bien installé. 
+Vous voilà avec un magnifique thème pour votre blog ✨
 
 Revenez dans le terminal et exécutez les commandes pour envoyer vos modifications à GitHub <i class="fa-brands fa-github"></i> :
 ```powershell
 # Indexer tous les fichiers modifiés
-# Astuce 💡 : remplacez le point par les noms de fichiers/dossiers que vous voulez indexer
-# Ces fichiers/dossiers sont indiqués d'un M dans l'explorateur à gauche sur Visual Studio Code
 git add .
 
 # Faire un commit des fichiers indexés
@@ -373,6 +372,10 @@ git commit -m "Second commit"
 # Pousser le code
 git push
 ```
+
+</br>
+
+Astuce 💡 : remplacez le point de `git add .` par les noms de fichiers/dossiers que vous voulez indexer. Ces fichiers/dossiers sont indiqués d'un M dans l'explorateur à gauche sur Visual Studio Code
 
 </br>
 
@@ -419,7 +422,7 @@ Astuce 💡 : vous pouvez traduire votre site en plusieures langues. Dans la maj
 </br>
 
 <p align="center">
-  <img src="hugo-terminal-vert.png" alt="Capture d'écran du thème Terminal configuré" width="500"/>
+  <img src="hugo-terminal-vert.webp" alt="Capture d'écran du thème Terminal configuré" width="500"/>
   <p style="text-align: center;"><i>Exemple où je configure le thème en vert</i></p>
 </p>
 
@@ -427,10 +430,10 @@ Astuce 💡 : vous pouvez traduire votre site en plusieures langues. Dans la maj
 
 #### (Optionnel) Intégrer des .webp, .svg, tweets...
 
-Dans vos articles si vous voulez intégrer divers types de documents, ajoutez ces lignes dans votre fichier de configuration. <u>Faites bien attention à ce que vous collez depuis internet sur votre site</u>, par exemple intégrer un Tweet implique l'installation d'un cookie Twitter pour chaque visiteur.
+Dans vos articles si vous voulez intégrer divers types de documents, ajoutez ces lignes dans votre fichier de configuration. **Faites bien attention à ce que vous collez depuis internet sur votre site**, par exemple intégrer un Tweet implique l'installation d'un cookie Twitter pour chaque visiteur.
 
 ```yaml
-# Raw HTML in Markdown
+# HTML brut
 markup:
   goldmark:
     renderer:
@@ -467,7 +470,7 @@ Enregistrez (régulièrement) votre article puis retournez sur votre site. Norma
 </br>
 
 <p align="center">
-  <img src="hugo-terminal-article.png" alt="Capture d'écran du thème Terminal avec un article" width="500"/>
+  <img src="hugo-terminal-article.webp" alt="Capture d'écran du thème Terminal avec un article" width="500"/>
   <p style="text-align: center;"><i>Exemple où je poste un article</i></p>
 </p>
 
@@ -483,12 +486,14 @@ Pour que GitHub puisse mettre à disposition le code source qu'il héberge sur i
 
 Allez dans l'onglet <kbd><i class="fa-solid fa-gear"></i> Settings</kbd> sur votre repository et appuyez sur <kbd><i class="fa-solid fa-pager"></i> Pages</kbd>. Changez la source `Deploy from a branch` en `GitHub Actions`. Dans *browse all workflows*, cherchez *Hugo* et un fichier YAML apparaît : c'est votre *pipeline CD*. 
 
+Note : le fait que le fichier de configuration de Hugo et la pipeline CD soient tous deux en YAML n'est qu'une coincidence (ou pas, YAML est vraiment excellent)
+
 Appuyez sur <kbd>Commit changes...</kbd> et ce fichier devrait apparaître dans le dossier `.github` de votre repository. Allez sur <kbd><i class="fa-regular fa-circle-play"></i> Actions</kbd>, cliquez sur le workflow à gauche, <kbd>Run workflow</kbd> et votre site devrait être accessible depuis https://votrepseudogithub.github.io ! 
 
 </br>
 
 <p align="center">
-  <img src="hugo-terminal-githubio.png" alt="Capture d'écran du thème Terminal publié sur github.io" width="500"/>
+  <img src="hugo-terminal-githubio.webp" alt="Capture d'écran du thème Terminal publié sur github.io" width="500"/>
   <p style="text-align: center;"><i>Constatez que l'URL (modifié) pointe sur github.io !</i></p>
 </p>
 
@@ -509,8 +514,8 @@ Une fois que vous êtes satisfaits de votre site (après l'avoir push sur GitHub
 
 Un nom de domaine permettra à votre blog de se démarquer : chaque nom de domaine est unique. Il est possible d'en acheter un chez un fournisseur de domaines, par exemple OVH qui fournit des domaines .fr pour 7€ par an (à l'écriture de l'article).
 
-Achetez donc votre nom de domaine [à ce lien](https://www.ovhcloud.com/fr/domains/) ou chez un autre revendeur. Il y a plusieurs choses à considérer :
-- J'ai dit dans le titre que l'hébergement coûte 0€. On parle bien ici du nom de domaine, pas de l'hébergement. Puis de toutes façons vous pouvez aussi faire sans et vous arrêter là
+Achetez donc votre nom de domaine [à ce lien](https://www.ovhcloud.com/fr/domains/) ou chez un autre revendeur (Google Domains, GoDaddy, Ionos...). Il y a plusieurs choses à considérer :
+- J'ai dit dans le titre que le site coûterait 0€. On parle bien ici du nom de domaine, pas de l'hébergement. Vous pouvez aussi faire sans et vous arrêter là
 - Les infos administratives que vous donnez au fournisseur de domaine seront accessibles publiquement par des [outils type Whois](https://whois.domaintools.com/) ; vous devrez voir pour les cacher manuellement après. Apparemment pour OVH c'est caché par défaut chez les particuliers [(source)](https://community.ovh.com/t/masquer-informations-whois-domaine-fr/27694/7).
 - Si vous ne renouvelez pas régulièrement le nom de domaine (c'est-à-dire payer 7€ par an), celui-ci libèrera automatiquement votre nom de domaine et de gentils robots s'emploieront (peut-être) à racheter le domaine pour le revendre ensuite plusieurs milliers d'euros [(source)](https://fr.wikipedia.org/wiki/Cybersquattage).
 
@@ -526,7 +531,7 @@ Une option envisageable serait d'installer un CDN (Content Delivery Network) com
 
 Dans notre cas nous hébergons notre site sur GitHub donc ce n'est même pas la peine d'essayer de rajouter une protection à celle déjà présente. Mais si vous voulez quand même le faire, vous pouvez suivre [ce tutoriel de Numelion](https://www.numelion.com/installer-cloudflare.html).
 
-CloudFlare est aussi pratique pour faire une redirection de mails, par exemple les mails envoyés à `contact@votresite.fr` seront renvoyés à `lolosmackdu91@gmail.com`. C'est très simple depuis le bouton <kbd><i class="fa-solid fa-envelope"></i> Email</kbd> sur le portail CloudFlare
+CloudFlare est aussi pratique pour faire une redirection de mails, par exemple les mails envoyés à `contact@votresite.fr` peuvent être renvoyés à `lolosmackdu91@gmail.com`. C'est très simple depuis le bouton <kbd><i class="fa-solid fa-envelope"></i> Email</kbd> sur le portail CloudFlare
 
 </br>
 </br>
@@ -592,9 +597,9 @@ Vous aurez ainsi un super dashboard sur `https://DOMAINE.goatcounter.com` en rem
 
 # Conclusion
 
-Ce fut un très long article de 600 lignes de markdown, mais qui au final représente un travail relativement simple. Le plus long sera évidemment de remplir le contenu de votre site selon ce qu'il est possible de faire avec votre thème.
+Ce fut une aventure assez longue sachant que l'application du nom de domaine et des champs DNS n'est pas instantané. Au final, les étapes que vous avez suivies représentent un travail relativement simple. Le plus long sera évidemment de remplir le contenu de votre site selon ce qu'il est possible de faire avec votre imagination (et les limites de votre thème).
 
-Au final, voici un bilan de que vous aurez appris :
+Voici un bilan de que vous aurez appris :
 - Installer des logiciels en ligne de commande
 - Générer un site statique avec Hugo
 - Configurer un site Hugo
@@ -602,7 +607,7 @@ Au final, voici un bilan de que vous aurez appris :
 - Acheter et configurer un nom de domaine et ses entrées DNS
 - Mettre en place une *pipeline CD* (100% DevOps attitude)
 
-Mes félicitations pour ce travail bien effectué, et **pensez à m'envoyer vos blogs une fois réalisés grâce à ce tutoriel** !
+Mes félicitations pour ce travail bien effectué, et **pensez à me partager vos blogs une fois réalisés grâce à ce tutoriel** !
 
 ---
 

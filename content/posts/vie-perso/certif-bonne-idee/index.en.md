@@ -1,6 +1,6 @@
 ---
 title: "My new website/blog/CV/portfolio ✨"
-date: 2023-04-24
+date: 2023-05-09
 hero: diploma.webp
 description: The first article on my site, what a deal
 theme: Toha

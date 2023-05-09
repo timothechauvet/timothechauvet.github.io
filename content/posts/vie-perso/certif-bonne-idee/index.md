@@ -1,7 +1,7 @@
 ---
 title: "Mon nouveau site/blog/CV/portfolio ✨"
 date: 2023-04-24
-hero: elephants.webp
+hero: diploma.webp
 description: Le premier article sur mon site, quelle affaire
 theme: Toha
 tags: ["Traduit", "Site internet"]

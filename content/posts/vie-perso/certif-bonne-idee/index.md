@@ -1,16 +1,16 @@
 ---
-title: "Mon nouveau site/blog/CV/portfolio ✨"
+title: "Changez votre carrière pro avec ces petites images ✅"
 date: 2023-05-09
 hero: diploma.webp
-description: Le premier article sur mon site, quelle affaire
+description: Le passage de multiples certifications confirme bien nos compétences malgré ce qu'on peut voir sur internet. Voici ce que je recommande à ce propos
 theme: Toha
-tags: ["Traduit", "Site internet"]
+tags: ["Traduit", "Certification"]
 ---
 
-Après deux semaines de dure labeur, à m'enseigner les fondamentaux du **thème [Toha](https://github.com/hugo-toha/toha)** fonctionnant avec le **framework [Hugo](https://gohugo.io/)**, je suis très heureux de pouvoir lancer mon super blog personnel sur lequel j'écris ces lignes. J'utilise les services de **GitHub** pour héberger mon site et des superpouvoirs de **GitHub Actions** pour générer le contenu statique de mon site. N'hésitez pas à me donner votre avis sur mon site 👋
+J'ai passé 12 certifications informatiques et j'en tire une expérience positive. Pourtant, à en croire les publications sur le sujet sur LinkedIn, un vrai professionnel ne devrait pas en avoir. 
 
 ---
 
 🤖 *Cet article a été écrit <u>sans</u> l'aide d'une IA*
 
-Bannière "Éléphants" générée par [DALL•E](https://labs.openai.com)
+Bannière "Diplôme" générée par [DALL•E](https://labs.openai.com)

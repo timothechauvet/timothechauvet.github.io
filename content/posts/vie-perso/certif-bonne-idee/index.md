@@ -24,7 +24,9 @@ Pour être sûr de vous faire embaucher, certifiez-vous, même si vous n'avez pa
 </br>
 
 ## Même si vous êtes déjà dans une bonne situation, c'est un moyen de progresser + vite
-Les certifications sont aussi **une preuve de vos hard skills**. Il est évident qu'un•e détenteur•rice de la Certified Kubernetes Administrator (CKA) sait de quoi il ou elle parle pour cette techno très pointue. Mais même exceller dans un domaine ne garantit pas de connaître la techno sous tous ses angles. Passer une certif, même après 10 ans d'expérience, permet de rester à la page et garantit de progresser malgré tout. Même si vous n'avez *"plus rien à prouver"*, c'est toujours une carte à jouer aux entretiens.
+Les certifications sont aussi **une preuve de vos hard skills**. Il est évident qu'un•e détenteur•rice de la Certified Kubernetes Administrator (CKA) sait de quoi il ou elle parle pour cette techno très pointue. Mais même exceller dans un domaine ne garantit pas de connaître la techno sous tous ses angles. Passer une certif, même après 10 ans d'expérience, permet de rester à la page et garantit de progresser malgré tout. 
+
+De plus, vous serez en concurrence avec [87% des spécialistes en informatique](https://www.globalknowledge.com/ca-en/resources/resource-library/articles/how-to-show-your-it-skills-and-certifications-on-linkedin/) qui possèdent au moins une certification, alors assurez-vous d'avoir les meilleurs badges possibles. Même si vous n'avez *"plus rien à prouver"*, c'est toujours une carte à jouer lors des entretiens.
 
 </br>
 
@@ -45,7 +47,7 @@ Donc en effet, toutes les certifications donnent un avantage pour l'embauche, ma
 </br>
 
 ## Quid des entreprises et des commerciaux ?
-Étant en ESN, je me suis tourné vers deux commerciaux pour avoir leur avis sur le sujet. Au plus proche des besoins du client, ils peuvent distinguer le bullshit de la vraie compétence. Ils confirment que les certifications sont indéniablement une plus-value sur un profil. *"Se certifier **prouve la volonté d'apprendre** et c'est une chose pour laquelle le client est sensible"*. 
+Étant en ESN, je me suis tourné vers deux commerciaux pour avoir leur avis sur le sujet. Au plus proche des besoins du client, ils peuvent distinguer le bullshit de la vraie compétence selon moi. Ils confirment que les certifications sont indéniablement une plus-value sur un profil. *"Se certifier **prouve la volonté d'apprendre** et c'est une chose pour laquelle le client est sensible"*. 
 
 Mais à nuancer sur la difficulté de la certification : *"tout le monde a une certification basique, je prépare moi-même la AZ-900, **mais si on monte un peu de niveau, ça devient plus compliqué d'en avoir, et c'est ce qu'on recherche**. Un junior avec une AWS Solutions Architect par exemple aura une vraie plus-value car elle est difficile à avoir."*. Il est aussi compliqué pour certains clients de choisir un profil pour ses certifications, ce qui montre que la pratique en environnement professionnel a toujours un avantage sur la théorie.
 
@@ -149,7 +151,7 @@ En revanche je ne recommande pas de les passer sans s'exercer. Après 20 ans d'�
 
 </br>
 
-Merci à Benjamin Attali, Antoine Bouchareissas, Danaé Bétolaud, Élisa Abitbol et Cécile Augusti d'avoir contribué à la rédaction de cet article
+Merci à Benjamin Attali, Antoine Bouchareissas, Danaé Bétolaud, Elisa Abitbol et Cécile Augusti d'avoir contribué à la rédaction de cet article
 
 🤖 Cet article a été écrit <u>sans</u> l'aide d'une IA
 

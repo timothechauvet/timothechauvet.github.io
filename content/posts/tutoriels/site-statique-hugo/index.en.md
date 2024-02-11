@@ -7,6 +7,8 @@ theme: Toha
 tags: ["Translated", "Website"]
 ---
 
+[*Lire cet article en français*](https://timothechau.vet/posts/tutoriels/site-statique-hugo/)
+
 LinkedIn, Meta and Twitter want them down! To create content in the 20's era (from 2020 on), there is a plethora of platforms. Some are newborns (Mastodon, Notion), some are ephemeral (Google +, Skyblog), some are somewhat disliked (Facebook, Twitter), these have a life sometimes shorter than your washing machine. <u>But there is one platform that does not suffer from programmed obsolescence: blogs.</u>
 
 In the first post of my super blog, I wanted to tell you how I made... my blog. Hosted on GitHub <i class="fa-brands fa-github"></i>, made with Hugo and maintained by me, it (almost) costs me 0€ to keep. I hope that by reading this tutorial, you will be able to realize how easy it is to make your own https://timothechau.vet for nothing.

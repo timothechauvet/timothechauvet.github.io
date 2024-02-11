@@ -7,6 +7,7 @@ theme: Toha
 tags: ["Translated", "Stack", "Facebook"]
 ---
 
+[*Lire cet article en français*](https://timothechau.vet/posts/technique/facebook-stack)
 
 I loved Facebook during my childhood. Today, people from my generation agree to call it the *worst social network*, still it remains the most popular social network in the world. With **2 billion active users daily**, Facebook is "not dead, nor dying" according to its director (March 2023).
 

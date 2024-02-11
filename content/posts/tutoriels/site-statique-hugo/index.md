@@ -7,6 +7,8 @@ theme: Toha
 tags: ["Traduit", "Site internet"]
 ---
 
+[*Read this article in english*](https://timothechau.vet/en/posts/tutoriels/site-statique-hugo/)
+
 LinkedIn, Meta et Twitter veulent leur peau ! Pour créer son contenu à l'ère des 20's (à partir de 2020), il existe pléthore de plateformes. Parfois naissantes (Mastodon, Notion), parfois éphémères (Google +, Skyblog), parfois boudées (Facebook, Twitter), celles-ci ont une vie parfois plus courte que celle de votre machine à laver. <u>Mais il existe bien une plateforme qui ne subit pas l'obsolescence programmée : les blogs.</u>
 
 Dans le premier article de mon super blog, je voulais vous raconter comment j'ai réalisé... mon blog. Hébergé par GitHub <i class="fa-brands fa-github"></i>, produit par Hugo et alimenté par moi-même, les coûts me reviennent à 0€, enfin presque. J'espère qu'en lisant ce tutoriel, vous pourrez vous rendre compte à quel point il est facile de, vous aussi, faire votre https://timothechau.vet à moindre frais.

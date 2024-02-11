@@ -56,9 +56,23 @@ params:
     provider: darkreader
     enable: true
     default: system
+  
 
   # Enable features
   features:
+    # ToC
+    toc:
+      enable: true
+    
+    # Tags
+    tags:
+      enable: true
+      on_card: true
+    
+    # Flags
+    flags:
+      enable: true
+
     # Site categories
     portfolio:
       enable: true
@@ -77,23 +91,18 @@ params:
       enable: false
     analytics:
       enable: true
-    
-    # Flags
-    enableTOC: true
-    enableTags: false
-    showFlags: true
 
-    # Footer
-    footer:
+  # Footer
+  footer:
+    enable: true
+    navigation:
       enable: true
-      navigation:
-        enable: true
-        customMenus: true
-      contactMe:
-        enable: true
-      credentials:
-        enable: true
-      newsletter:
-        enable: false
-      disclaimer:
-        enable: true
+      customMenus: true
+    contactMe:
+      enable: true
+    credentials:
+      enable: true
+    newsletter:
+      enable: false
+    disclaimer:
+      enable: false

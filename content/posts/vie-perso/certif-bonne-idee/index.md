@@ -7,6 +7,8 @@ theme: Toha
 tags: ["Traduit", "Certification"]
 ---
 
+[*Read this article in english*](https://timothechau.vet/en/posts/vie-perso/certif-bonne-idee)
+  
 Après avoir passé 12 certifications autour du cloud et du DevOps, je peux vous dire que j'en tire de nombreuses leçons. Ces petits badges virtuels ont réussi à stimuler ma dopamine et la récompense n'est pas qu'une réaction chimique dans mon cerveau. Beaucoup de personnes me sollicitent à propos des certifications et je veux condenser ce que je leur réponds dans un seul article pour que vous puissiez aussi profiter de ce système qui, à mon sens, valorise les compétences de toutes et tous mais reste à nuancer dans le monde professionnel.
 
 </br>
@@ -156,3 +158,5 @@ Merci à Benjamin Attali, Antoine Bouchareissas, Danaé Bétolaud, Elisa Abitbol
 🤖 Cet article a été écrit <u>sans</u> l'aide d'une IA
 
 Bannière "Diplôme" générée par [DALL•E](https://labs.openai.com)
+
+Si vous avez des questions ou des suggestions, n'hésitez pas à me contacter par [mail](mailto:timothe@chauvet.dev), sur [LinkedIn](https://www.linkedin.com/in/timothechauvet/) ou directement en envoyant [une *issue* sur GitHub](https://github.com/timothechauvet/timothechauvet.github.io/issues)

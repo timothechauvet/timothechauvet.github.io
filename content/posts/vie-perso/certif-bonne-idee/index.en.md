@@ -7,6 +7,8 @@ theme: Toha
 tags: ["Translated", "Certification"]
 ---
 
+[*Lire cet article en français*](https://timothechau.vet/posts/vie-perso/certif-bonne-idee)
+
 After 12 cloud and DevOps certifications, I can tell you that I've learned a lot. Those little virtual badges have managed to stimulate my dopamine, and the reward isn't just a chemical reaction in my brain. Some people ask me about certifications, and I want to summarize what I say to them into a single article, so that you too can benefit from this system which, in my opinion, values the skills of everyone, but still needs to be nuanced in the professional world.
 
 </br>

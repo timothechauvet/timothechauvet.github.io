@@ -7,6 +7,8 @@ theme: Toha
 tags: ["Traduit", "Stack", "Facebook"]
 ---
 
+[*Read this article in english*](https://timothechau.vet/en/posts/technique/facebook-stack)
+
 J'adorais Facebook pendant mon enfance. Aujourd'hui élu pire réseau social par ma génération, il n'en reste pas moins le réseau social le plus populaire au monde. Avec ses 2 milliards d'utilisateurs actifs **quotidiennement**, Facebook n'est "pas mort, ni mourrant" selon son directeur en mars 2023.
 
 Créé le 4 février 2004 par Mark Zuckerberg, "Zucc" pour les intimes, Facebook a fait ses débuts sur un monolithe PHP codé en dehors des heures de cours de son créateur. N'ayant pu anticiper son succès, le code a été réadapté et l'infrastructure modernisée. 

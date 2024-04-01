@@ -1,6 +1,6 @@
 ---
 title: "Les différentes facettes de Windows Server Core 💠"
-date: 2024-03-29
+date: 2024-04-02
 hero: winser.webp
 description: Simple explication des différents rôles de Windows Server Core
 theme: Toha
@@ -41,7 +41,7 @@ LA killer feature d'Active Directory. ADDS est, en gros, le service de gestion d
 - Propose les services d'authentification 
 - Gère les autorisations sur le réseau
 - Hiérarchise les composants
-- Réplication des données
+- Réplique les données
 
 On parle alors de Domain Controller (DC).
 
@@ -51,7 +51,7 @@ C'est d'ailleurs par ses fonctionnalités qu'on méprend souvent ADDS pour AD. C
 
 ### Active Directory Lightweight Directory Services (ADLDS)
 
-ADLDS une version allégée d'ADDS. Il est possible de l'utiliser à la place d'ADDS, car il est plus simple et plus rapide d'accès. On ne parle pas ici de Domain Controller (DC) car c'est un annuaire autonome léger. 
+ADLDS une version allégée d'ADDS. Il ne contient pas les fonctionnalités d'ADDS car il est plus simple et rapide d'accès. On ne parle pas ici de Domain Controller (DC) car c'est un annuaire autonome léger. 
 
 Il est généralement utilisé dans des applications, car il permet d'avoir un annuaire simple et rapide. 
 
@@ -143,7 +143,7 @@ Vous pouvez aussi mettre en place DFS (Distributed File System) pour avoir un pa
 
 Permet de gérer les imprimantes. 
 
-Contrairement à File Services, il connecte en réseau les imprimantes et non les dossiers et fichiers.
+Contrairement à File Services, il connecte en réseau les imprimantes et non les dossiers et fichiers. Il peut aussi utiliser le rôle DNS pour attribuer un nom de domaine aux imprimantes.
 
 </br>
 
@@ -158,11 +158,11 @@ Contrairement à File Services, il connecte en réseau les imprimantes et non le
 
 </br>
 
-L'hyperviseur par excellence de Microsoft. Hyper-V permet de créer des machines virtuelles, et donc de virtualiser des serveurs. 
+L'hyperviseur par excellence de Microsoft. Hyper-V permet de créer des machines virtuelles (VM), et donc de virtualiser des serveurs. 
 
 C'est comme si vous aviez un ordinateur dans votre ordinateur. 
 
-La VM est la base des ressources cloud. Ce service ajouté avec Windows Server 2008 n'a [pas été grandement mis à jour depuis 2019](https://www.altaro.com/hyper-v/end-of-hyper-v-server/). En effet, Microsoft pousse à l'adoption de ses services cloud Azure, une stratégie sur le long terme.
+La VM est la base des ressources cloud. Ce rôle Hyper-V ajouté avec Windows Server 2008 n'a [pas été grandement mis à jour depuis 2019](https://www.altaro.com/hyper-v/end-of-hyper-v-server/). En effet, Microsoft pousse à l'adoption de ses services cloud Azure, une stratégie sur le long terme.
 
 Vous avez de nombreuses alternatives, comme (le récemment fusionné) VMware, ou encore VirtualBox pour une utilisation plus personnelle.
 

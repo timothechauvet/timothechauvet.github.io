@@ -9,26 +9,26 @@ section:
 
 # Compétences
 skills:
-- name: Azure
-  logo: /images/skills/azure.png
-  summary: "J'ai plus d'un an d'expérience avec Azure grâce à mon travail chez Devoteam M Cloud et la découverte de certains services [avec mes certifications](#about) 💙"
+- name: Kubernetes
+  logo: /images/skills/kube.webp
+  summary: "J'ai une expérience Kubernetes acquise en tant qu'Ops chez Carrefour. Je maîtrise le déploiement et la gestion d'applications dans des environnements Kubernetes et d'autres concepts inclus dans la CKA et la CKAD."
 
-- name: Terraform
-  logo: /images/skills/terraform.png
-  summary: "[Je suis certifié Terraform](#about) et j'ai travaillé à développer des modules IaC sur Azure pour mon stage chez Devoteam M Cloud 👷"
-
-- name: GitHub Actions
-  logo: /images/skills/github.png
-  summary: "Je suis aussi [certifié GitHub](#about) et pour mon stage chez Devoteam M Cloud j'ai configuré une pipeline CI/CD pour Terraform to Azure. J'ai aussi un workflow CI/CD [sur mon site personnel](https://github.com/timothechauvet/timothechauvet.github.io/actions/workflows/pages.yml) 🐙"
-
-- name: Linux
-  logo: /images/skills/linux.png
-  summary: "Je travaille sous environnement Linux/UNIX depuis le collège et j'ai pu réaliser plusieurs travaux scolaires dans ces environnements (Ubuntu/Mint, MacOS, Fedora) 🐧"
+- name: Microsoft Azure
+  logo: /images/skills/azure.webp
+  summary: "Fort de 4 expériences avec le cloud Microsoft, je me suis formé sur les examens AZ et je suis formateur MCT autour d'Azure. J'ai pu mettre en œuvre différents services Azure, dont certains à titre personnel."
 
 - name: Cloud Computing
-  logo: /images/skills/cloud.png
-  summary: "En plus de mon fournisseur préféré, j'ai aussi eu l'occasion de travailler avec d'autres clouds (Oracle OCI, Google GCP, Amazon AWS, OVH) ☁️"
+  logo: /images/skills/cloud.webp
+  summary: "Au-delà d'Azure, je suis curieux autour des autres cloud provider : Oracle OCI et Google GCP à titre personnel, Amazon AWS à titre expérimental, OVH pour le cloud web. J'ai aussi travaillé sur un sujet de migration Cloud."
 
-- name: Dev
-  logo: /images/skills/vscode.png
-  summary: "Au-delà de développer des modules Terraform, j'ai aussi eu l'occasion de développer dans différents langages (Python, JS, Java, PHP, dev mobile...) 🧑‍💻"
+- name: CI/CD
+  logo: /images/skills/devops.webp  
+  summary: "J'ai développé diverses pipelines CI/CD avec GitHub Actions et Azure DevOps pendant mon stage, GitLab CI et Jenkins chez Carrefour. Je suis un fervent partisan de l'automatisation et c'est ce que j'utilise pour mon blog."
+
+- name: Infrastructure-as-Code
+  logo: /images/skills/iac.webp
+  summary: "Je maîtrise les technologies d'IaC depuis que j'ai commencé ma carrière. Terraform pour commencer, puis Helm et Ansible un an après. J'ai récemment compris le fonctionnement de Vault en passant la certif associée."
+
+- name: Formation pour adultes
+  logo: /images/skills/mct.webp 
+  summary: "En tant que formateur Microsoft certifié (MCT), j'ai dispensé des formations sur Azure. J'ai aussi accompagné des collègues, des stagiaires et des étudiants dans leur développement professionnel."

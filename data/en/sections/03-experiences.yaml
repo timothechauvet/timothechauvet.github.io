@@ -10,6 +10,19 @@ section:
 # Experiences
 experiences:
 - company:
+    name: Carrefour
+    url: https://carrefour.com/
+    location: Massy
+    overview: Carrefour is one of the global leaders in retail
+  positions:
+  - designation: Ops front & back (Devoteam)
+    start: Apr 2023
+    responsibilities:
+    - Run, build, troubleshooting and on-call duty
+    - Migrations (Git->git, IaaS->PaaS, Kubernetes...)
+    - Jenkins, GitLab CI, Ansible, Helm, Terraform...
+
+- company:
     name: Devoteam M Cloud
     url: https://mcloud.devoteam.com/fr/
     location: Levallois-Perret
@@ -18,7 +31,9 @@ experiences:
   - designation: DevOps & Cloud Engineer consultant
     start: Apr 2023
     responsibilities:
-    - Operational work at [Carrefour](https://www.carrefour.com)
+    - Consultant at Carrefour
+    - Coaching interns
+    - Company outreach
 
   - designation: Apps Engineer consultant
     start: Oct 2022

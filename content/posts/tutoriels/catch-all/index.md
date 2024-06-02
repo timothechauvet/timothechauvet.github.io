@@ -100,7 +100,7 @@ Une fois que vous avez votre nom de domaine, il faut maintenant vous débarrasse
 </br>
 </br>
 
-## 2. Inscrire son site sur Cloudflare
+## 2. Inscrire son site sur CloudFlare
 
 La deuxième étape consiste à s'inscrire sur CloudFlare, qui permet la fonctionnalité Catch-All et est gratuit.
 

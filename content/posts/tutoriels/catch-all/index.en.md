@@ -57,7 +57,7 @@ The idea behind using a different email is that it becomes more difficult to tra
 |                    | Anonymity | Spam management | Breach-proof | Setup | Use | Price                   |
 |:--------------------:|:--------:|:-----------------:|:-----------:|:-------------:|:-----------:|:----------------------:|
 | Personal email         | 🌧️        | ⛅ (filters)       | 🌧️           | ☀️             | ☀️           | 0€                     |
-| 2nd trash email  | ⛅️        | ☀️                 | 🌧️           | ⛅️             | ☀️           | 0€                     |
+| Trash email  | ⛅️        | ☀️                 | 🌧️           | ⛅️             | ☀️           | 0€                     |
 | Alias +            | ⛅️        | ⛅ (filters)       | ⛅️           | ☀️             | ⛅️           | 0€                     |
 | Email generator | ☀️        | ☀️                 | ☀️           | 🌧️             | 🌧️           | 12€/year</br>(Firefox Relay) |
 | Temporary email    | ☀️        | ☀️                 | ☀️           | ⛅️             | 🌧️           | 0€                     |
@@ -86,33 +86,33 @@ To begin, let's buy a domain name. My favorite registrar, OVH, offers them at lo
 1. Go to [OVH](https://www.ovh.com/fr/domaines/) or another registrar of your choice
 2. Search for an available domain, for example timomail.fr
 3. Add it to your cart
-4. Don't take any hosting, you don't need it. Uncheck options such as "DNS accelerator" which are paid
+4. Don't buy any hosting option, you don't need it. Uncheck "DNS accelerator" and such, which are paid
 5. Optionally, reserve your domain name for several years, the price of which will naturally increase each year
-6. Pay by creating an account
+6. Pay and create your account
 7. Wait for your domain name to be available on your portal (about 15min)
 
 </br>
 
-Once you have your domain name, you now need to get rid of the DNS servers for those of CloudFlare.
+Once you have your domain name, you now need to get rid of the current DNS servers for those of CloudFlare.
 
 </br>
 </br>
 
-## 2. Register your site on Cloudflare
+## 2. Register your domain on CloudFlare
 
 The second step is to register on CloudFlare, which allows the Catch-All functionality and is free.
 
 1. [Register on CloudFlare](https://dash.cloudflare.com/sign-up?pt=f) if it's not already done
 2. Once on your interface, click on "Add a site"
 3. Enter your domain name and choose the Free option
-4. CloudFlare needs to scan the site, and then offers to change the DNS servers
+4. CloudFlare needs to scan the domain, and then prompts you to change the DNS servers
 5. Copy the 2 DNS servers and replace those in the "DNS Servers" tab of your registrar
-6. Wait for CloudFlare to validate the DNS server change (about 15min)
+6. Wait for CloudFlare to validate the change (about 15min)
 
 </br>
 
 <p align="center">
-  <img src="cloudflare_dns.webp" alt="CloudFlare asks to install 2 DNS servers" width=400/>
+  <img src="cloudflare_dns.webp" width=400/>
   <p style="text-align: center;"><i>CloudFlare asks to install 2 DNS servers</i></p>
 </p>
 
@@ -120,18 +120,39 @@ The second step is to register on CloudFlare, which allows the Catch-All functio
 
 ## 3. Configure the Catch-All email
 
-Now that your domain is on CloudFlare servers, you can manage DNS entries as you like. For the purposes of this tutorial, we won't need them.
+Now that your domain is on CloudFlare servers, you can manage DNS entries as you like. For the purposes of this tutorial, we won't need to do that.
 
 1. In the "Email" tab, go to "Email routing"
 2. Do "Getting started" then "Skip" to skip the configuration
 3. You should have a text "Email Routing is currently disabled and not routing emails. Enable Email Routing"; click on "Enable Email Routing" if so
 4. Delete all the records that CloudFlare shows, and add the ones proposed by CloudFlare
 5. Once the change is made (1-2min), go to the "Routing rules" option
-6. In "Catch-all address", configure the action to "Send to an email" then put the email that will receive all emails sent to the domain
+6. In "Catch-all address", configure the action to "Send to an email" then put the recipient email that will receive all emails sent to the domain
 7. Save, and remember to activate the option in "Status"
 
 </br>
 </br>
 
 <p align="center">
-  <img src="cloudflare_routing.webp" alt="
+  <img src="cloudflare_routing.webp" width=600/>
+  <p style="text-align: center;"><i>Make sure the Active option is enabled</i></p>
+</p>
+
+</br>
+</br>
+
+# Conclusion
+
+It wasn't that complicated, was it? By taking an hour out of your weekend and €7 a year, you can now receive your emails at as many addresses as you like, while keeping just one main email.
+
+Please bear these points in mind:
+- Your *registrar* may publish information about you. Find out about `hide whois <your-registrar>` if you haven't chosen OVH (which hides this information by default).
+- Make sure you keep payment active on your *registrar*, otherwise you risk losing your domain! In all cases, you'll be notified by email before the expiration date.
+- Some sites **require** you to enter an email address on Gmail or Outlook. Refer to the “Trash email” option 👀
+- You can't send mail with this address, only receive it. 
+  - Actually you can, but it requires configuration with another mail service, which means removing the Catch-All if that mail service doesn't have the option.
+  - Google Workspace and ProtonMail Plus allow you to send/receive mail with your domain in addition to Catch-All, but you have to pay for them. There are others ones I don't know about.
+  - Alternatively, you can reply with the recipient email mentioned in step 3.6.
+
+---
+If you have any questions or suggestions, please don't hesitate to contact me by [mail](mailto:timothe@chauvet.cloud), on [LinkedIn](https://www.linkedin.com/in/timothechauvet/) or directly by opening [an *issue* on GitHub](https://github.com/timothechauvet/timothechauvet.github.io/issues)

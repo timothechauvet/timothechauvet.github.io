@@ -155,8 +155,6 @@ En revanche je ne recommande pas de les passer sans s'exercer. Après 20 ans d'�
 
 Merci à Benjamin Attali, Antoine Bouchareissas, Danaé Bétolaud, Elisa Abitbol et Cécile Augusti d'avoir contribué à la rédaction de cet article
 
-🤖 Cet article a été écrit <u>sans</u> l'aide d'une IA
-
 Bannière "Diplôme" générée par [DALL•E](https://labs.openai.com)
 
 Si vous avez des questions ou des suggestions, n'hésitez pas à me contacter par [mail](mailto:timothe@chauvet.cloud), sur [LinkedIn](https://www.linkedin.com/in/timothechauvet/) ou directement en envoyant [une *issue* sur GitHub](https://github.com/timothechauvet/timothechauvet.github.io/issues)

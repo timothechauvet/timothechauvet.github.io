@@ -10,7 +10,7 @@ section:
 # Education experiences
 degrees:
 - name: Formateur Microsoft MCT
-  icon: fa-microsoft
+  icon: fa-brands fa-microsoft
   timeframe: Depuis 2023
   institution:
     name: Cellenza Training

@@ -9,6 +9,26 @@ section:
 
 # Education experiences
 degrees:
+- name: Formateur Microsoft MCT
+  icon: fa-microsoft
+  timeframe: Depuis 2023
+  institution:
+    name: Cellenza Training
+    url: https://training.cellenza.com
+  
+  takenCourses: 
+    showGrades: false
+    collapseAfter: 2
+    courses:
+    - name: Mise en situation et évaluation finale
+    - name: Développer un enseignement performant
+    - name: Parler longtemps sans ennuyer
+    - name: Etablir un lien individuel
+    - name: Créer une dynamique de groupe
+    - name: Gérer les conflits
+    - name: Etre professionnel en formation présentielle comme distancielle 
+    - name: Utiliser les outils Microsoft pour les MCT
+  
 - name: Diplôme d'ingénieur informatique
   icon: fa-robot
   timeframe: 2017-2022

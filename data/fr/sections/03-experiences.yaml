@@ -10,6 +10,18 @@ section:
 # Experiences
 experiences:
 - company:
+    name: Bleu Cloud
+    url: https://bleucloud.fr
+    location: La Défense
+    overview: Bleu Cloud est le cloud de confiance Microsoft qui vise une certification SecNumCloud 3.2 d'ici 2025 
+  positions:
+  - designation: Ops Azure
+    start: Sep 2024
+    responsibilities:
+    - Maintien en conditions opérationnelles
+    - Livraison Azure
+
+- company:
     name: Carrefour
     url: https://carrefour.com/
     location: Massy

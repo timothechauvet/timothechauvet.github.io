@@ -9,14 +9,12 @@ section:
 # Professional informations
 designation: Ingénieur Cloud
 company:
-  name: Devoteam M Cloud
-  url: https://mcloud.devoteam.com/fr/
+  name: Bleu Cloud
+  url: https://bleucloud.fr
 summary: |
   Je suis diplômé de [l'Efrei](https://efrei.fr/), l'école du numérique, avec un diplôme d'ingénieur informatique (2022) 🎓 
 
-  J'aspire à devenir Architecte Cloud 👷 
-  
-  Mon objectif est d'apporter ma 1ère pierre à l'édifice le plus rapidement possible !
+  J'adore partager ma passion d'Azure autour de formations et j'aspire à devenir Architecte Cloud
 socialLinks:
 - name: Email
   icon: fas fa-envelope

@@ -9,6 +9,26 @@ section:
 
 # Education experiences
 degrees:
+- name: Microsoft MCT Trainer
+  icon: fa-microsoft
+  timeframe: Since 2023
+  institution:
+    name: Cellenza Training
+    url: https://training.cellenza.com
+  
+  takenCourses: 
+    showGrades: false
+    collapseAfter: 2
+    courses:
+    - name: Final assessment
+    - name: Developing effective teaching
+    - name: Talking long without boring
+    - name: Establishing an individual bond
+    - name: Creating group dynamics
+    - name: Managing conflicts
+    - name: Being professional in face-to-face and distance training 
+    - name: Using Microsoft MCT tools
+
 - name: Diploma in computer engineering
   icon: fa-robot
   timeframe: 2017-2022

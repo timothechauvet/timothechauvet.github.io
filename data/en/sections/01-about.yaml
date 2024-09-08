@@ -9,14 +9,12 @@ section:
 # Professional informations
 designation: Cloud Engineer
 company:
-  name: Devoteam M Cloud
-  url: https://mcloud.devoteam.com/
+  name: Bleu Cloud
+  url: https://bleucloud.fr
 summary: |
   I graduated [Efrei](https://eng.efrei.fr/), the digital engineering school, with a master's degree in 2022 🎓 
 
-  I aspire to become a Cloud Architect 🏅 
-  
-  My goal is to laid the first brick in the building as quickly as possible !
+  I love to share my passion of Azure and aspire to become a Cloud Architect 
 socialLinks:
 - name: Email
   icon: fas fa-envelope

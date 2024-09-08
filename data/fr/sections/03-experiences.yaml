@@ -29,6 +29,7 @@ experiences:
   positions:
   - designation: Ops middleware & back-end (Devoteam)
     start: Avr 2023
+    env: Sep 2024
     responsibilities:
     - Run, build, résolution d'incidents et astreintes
     - Migrations (Git->git, IaaS->PaaS, Kubernetes...)
@@ -42,6 +43,7 @@ experiences:
   positions:
   - designation: Consultant DevOps & Cloud
     start: Avr 2023
+    end: Sep 2024
     responsibilities:
     - Mission chez Carrefour
     - Accompagnement des stagiaires

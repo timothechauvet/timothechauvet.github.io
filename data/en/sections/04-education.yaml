@@ -10,7 +10,7 @@ section:
 # Education experiences
 degrees:
 - name: Microsoft MCT Trainer
-  icon: fa-brands fa-microsoft
+  icon: fa-graduation-cap
   timeframe: Since 2023
   institution:
     name: Cellenza Training
@@ -30,7 +30,7 @@ degrees:
     - name: Using Microsoft MCT tools
 
 - name: Diploma in computer engineering
-  icon: fa-robot
+  icon: fa-graduation-cap
   timeframe: 2017-2022
   institution:
     name: Efrei Paris Panthéon Assas Université
@@ -63,7 +63,7 @@ degrees:
   - Collaboration with the administrative team for cohesion
 
 - name: Italian courses
-  icon: fa-pizza-slice
+  icon: fa-graduation-cap
   timeframe: Sep 2021
   institution:
     name: ABC Scuola
@@ -75,7 +75,7 @@ degrees:
     - name: Italian
 
 - name: Immersion abroad
-  icon: fa-earth-asia
+  icon: fa-graduation-cap
   timeframe: Sep - Dec 2019
   institution:
     name: Southeast University 东南大学

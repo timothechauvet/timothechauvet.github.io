@@ -131,7 +131,7 @@ CMD ["python", "my_bot.py"]
 
 </br>
 
-And to test, run this command:
+And to test, run this command (replace the placeholder with the correct bot token):
 
 ```sh
 docker build -t my_python_bot . && docker run -d --name my_python_bot -e TELEGRAM_BOT_TOKEN="1234567890:AABBCCDDEEFF-gghhiijjkkllmmnnoo123"  my_python_bot
@@ -234,8 +234,10 @@ As far as development goes, a Telegram bot doesn't require a lot of skills. Usin
 
 There are many costly ways to host a Telegram bot. I didn't choose the most economical way, but it allowed me to learn quite a few things.
 
-Keep in mind that it's not possible to host two instances of Telegram bots, so no acceptable redundancy, unfortunately.
+Keep in mind that it's not possible to host two instances of Telegram bots in parallel, so no acceptable redundancy, unfortunately.
 
 ---
+
+Lazily translated from French using Claude 3.5 Sonnet with Perplexity
 
 If you have any questions or suggestions, feel free to contact me by [email](mailto:timothe@chauvet.cloud), on [LinkedIn](https://www.linkedin.com/in/timothechauvet/) or directly by sending [an issue on GitHub](https://github.com/timothechauvet/timothechauvet.github.io/issues)

@@ -131,7 +131,7 @@ CMD ["python", "mon_bot.py"]
 
 </br>
 
-Et pour tester, lancez cette commande
+Et pour tester, lancez cette commande (en remplaçant le token par le bon)
 
 ```sh
 docker build -t mon_bot_python . && docker run -d --name mon_bot_python -e TELEGRAM_BOT_TOKEN="1234567890:AABBCCDDEEFF-gghhiijjkkllmmnnoo123"  mon_bot_python
@@ -234,7 +234,7 @@ Pour ce qui est du développement, un robot Telegram ne demande pas beaucoup de 
 
 Il y a beaucoup de moyens bien coûteux pour héberger un robot Telegram. Je n'ai pas choisi la manière la plus économique mais ça m'a permis d'apprendre pas mal de choses. 
 
-Gardez bien à l'esprit qu'il n'est pas possible d'héberger deux instances de robots Telegram, donc pas de redondance acceptable hélas
+Gardez bien à l'esprit qu'il n'est pas possible d'héberger deux instances de robots Telegram en parallèle, donc pas de redondance acceptable hélas
 
 ---
 

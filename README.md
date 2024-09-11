@@ -48,7 +48,7 @@ My website is using GitHub Actions for its Continuous Deployment capabilities. M
 - [x] Lighthouse compliance
 - [x] First blog post
 - [x] Privacy Policy & GDPR compliance
-- [ ] Bug template
+- [x] Bug template
 
 ## Contributing
 

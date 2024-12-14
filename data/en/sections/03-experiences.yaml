@@ -10,16 +10,27 @@ section:
 # Experiences
 experiences:
 - company:
+    name: Freelance
+    location: Home
+    overview: Working as a DevOps engineer 
+  positions:
+  - designation: DevOps engineer
+    start: Dec 2024
+    responsibilities:
+    - Run, build, troubleshooting and on-call duty
+
+- company:
     name: Bleu Cloud
     url: https://bleucloud.fr
     location: La Défense
     overview: Bleu Cloud is the French Azure cloud that aims to be SecNumCloud 3.2-certified by 2025 
   positions:
-  - designation: Ops Azure
+  - designation: Cloud Architect
     start: Sep 2024
+    end: Dec 2024
     responsibilities:
-    - Operations
-    - Azure delivery
+    - Internal technical and commercial documentation
+    - Partners relations
 
 - company:
     name: Carrefour

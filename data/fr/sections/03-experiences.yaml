@@ -10,16 +10,27 @@ section:
 # Experiences
 experiences:
 - company:
+    name: Freelance
+    location: Chez moi
+    overview: Mission d'ingénieur DevOps 
+  positions:
+  - designation: Ingénieur DevOps
+    start: Dec 2024
+    responsibilities:
+    - Run, build, résolution d'incidents et astreintes
+
+- company:
     name: Bleu Cloud
     url: https://bleucloud.fr
     location: La Défense
     overview: Bleu Cloud est le cloud de confiance Microsoft qui vise une certification SecNumCloud 3.2 d'ici 2025 
   positions:
-  - designation: Ops Azure
+  - designation: Architecte Cloud
     start: Sep 2024
+    end: Dec 2024
     responsibilities:
-    - Maintien en conditions opérationnelles
-    - Livraison Azure
+    - Documentation interne technico-commerciale
+    - Relations partenaires
 
 - company:
     name: Carrefour

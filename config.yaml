@@ -91,6 +91,9 @@ params:
       enable: false
     analytics:
       enable: true
+      services:
+        goatCounter:
+          code: timothechauvet
 
   # Footer
   footer:

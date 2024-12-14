@@ -4,6 +4,8 @@ node_modules
 dist
 tmp
 package-lock.json
+package.json
+go.sum
 
 # Generated files by hugo
 /public/

@@ -7,10 +7,7 @@ section:
   showOnNavbar: false
 
 # Professional informations
-designation: Ingénieur Cloud
-company:
-  name: Bleu Cloud
-  url: https://bleucloud.fr
+designation: Ingénieur DevOps
 summary: |
   Je suis diplômé de [l'Efrei](https://efrei.fr/), l'école du numérique, avec un diplôme d'ingénieur informatique (2022) 🎓 
 
@@ -35,59 +32,59 @@ socialLinks:
 badges:
 - type: certification
   name: Microsoft Certified Trainer (MCT)
-  badge: ../images/about/mct.webp
+  badge: https://publicstorageacctim110.blob.core.windows.net/timothechau-vet/cert-icons/mct.webp
 
 - type: certification
   name: Certified Kubernetes Administrator
   url: https://www.credly.com/badges/fa8631a2-b273-4ead-91ae-8055f9971b7a/public_url
-  badge: ../images/about/cka.webp
+  badge: https://publicstorageacctim110.blob.core.windows.net/timothechau-vet/cert-icons/cka.webp
 
 - type: certification
   name: Certified Kubernetes Application Developer
   url: https://www.credly.com/badges/f4dcc5e1-8412-4635-a76e-1363b646c3eb/public_url
-  badge: ../images/about/ckad.webp
+  badge: https://publicstorageacctim110.blob.core.windows.net/timothechau-vet/cert-icons/ckad.webp
 
 - type: certification
   name: Azure DevOps Engineer (AZ-400)
   url: https://www.credly.com/badges/09cbfc6c-2b53-40f9-96c0-c4cd08ef607f/public_url
-  badge: ../images/about/az-400.webp
+  badge: https://publicstorageacctim110.blob.core.windows.net/timothechau-vet/cert-icons/az-400.webp
 
 - type: certification
   name: Azure Security Engineer (AZ-500)
   url: https://www.credly.com/badges/e1b2516c-779e-41d7-a41b-dea126accaac/public_url
-  badge: ../images/about/az-500.webp
+  badge: https://publicstorageacctim110.blob.core.windows.net/timothechau-vet/cert-icons/az-500.webp
 
 - type: certification
   name: Azure Administrator Associate (AZ-104)
   url: https://www.credly.com/badges/6bcc3e08-70bd-421e-83c0-922e8ac13fe4/public_url
-  badge: ../images/about/az-104.webp
+  badge: https://publicstorageacctim110.blob.core.windows.net/timothechau-vet/cert-icons/az-104.webp
 
 - type: certification
   name: AWS Certified Cloud Practitioner
   url: https://www.credly.com/badges/1cf1a2be-88a6-4bc4-838a-1bee1208e604/public_url
-  badge: ../images/about/aws-cloud-practitioner.webp
+  badge: https://publicstorageacctim110.blob.core.windows.net/timothechau-vet/cert-icons/aws-cloud-practitioner.webp
 
 - type: certification
   name: Vault Associate (002)
   url: https://www.credly.com/badges/2d7eca10-d849-462a-a891-a94f2470d66a/public_url
-  badge: ../images/about/hashicorp-vault.webp
+  badge: https://publicstorageacctim110.blob.core.windows.net/timothechau-vet/cert-icons/hashicorp-vault.webp
 
 - type: certification
   name: Terraform Associate (003)
   url: https://www.credly.com/badges/b2d4b79d-8fbc-485e-a1e5-4b5387401a67/public_url
-  badge: ../images/about/hashicorp-terraform.webp
+  badge: https://publicstorageacctim110.blob.core.windows.net/timothechau-vet/cert-icons/hashicorp-terraform.webp
 
 - type: certification
   name: Oracle Cloud Infrastructure Foundations 2021 Associate
   url: https://catalog-education.oracle.com/pls/certview/sharebadge?id=9D5F26B9D773A654CC834E7591195BD4C57E76A756F000876121C684F57015BE
-  badge: ../images/about/oracle.webp
+  badge: https://publicstorageacctim110.blob.core.windows.net/timothechau-vet/cert-icons/oracle.webp
 
 - type: certification
   name: GitHub Administration
   url: https://www.credly.com/badges/e31b2e7f-81ec-4f41-a4fb-fc267bf307a5/public_url
-  badge: ../images/about/github-admin.webp
+  badge: https://publicstorageacctim110.blob.core.windows.net/timothechau-vet/cert-icons/github-admin.webp
 
 - type: certification
   name: GitHub Actions
   url: https://www.credly.com/badges/7e8689c8-4ebc-4470-b219-baca493a83db/public_url
-  badge: ../images/about/github-actions.webp
+  badge: https://publicstorageacctim110.blob.core.windows.net/timothechau-vet/cert-icons/github-actions.webp

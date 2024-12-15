@@ -1,14 +1,20 @@
 ---
-title: "Son propre Kubernetes ☸️"
+title: "Kubernetes mono-node ☸️"
 date: 2024-12-14
 hero: catch-all.webp
 description: La manière dont je me suis pris pour avoir mon propre Kubernetes
 theme: Toha
 ---
 
-[*Read this article in english*](https://timothechau.vet/en/posts/tutoriels/k3s/)
+Pour un ami j'avais décidé de [coder un bot Telegram et de l'héberger sur Docker](google.fr/tutoriels/telegram-bot-python/). En réalité, c'était le début d'un long calvaire pour comprendre que je n'arriverais pas à garder uniquement Docker et configurer un reverse proxy, car je suis trop mauvais pour ça.
 
-Pour un ami j'avais décidé de [coder un bot Telegram et de l'héberger sur Docker](../tutoriels/telegram-bot-python/). 
+À la place, **j'ai installé K3s qui m'a permis d'avoir un Kubernetes en single-node**, c'est-à-dire sur une seule VM.
+
+# Comment s'y prendre
+
+Ce tutoriel n'a rien de mirobolant, mais pour des néophytes j'ai voulu faire simple
+
+1. 
 
 Imaginez juste : 
 - Vous allez dans votre boutique [Le Caleçon Français](https://www.zdnet.fr/actualites/le-slip-francais-victime-dune-fuite-de-donnees-390787.htm) préférée.

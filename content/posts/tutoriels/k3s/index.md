@@ -1,166 +1,163 @@
 ---
-title: "Kubernetes mono-node ☸️"
+title: "Kubernetes mono-node avec reverse proxy ☸️"
 date: 2024-12-14
 hero: catch-all.webp
 description: La manière dont je me suis pris pour avoir mon propre Kubernetes
 theme: Toha
 ---
 
-Pour un ami j'avais décidé de [coder un bot Telegram et de l'héberger sur Docker](google.fr/tutoriels/telegram-bot-python/). En réalité, c'était le début d'un long calvaire pour comprendre que je n'arriverais pas à garder uniquement Docker et configurer un reverse proxy, car je suis trop mauvais pour ça.
+Pour un ami, j'avais [codé un bot Telegram et conteneurisé l'appli avec Docker](../telegram-bot-python/). En réalité, c'était le début d'un long calvaire pour garder uniquement Docker et configurer un reverse proxy, car je suis trop mauvais pour ça.
 
-À la place, **j'ai installé K3s qui m'a permis d'avoir un Kubernetes en single-node**, c'est-à-dire sur une seule VM.
+À la place, **j'ai installé k3s qui m'a permis d'avoir Kubernetes en single-node**, c'est-à-dire sur une seule VM. Kubernetes permet d'orchestrer les conteneurs, et donc de résoudre pas mal de mes soucis.
 
-# Comment s'y prendre
+{{< vs 4>}}
 
-Ce tutoriel n'a rien de mirobolant, mais pour des néophytes j'ai voulu faire simple
+## Comment s'y prendre
 
-1. 
+Ce tutoriel n'a rien de mirobolant. Mais j'ai fait ce tutoriel car k3s n'arrive pas avec toutes les fonctionnalités dont j'ai eu besoin. Voici comment faire.
 
-Imaginez juste : 
-- Vous allez dans votre boutique [Le Caleçon Français](https://www.zdnet.fr/actualites/le-slip-francais-victime-dune-fuite-de-donnees-390787.htm) préférée.
-- On vous propose une carte de fidelité pour récompenser le bon client que vous êtes. 
-- On vous demande votre email.
-- Vous répondez tout fièrement : *"caleçon arobase timomail point fr"*. 
-- La personne à la caisse, interloquée, vous demande de répéter. 
+1. Avoir une VM sous Linux. 2 CPU et 2Go de RAM minimum feront l'affaire
+1. Avoir les ports *80* et *443* ouverts en TCP en inbound (NSG, firewall, iptables, ufw, en fonction de ce que vous avez) 
+1. Installer [Docker](https://docs.docker.com/desktop/setup/install/linux/) (sauf si containerD vous suffit)
+1. Installer k3s : `curl -sfL https://get.k3s.io | sh -`
+1. Activer k3s au prochain redémarrage avec `sudo systemctl enable k3s`
+1. Ajouter la ligne `export KUBECONFIG=/etc/rancher/k3s/k3s.yaml` à votre fichier "rc" (.bashrc, .zshrc, que sais-je)
+    - Note : en cas de problème, vous pouvez agrandir les permissions du fichier k3s avec `sudo chmod 644 /etc/rancher/k3s/k3s.yaml` (pas recommandé)
+1. Installer ingress-nginx pour vos ressources ingress (ici si vous passez par un cloud provider) `kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.11.3/deploy/static/provider/cloud/deploy.yaml`
+1. Installer cert-manager pour activer HTTPS par la suite avec `kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.16.1/cert-manager.yaml`
+1. Installer MetalLB pour créer des LoadBalancer avec `kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.14.8/config/manifests/metallb-native.yaml`
 
-Eh oui, elle a pourtant bien entendu. Vous auriez aussi pu répondre `lecaleçonfrançais@timomail.fr`, `lcf@timomail.fr` ou même `ils-vont-me-prendre-la-tête-encore-combien-de-temps@timomail.fr` que ça aurait fonctionné.
+{{< vs 2>}}
 
-Même en n'ayant pas créé explicitement l'adresse `caleçon@timomail.fr`, vous pouvez être sûr que les newsletters arriveront bien à destination. C'est parce-que vous avez activé le Catch-All sur timomail.fr que c'est possible
+{{< alert type="info" >}}
+Pour tous les fichiers `.yaml` qui suivent, vous pourrez les appliquer avec la commande `kubectl apply -f monfichier.yaml`
+{{< /alert >}}
 
-J'ai mentionné des réserves en conclusion qui sont à prendre en considération.
+{{< vs 4>}}
 
-</br>
+### Configurer MetalLB 
 
-<p align="center">
-  <img src="catch-all.webp" alt="Illustration rouge-orange" width=400/>
-  <p style="text-align: center;"><i>Bannière "Enveloppes" générée par Dall•E sur ChatGPT</i></p>
-</p>
+MetalLB doit pouvoir créer des LoadBalancer grâce à une liste d'IPs disponibles. Pour déterminer quelle rangée utiliser :
+- lancer `hostname -I`
+- prendre une liste d'adresses qui ne touche pas les IPs listées.
 
-</br>
+Créer et appliquer le fichier `metallb.yaml` :
 
-# Mais pourquoi utiliser un mail différent à chaque fois ?
-</br>
+```yaml
+apiVersion: metallb.io/v1beta1
+kind: IPAddressPool
+metadata:
+  name: first-pool
+  namespace: metallb-system
+spec:
+  addresses:
+  - 10.0.0.240-10.0.0.250 # à adapter selon votre réseau
 
-Selon [le site Have I Been Pwned](https://haveibeenpwned.com/) qui recense les fuites de données, **on compte au moins 13 milliards d'identifiants compromis**. Ceux-ci n'intègrent pas forcément les mots de passe, mais si vous réutilisez le même sur chaque site, il est simplissime de vous pirater avec une seule brèche.
+---
+apiVersion: metallb.io/v1beta1
+kind: L2Advertisement
+metadata:
+  name: l2-advert
+  namespace: metallb-system
+spec:
+  ipAddressPools:
+  - first-pool
+```
 
-Si j'ai toujours utilisé un mot de passe différent à chaque compte, je n'ai que très récemment commencé à utiliser un mail différent à chaque compte aussi. **Qui d'entre-nous n'a pas déjà fait un _mail poubelle_** pour 
+{{< vs 4>}}
 
-- éviter les spams
-- se protéger des fuites 
-- ou généralement s'inscrire sur un site louche ? (oui, on l'a tous fait)
+### Configurer Let's Encrypt
 
-</br>
+Let's Encrypt doit pouvoir certifier que vos noms de domaines vous appartiennent. Créer un fichier `clusterissuer-letsencrypt.yaml`
 
-L'idée derrière l'utilisation d'un mail différent est qu'il devient plus compliqué de retracer tous vos comptes. Plusieurs méthodes existent :
-- `Créer un mail poubelle` : un mail que vous n'utilisez que pour les sites louche, mais que vous réutiliserez souvent
-- `Utiliser les alias +` : option disponible sur certains fournisseurs de mail comme Gmail ou Proton, qui consiste à ajouter un + après l'identifiant. Par exemple, timothe+badoo@gmail.com renverra les mails reçus sur timothe@gmail.com. L'inconvénient est que certains sites ne l'acceptent pas, et une personne connaissant l'astuce peut simplement enlever le + pour retrouver votre adresse
-- `Souscrire à un générateur de mails` qui vous permettra de créer des mails à la volée, comme [Firefox Relay](https://relay.firefox.com/) ou [Proton Pass](https://proton.me/fr/pass/aliases). Il est aussi possible de les désactiver pour stopper les mails, ou bloquer les spams à la racine. Cette option demande de générer le mail avant de l'utiliser
-- `Utiliser un mail temporaire` qui s'autodétruira après un certain moment, comme [Temp Mail](https://temp-mail.org/). L'inconvénient est qu'une fois le mail détruit, vous ne pourrez plus voir vos mails
-- `Utiliser un mail Catch-All` : une adresse qui reçoit tous les mails envoyés à n'importe quel identifiant de votre domaine. L'inconvénient est qu'il faille le configurer et que vous devez posséder un nom de domaine
+```yaml
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: letsencrypt-prod
+spec:
+  acme:
+    server: https://acme-v02.api.letsencrypt.org/directory
+    email: timothe@chauvet.cloud # à remplacer
+    privateKeySecretRef:
+      name: letsencrypt-prod
+    solvers:
+    - http01:
+        ingress:
+          class: traefik
+```
 
-</br>
+Comme ça, si vous avez besoin d'un certificat, vous pourrez en créer un avec un fichier `certificate-yourls.yaml` par exemple : 
+
+```yaml
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: yourls-tls
+  namespace: default
+spec:
+  secretName: yourls-tls
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  dnsNames:
+  - tmth.fr
+```
+
+## Héberger mes applis
+
+### Mon bot Telegram
+
+Pour mon bot Telegram, c'était plutôt simple car il n'a pas besoin de recevoir des requêtes HTTP. Un simple déploiement a suffi
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: telebot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: telebot
+  template:
+    metadata:
+      labels:
+        app: telebot
+    spec:
+      restartPolicy: Always
+      containers:
+      - name: telebot
+        image: ghcr.io/timothechauvet/telebot:latest
+        env:
+        - name: TELEGRAM_BOT_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: telebot-secrets
+              key: TELEGRAM_BOT_TOKEN
+        - name: HASHED_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: telebot-secrets
+              key: HASHED_PASSWORD
+      imagePullSecrets:
+      - name: ghcr-secret
+```
+
+Je ne vais évidemment pas vous envoyer mes secrets en clair.
 
 
-|                    | Anonymat | Gestion des spams | Para-fuites | Mise en place | Utilisation | Prix                   |
-|--------------------:|:--------:|:-----------------:|:-----------:|:-------------:|:-----------:|:----------------------:|
-| Mail perso         | 🌧️        | ⛅ (filtres)       | 🌧️           | ☀️             | ☀️           | 0€                     |
-| 2nd mail poubelle  | ⛅️        | ☀️                 | 🌧️           | ⛅️             | ☀️           | 0€                     |
-| Alias +            | ⛅️        | ⛅ (filtres)       | ⛅️           | ☀️             | ⛅️           | 0€                     |
-| &nbsp;&nbsp;Générateur de mail | ☀️        | ☀️                 | ☀️           | 🌧️             | 🌧️           | 12€/an</br>(Firefox Relay) |
-| Mail temporaire    | ☀️        | ☀️                 | ☀️           | ⛅️             | 🌧️           | 0€                     |
-| Mail catch-all     | ☀️        | ☀️                 | ☀️           | 🌧️             | ☀️           | 7€/an</br>(domaine .fr)    |
+{{< img src="https://risibank.fr/cache/medias/0/23/2399/239915/full.gif" height="200" align="left" title="Néanmoins !!" >}}
 
-</br>
+**Néanmoins !!**
 
-Je ne sais pas pour vous, mais moi je compte + de ☀️ dans l'option Catch-All. Pour ce qui est du 🌧️ dans la *mise en place*, on va remédier à ça dans cet article !
+J'ai pris la peine de publier la configuration de mes secrets que vous pouvez [retrouver sur mon GitHub](https://github.com/timothechauvet/mes-yaml-de-kube/tree/main/secrets). Donc n'hésitez pas à les prendre comme exemple si jamais !
+
+### Une appli HTTP
 
 
-</br>
-</br>
 
-## 1. Acheter un nom de domaine
 
-Pour commencer, achetons un nom de domaine. Mon *registrar* préféré, OVH, en propose à bas prix, mais n'importe-quel *registrar* permet de faire la même chose.
-
-</br>
-
-<p align="center">
-  <img src="ovh_interface.webp" alt="Interface de votre domaine"/>
-  <p style="text-align: center;"><i>Interface de gestion de votre domaine sur OVH</i></p>
-</p>
-
-</br>
-
-1. Allez sur [OVH](https://www.ovh.com/fr/domaines/) ou un autre *registrar* de votre choix
-2. Chercher un domaine disponible, par exemple timomail.fr
-3. Ajoutez-le à votre panier
-4. Ne prenez pas d'hébergement, vous n'en avez pas besoin. Décochez les options telles que "DNS accelerator" qui sont payantes
-5. Optionnellement, réservez votre nom de domaine sur plusieurs années, dont le prix va naturellement augmenter chaque année
-6. Payez en vous créant un compte
-7. Attendez que votre nom de domaine soit disponible sur votre portail (15min environ)
-
-</br>
-
-Une fois que vous avez votre nom de domaine, il faut maintenant vous débarrasser des serveurs DNS pour ceux de CloudFlare.
-
-</br>
-</br>
-
-## 2. Inscrire son site sur CloudFlare
-
-La deuxième étape consiste à s'inscrire sur CloudFlare, qui permet la fonctionnalité Catch-All et est gratuit.
-
-1. [S'inscrire sur CloudFlare](https://dash.cloudflare.com/sign-up?pt=f) si ce n'est pas déjà fait
-2. Une fois sur votre interface, cliquer sur "Add a site" 
-3. Rentrer son nom de domaine et choisir l'option Free
-4. CloudFlare doit scanner le site, et propose ensuite de changer les serveurs DNS
-5. Copier les 2 serveurs DNS et remplacer ceux dans l'onglet "Serveurs DNS" de votre *registrar*
-6. Attendre que CloudFlare valide le changement de serveurs DNS (15min environ)
-
-</br>
-
-<p align="center">
-  <img src="cloudflare_dns.webp" alt="CloudFlare demande d'installer 2 serveurs DNS" width=400/>
-  <p style="text-align: center;"><i>CloudFlare demande d'installer 2 serveurs DNS</i></p>
-</p>
-
-</br>
-
-## 3. Configurer le mail Catch-All
-
-Maintenant que votre domaine est sur les serveurs CloudFlare, vous pouvez gérer les entrées DNS comme vous voulez. Dans le cadre de ce tutoriel, on n'en aura pas besoin.
-
-1. Dans l'onglet "Email", aller dans "Email routing"
-2. Faire "Getting started" puis "Skip" pour ignorer la configuration
-3. Vous devriez avoir un texte "Email Routing is currently disabled and not routing emails. Enable Email Routing" ; cliquer sur "Enable Email Routing" si c'est le cas
-4. Supprimer tous les enregistrements que CloudFlare montre, et ajouter ceux proposés par CloudFlare
-5. Une fois le changement fait (1-2min), allez sur l'option "Routing rules" 
-6. Dans "Catch-all address", configurez l'action sur "Send to an email" puis mettre l'email qui recevra tous les mails envoyés au domaine
-7. Sauvegardez, et pensez à activer l'option dans "Status"
-
-</br>
-</br>
-
-<p align="center">
-  <img src="cloudflare_routing.webp" alt="Cocher l'option Active" width=600/>
-  <p style="text-align: center;"><i>Vérifiez que l'option Active est cochée</i></p>
-</p>
-
-</br>
-</br>
-
-# Conclusion
-
-Ce n'était pas si compliqué, non ? En prenant une petite heure de son week-end et 7€ par an, vous avez maintenant la possibilité de recevoir vos mails sur autant d'adresses que vous souhaitez, tout en ne gardant qu'un mail principal.
-
-Gardez bien en tête ces quelques points :
-- Il est possible que votre *registrar* diffuse des informations sur vous publiquement. Renseignez-vous sur `hide whois <votre-registrar>` si vous n'avez pas pris OVH (qui cache ces informations par défaut)
-- Garder bien le paiement actif sur votre *registrar*, sinon vous risquez de perdre votre domaine ! Dans tous les cas, vous serez prévenus par mail avant la date d'expiration
-- Certains sites **obligent** à entrer un mail sur Gmail ou Outlook. Référez-vous à l'option "Email poubelle" 👀
-- Vous ne pouvez pas envoyer de mail avec cette adresse, seulement en recevoir. 
-  - En fait si vous pouvez, mais ça demande une configuration avec un autre service mail, ce qui implique de retirer le Catch-All si jamais ce service de mail n'a pas l'option
-  - Google Workspace et ProtonMail Plus permettent d'envoyer/recevoir des mails avec votre domaine en plus du Catch-All, mais sont payants. Il y en a d'autres que je ne connais pas
-  - Sinon, vous pouvez aussi répondre avec l'email mentionné dans l'étape 3.6
 
 ---
 

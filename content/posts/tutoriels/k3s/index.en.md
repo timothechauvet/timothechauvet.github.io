@@ -6,9 +6,7 @@ description: Setting up a Catch-All email allows you to receive all emails sent 
 theme: Toha
 ---
 
-[*Lire cet article en français*](https://timothechau.vet/posts/tutoriels/catch-all/)
-
-Until now, whenever a restaurant or website asked for my email address, I was reluctant to give out my real address. I'm obsessed with never reusing the same password, and I also don't want my email address to be sold to third parties. If this is your case, there are several solutions, including the **Catch-All email address** which allows you to use any different addresses as you wish.
+Pour un ami j'avais décidé de [coder un bot Telegram et de l'héberger sur Docker](../telegram-bot-python/). En réalité, c'était le début d'un long calvaire pour comprendre que je n'arriverais pas à garder uniquement Docker et configurer un reverse proxy, car je suis trop mauvais pour ça.
 
 Just imagine:
 - You go to your favorite [Le Caleçon Français](https://www.zdnet.fr/actualites/le-slip-francais-victime-dune-fuite-de-donnees-390787.htm) store.

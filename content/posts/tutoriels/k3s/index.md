@@ -2,13 +2,13 @@
 title: "Son propre Kubernetes ☸️"
 date: 2024-12-14
 hero: catch-all.webp
-description: La manière dont je me suis prise pour avoir mon propre Kubernetes
+description: La manière dont je me suis pris pour avoir mon propre Kubernetes
 theme: Toha
 ---
 
 [*Read this article in english*](https://timothechau.vet/en/posts/tutoriels/k3s/)
 
-Pour un ami j'avais décidé de [coder un bot Telegram et de l'héberger sur Docker](google.fr/tutoriels/telegram-bot-python/). 
+Pour un ami j'avais décidé de [coder un bot Telegram et de l'héberger sur Docker](../tutoriels/telegram-bot-python/). 
 
 Imaginez juste : 
 - Vous allez dans votre boutique [Le Caleçon Français](https://www.zdnet.fr/actualites/le-slip-francais-victime-dune-fuite-de-donnees-390787.htm) préférée.

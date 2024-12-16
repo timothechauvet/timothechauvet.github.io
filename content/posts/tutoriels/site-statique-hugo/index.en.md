@@ -4,10 +4,8 @@ date: 2023-04-24
 hero: mascot.webp
 description: Host your Hugo static site with GitHub Pages and Actions for nothing
 theme: Toha
-tags: ["Translated", "Website"]
 ---
 
-[*Lire cet article en français*](https://timothechau.vet/posts/tutoriels/site-statique-hugo/)
 
 LinkedIn, Meta and Twitter want them down! To create content in the 20's era (from 2020 on), there is a plethora of platforms. Some are newborns (Mastodon, Notion), some are ephemeral (Google +, Skyblog), some are somewhat disliked (Facebook, Twitter), these have a life sometimes shorter than your washing machine. <u>But there is one platform that does not suffer from programmed obsolescence: blogs.</u>
 
@@ -41,7 +39,7 @@ In 2013, when Hugo Chávez left us, Hugo (the software, not the president of Ven
 Without going into details, it allows you to simply configure and launch your site. Open-source, free and easy to use, it has acquired a large community that has created a wide range of customizable themes. Hugo is **easy to configure**, and once done **you can forget it** and post content easily.
 
 <p align="center">
-  <img src="hugo-mascotte.webp" alt="Hugo mascot" width="150"/>
+  {{< img src="/posts/tutoriels/site-statique-hugo/hugo-mascotte.webp" align="center" alt="Hugo mascot" width="150" >}}
   <p style="text-align: center;"><i>Go and Hugo together make <a href="https://gohugo.io">Super-Hugo</a></i></p>
 </p>
 
@@ -358,7 +356,7 @@ Tip 💡: just save the file, the command "hugo serve" should automatically relo
 </br>
 
 <p align="center">
-  <img src="hugo-terminal-vide.webp" alt="Screenshot of the empty Terminal theme" width="500"/>
+  {{< img src="/posts/tutoriels/site-statique-hugo/hugo-terminal-vide.webp" align="center" alt="Screenshot of the empty Terminal theme" width="500" >}}
   <p style="text-align: center;"><i>Example with the <a href="https://github.com/panr/hugo-theme-terminal">Terminal</a> theme</i></p>
 </p>
 
@@ -425,7 +423,7 @@ Tip 💡 : you can translate your site into several languages. In most themes, y
 </br>
 
 <p align="center">
-  <img src="hugo-terminal-vert.webp" alt="Screenshot of the configured Terminal theme" width="500"/>
+  {{< img src="/posts/tutoriels/site-statique-hugo/hugo-terminal-vert.webp" align="center" alt="Screenshot of the configured Terminal theme" width="500" >}}
   <p style="text-align: center;"><i>Example where I configure the Terminal theme in green</i></p>
 </p>
 
@@ -458,7 +456,6 @@ date: 2023-01-31
 hero: illustration.png
 description: "Awesomer"
 theme: terminal
-tags: ["first article", "article"]
 ---
 ```
 
@@ -473,7 +470,7 @@ Save your article (regularly) and then go back to your site. It should be there!
 </br>
 
 <p align="center">
-  <img src="hugo-terminal-article.webp" alt="Screenshot of the Terminal theme with an article" width="500"/>
+  {{< img src="/posts/tutoriels/site-statique-hugo/hugo-terminal-article.webp" align="center" alt="Screenshot of the Terminal theme with an article" width="500" >}}
   <p style="text-align: center;"><i>Example of an article</i></p>
 </p>
 
@@ -496,7 +493,7 @@ Click on <kbd>Commit changes...</kbd> and this file should appear under the `.gi
 </br>
 
 <p align="center">
-  <img src="hugo-terminal-githubio.webp" alt="Screenshot of the Terminal theme published on github.io" width="500"/>
+  {{< img src="/posts/tutoriels/site-statique-hugo/hugo-terminal-githubio.webp" align="center" alt="Screenshot of the Terminal theme published on github.io" width="500" >}}
   <p style="text-align: center;"><i>See that the URL (edited) is now github.io!</i></p>
 </p>
 

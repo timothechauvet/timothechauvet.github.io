@@ -4,10 +4,8 @@ date: 2024-04-02
 hero: winser.webp
 description: Simple explication des différents rôles de Windows Server Core
 theme: Toha
-tags: ["Traduit", "Windows Server", "Microsoft"]
 ---
 
-[*Read this article in english*](https://timothechau.vet/en/posts/technique/windows-server-features)
 
 Windows Server, c'est la version de Windows plébicitée par les entreprises pour leur infrastructure *on-premises* (le contraire du Cloud, c'est-à-dire une infrastructure hébergée localement). Elle propose différentes solutions, ou *roles* que l'on ne retrouve pas (toujours) dans les versions traditionnelles de Windows. Voici un petit tour d'horizon des rôles essentiels sur Windows Server Core.
 
@@ -18,7 +16,7 @@ Windows Server, c'est la version de Windows plébicitée par les entreprises pou
 </br>
 
 <p align="center">
-  <img src="active-directory.webp" alt="Logo Active Directory" width="500"/>
+  {{< img src="/posts/technique/windows-server-features/active-directory.webp" align="center" alt="Logo Active Directory" width="500" >}}
 </p>
 
 </br>
@@ -95,7 +93,7 @@ Il s'agit d'un service de sécurité, notamment pour les droits. Il permet de :
 </br>
 
 <p align="center">
-  <img src="server-manager.webp" alt="Capture d'écran de Server Manager" width="500"/>
+  {{< img src="/posts/technique/windows-server-features/server-manager.webp" align="center" alt="Capture d'écran de Server Manager" width="500" >}}
   <p style="text-align: center;"><i>Écran de Server Manager pour ajouter des rôles <a href="https://www.server-world.info/en/note?os=Windows_Server_2022&p=active_directory&f=1">(source)</a></i></p>
 </p>
 
@@ -152,7 +150,7 @@ Contrairement à File Services, il connecte en réseau les imprimantes et non le
 </br>
 
 <p align="center">
-  <img src="hyper-v.webp" alt="Capture d'écran d'une VM tournant avec Hyper-V" width="500"/>
+  {{< img src="/posts/technique/windows-server-features/hyper-v.webp" align="center" alt="Capture d'écran d'une VM tournant avec Hyper-V" width="500" >}}
   <p style="text-align: center;"><i>Exemple d'une VM dans une VM avec Hyper-V <a href="https://share-danielfeau.com/es/introducci%C3%B3n-a-hyper-v-en-windows-10/">(source)</a></i></p>
 </p>
 
@@ -187,7 +185,7 @@ HGS permet de sécuriser les machines virtuelles Hyper-V. Voici notamment son fo
 </br>
 
 <p align="center">
-  <img src="hgs.webp" alt="Schéma avec 3 noeuds HGS, 3 noeuds de controleur de domaine et des hôtes Hyper-V" width="500"/>
+  {{< img src="/posts/technique/windows-server-features/hgs.webp" align="center" alt="Schéma avec 3 noeuds HGS, 3 noeuds de controleur de domaine et des hôtes Hyper-V" width="500" >}}
   <p style="text-align: center;"><i>Schéma de surveillance des serveurs HGS sur les hôtes Hyper-V</i></p>
 </p>
 
@@ -248,7 +246,7 @@ Il se concentre sur la sécurité (puces TPM), et les logs. La fonctionnalité *
 </br>
 
 <p align="center">
-  <img src="device-health-assessment.webp" alt="Exemple de dashboard Device Health Assessment" width="500"/>
+  {{< img src="/posts/technique/windows-server-features/device-health-assessment.webp" alt="Device Health assessment" align="center" width="500" >}}
   <p style="text-align: center;"><i>Exemple de <a href="https://www.oscc.be/sccm/configmgr/tp/intune/hybrid/aad/azure/windows%2010/TP-1706-DHA">Tom Degreef</a></i></p>
 </p>
 

@@ -6,7 +6,6 @@ description: Faire un mail Catch-All permet de recevoir tous les mails envoyés 
 theme: Toha
 ---
 
-[*Read this article in english*](https://timothechau.vet/en/posts/tutoriels/catch-all/)
 
 Jusqu'ici, quand un restaurant ou un site demandait mon adresse e-mail, je rechignais à donner ma vraie adresse. Je suis obsédé à l'idée de ne jamais réutiliser le même mot de passe, et je ne veux pas non plus que mon adresse e-mail soit revendue à des tiers. Si tel est votre cas, il existe plusieurs solution, dont **l'adresse mail Catch-All** qui permet d'avoir une adresse différente au gré de vos envies. 
 
@@ -26,7 +25,7 @@ J'ai mentionné des réserves en conclusion qui sont à prendre en considératio
 </br>
 
 <p align="center">
-  <img src="catch-all.webp" alt="Illustration rouge-orange" width=400/>
+  {{< img src="/posts/tutoriels/catch-all/catch-all.webp" align="center" alt="Illustration rouge-orange" width=400 >}}
   <p style="text-align: center;"><i>Bannière "Enveloppes" générée par Dall•E sur ChatGPT</i></p>
 </p>
 
@@ -79,7 +78,7 @@ Pour commencer, achetons un nom de domaine. Mon *registrar* préféré, OVH, en 
 </br>
 
 <p align="center">
-  <img src="ovh_interface.webp" alt="Interface de votre domaine"/>
+  {{< img src="/posts/tutoriels/catch-all/ovh_interface.webp" align="center" alt="Interface de votre domaine" >}}
   <p style="text-align: center;"><i>Interface de gestion de votre domaine sur OVH</i></p>
 </p>
 
@@ -114,7 +113,7 @@ La deuxième étape consiste à s'inscrire sur CloudFlare, qui permet la fonctio
 </br>
 
 <p align="center">
-  <img src="cloudflare_dns.webp" alt="CloudFlare demande d'installer 2 serveurs DNS" width=400/>
+  {{< img src="/posts/tutoriels/catch-all/cloudflare_dns.webp" align="center" alt="CloudFlare demande d'installer 2 serveurs DNS" width=400 >}}
   <p style="text-align: center;"><i>CloudFlare demande d'installer 2 serveurs DNS</i></p>
 </p>
 
@@ -136,7 +135,7 @@ Maintenant que votre domaine est sur les serveurs CloudFlare, vous pouvez gérer
 </br>
 
 <p align="center">
-  <img src="cloudflare_routing.webp" alt="Cocher l'option Active" width=600/>
+  {{< img src="/posts/tutoriels/catch-all/cloudflare_routing.webp" align="center" alt="Cocher l'option Active" width=600 >}}
   <p style="text-align: center;"><i>Vérifiez que l'option Active est cochée</i></p>
 </p>
 

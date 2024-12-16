@@ -4,10 +4,8 @@ date: 2023-04-24
 hero: elephants.webp
 description: The first article on my site, what a deal
 theme: Toha
-tags: ["Translated", "Website"]
 ---
 
-[*Lire cet article en français*](https://timothechau.vet/posts/vie-perso/nouveau-site)
 
 After two weeks of hard work, teaching myself the fundamentals of the **[Toha](https://github.com/hugo-toha/toha) theme** working with the **[Hugo](https://gohugo.io/) framework**, I'm very happy to to launch my super personal blog on which I'm writing these lines. I use the services of **GitHub** to host my site and the superpowers of **GitHub Actions** to generate the static content of my site. Feel free to give me feedback on my site 👋
 

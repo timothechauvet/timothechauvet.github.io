@@ -4,10 +4,8 @@ date: 2023-07-12
 hero: diploma.webp
 description: My experience of certifications and what they have brought me
 theme: Toha
-tags: ["Translated", "Certification"]
 ---
 
-[*Lire cet article en français*](https://timothechau.vet/posts/vie-perso/certif-bonne-idee)
 
 After 12 cloud and DevOps certifications, I can tell you that I've learned a lot. Those little virtual badges have managed to stimulate my dopamine, and the reward isn't just a chemical reaction in my brain. Some people ask me about certifications, and I want to summarize what I say to them into a single article, so that you too can benefit from this system which, in my opinion, values the skills of everyone, but still needs to be nuanced in the professional world.
 
@@ -87,7 +85,7 @@ Here's what I recommend as certifications for different fields. Don't hesitate t
 </br>
 
 <p align="center">
-  <img src="badges_illu.webp" alt="Badges examples" width="600"/>
+  {{< img src="/posts/vie-perso/certif-bonne-idee/badges_illu.webp" align="center" alt="Badges examples" width="600" >}}
   <p style="text-align: center;"><i>What you could showcase on your resume</i></p>
 </p>
 

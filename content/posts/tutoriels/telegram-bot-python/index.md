@@ -6,14 +6,13 @@ description: Ma mise en œuvre d'un robot Telegram codé en Python, conteneuris�
 theme: Toha
 ---
 
-[*Read this article in english*](https://timothechau.vet/en/posts/tutoriels/telegram-bot-python/)
 
 J'ai pris quelques semaines à faire un robot sur Telegram pour un très cher ami. Il réalisait jusqu'ici la tâche redondante de poster du contenu sur les réseaux sociaux avec le même modèle, créé avec Canva. Ce dernier étant très facile d'accès, Canva implique quand même des étapes redondantes qui peuvent être facilement évitées. Les chatbots et Telegram faisant la une des médias en ce moment, j'ai trouvé que c'était une bonne idée de lancer mon propre chatbot. Voici comment j'ai fait.
 
 </br>
 
 <p align="center">
-  <img src="octobot.webp" alt="Illustration rouge-orange d'un robot octopus sur un ordinateur portable avec une bulle conteneur les logos de Python et Telegram" width=400/>
+  {{< img src="/posts/tutoriels/telegram-bot-python/octobot.webp" width="400" align="center" alt="Illustration rouge-orange d'un robot octopus sur un ordinateur portable avec une bulle conteneur les logos de Python et Telegram" >}}
   <p style="text-align: center;"><i>Bannière "Octobot" générée par Flux avec Perplexity</i></p>
 </p>
 
@@ -41,7 +40,7 @@ Pour commencer du côté Telegram, il vous faudra une clé d'API. C'est simple e
 3. Notez le token API (il reste dans la conversation si jamais vous l'oubliez)
 
 <p align="center">
-  <img src="botfather.webp" alt="Capture d'écran du compte Telegram de BotFather" width=400/>
+  {{< img src="/posts/tutoriels/telegram-bot-python/botfather.webp" align="center" alt="Capture d'écran du compte Telegram de BotFather" width=400 >}}
   <p style="text-align: center;"><i>BotFather</i></p>
 </p>
 

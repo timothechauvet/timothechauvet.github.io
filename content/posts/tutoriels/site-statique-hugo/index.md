@@ -4,10 +4,8 @@ date: 2023-04-24
 hero: mascot.webp
 description: Héberger son site statique Hugo avec GitHub Pages et Actions pour pas un rond
 theme: Toha
-tags: ["Traduit", "Site internet"]
 ---
 
-[*Read this article in english*](https://timothechau.vet/en/posts/tutoriels/site-statique-hugo/)
 
 LinkedIn, Meta et Twitter veulent leur peau ! Pour créer son contenu à l'ère des 20's (à partir de 2020), il existe pléthore de plateformes. Parfois naissantes (Mastodon, Notion), parfois éphémères (Google +, Skyblog), parfois boudées (Facebook, Twitter), celles-ci ont une vie parfois plus courte que celle de votre machine à laver. <u>Mais il existe bien une plateforme qui ne subit pas l'obsolescence programmée : les blogs.</u>
 
@@ -41,7 +39,7 @@ En 2013, quand Hugo Chávez nous quittait, Hugo (le logiciel, pas le président 
 Sans rentrer dans les détails, il permet de simplement configurer et lancer son site. Open-source, gratuit et facile d'utilisation, il a acquis une grande communauté ayant créé un large panel de thèmes personnalisables. Hugo est **facile à configurer**, et une fois cette configuration faite **on peut l'oublier** et alimenter son blog facilement.
 
 <p align="center">
-  <img src="hugo-mascotte.webp" alt="Mascotte de Hugo" width="150"/>
+  {{< img src="/posts/tutoriels/site-statique-hugo/hugo-mascotte.webp" align="center" alt="Mascotte de Hugo" width="150" >}}
   <p style="text-align: center;"><i>Go et Hugo ensemble, ça donne <a href="https://gohugo.io">Super-Hugo</a></i></p>
 </p>
 
@@ -357,7 +355,7 @@ Astuce 💡 : enregistrez simplement le fichier, la commande "hugo serve" devrai
 </br>
 
 <p align="center">
-  <img src="hugo-terminal-vide.webp" alt="Capture d'écran du thème Terminal vide" width="500"/>
+  {{< img src="/posts/tutoriels/site-statique-hugo/hugo-terminal-vide.webp" align="center" alt="Capture d'écran du thème Terminal vide" width="500" >}}
   <p style="text-align: center;"><i>Exemple avec le thème <a href="https://github.com/panr/hugo-theme-terminal">Terminal</a></i></p>
 </p>
 
@@ -424,7 +422,7 @@ Astuce 💡 : vous pouvez traduire votre site en plusieures langues. Dans la maj
 </br>
 
 <p align="center">
-  <img src="hugo-terminal-vert.webp" alt="Capture d'écran du thème Terminal configuré" width="500"/>
+  {{< img src="/posts/tutoriels/site-statique-hugo/hugo-terminal-vert.webp" align="center" alt="Capture d'écran du thème Terminal configuré" width="500" >}}
   <p style="text-align: center;"><i>Exemple où je configure le thème en vert</i></p>
 </p>
 
@@ -457,7 +455,6 @@ date: 2023-01-31
 hero: illustration.png
 description: "Superbe description"
 theme: terminal
-tags: ["premier article", "article"]
 ---
 ```
 
@@ -472,7 +469,7 @@ Enregistrez (régulièrement) votre article puis retournez sur votre site. Norma
 </br>
 
 <p align="center">
-  <img src="hugo-terminal-article.webp" alt="Capture d'écran du thème Terminal avec un article" width="500"/>
+  {{< img src="/posts/tutoriels/site-statique-hugo/hugo-terminal-article.webp" align="center" alt="Capture d'écran du thème Terminal avec un article" width="500" >}}
   <p style="text-align: center;"><i>Exemple où je poste un article</i></p>
 </p>
 
@@ -495,7 +492,7 @@ Appuyez sur <kbd>Commit changes...</kbd> et ce fichier devrait apparaître dans 
 </br>
 
 <p align="center">
-  <img src="hugo-terminal-githubio.webp" alt="Capture d'écran du thème Terminal publié sur github.io" width="500"/>
+  {{< img src="/posts/tutoriels/site-statique-hugo/hugo-terminal-githubio.webp" align="center" alt="Capture d'écran du thème Terminal publié sur github.io" width="500" >}}
   <p style="text-align: center;"><i>Constatez que l'URL (modifié) pointe sur github.io !</i></p>
 </p>
 

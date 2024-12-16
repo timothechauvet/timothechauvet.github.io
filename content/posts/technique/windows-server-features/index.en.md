@@ -4,10 +4,8 @@ date: 2024-04-02
 hero: winser.webp
 description: An overview of Windows Server Core roles and features
 theme: Toha
-tags: ["Traduit", "Windows Server", "Microsoft"]
 ---
 
-[*Lire cet article en français*](https://timothechau.vet/posts/technique/windows-server-features)
 
 Windows Server is the version of Windows favoured by businesses for their on-premises infrastructure. It offers various solutions, or *roles*, that are not (always) found in the home versions of Windows. This article aims to overview essential roles on Windows Server Core.
 
@@ -18,7 +16,7 @@ Windows Server is the version of Windows favoured by businesses for their on-pre
 </br>
 
 <p align="center">
-  <img src="active-directory.webp" alt="Active Directory logo" width="500"/>
+  {{< img src="/posts/technique/windows-server-features/active-directory.webp" align="center" alt="Active Directory logo" width="500" >}}
 </p>
 
 </br>
@@ -95,7 +93,7 @@ You might have noticed that Windows Server is often used... for servers. Here ar
 </br>
 
 <p align="center">
-  <img src="server-manager.webp" alt="Server Manager screenshot" width="500"/>
+  {{< img src="/posts/technique/windows-server-features/server-manager.webp" align="center" alt="Server Manager screenshot" width="500" >}}
   <p style="text-align: center;"><i>Server Manager screenshot to add roles to a Windows Server <a href="https://www.server-world.info/en/note?os=Windows_Server_2022&p=active_directory&f=1">(source)</a></i></p>
 </p>
 
@@ -152,7 +150,7 @@ Unlike File Services, it connects printers to the network, not folders and files
 </br>
 
 <p align="center">
-  <img src="hyper-v.webp" alt="Screenshot of a VM running on Hyper-V" width="500"/>
+  {{< img src="/posts/technique/windows-server-features/hyper-v.webp" align="center" alt="Screenshot of a VM running on Hyper-V" width="500" >}}
   <p style="text-align: center;"><i>A VM inside a VM inside an Hyper-V host <a href="https://share-danielfeau.com/es/introducci%C3%B3n-a-hyper-v-en-windows-10/">(source)</a></i></p>
 </p>
 
@@ -187,7 +185,7 @@ HGS is used to secure Hyper-V virtual machines. Here's how it works:
 </br>
 
 <p align="center">
-  <img src="hgs.webp" alt="Diagram with 3 HGS nodes, 3 domain controller nodes and Hyper-V hosts" width="500"/>
+  {{< img src="/posts/technique/windows-server-features/hgs.webp" align="center" alt="Diagram with 3 HGS nodes, 3 domain controller nodes and Hyper-V hosts" width="500" >}}
   <p style="text-align: center;"><i>Diagram showcasing how HGS ensures Hyper-V hosts safety</i></p>
 </p>
 
@@ -248,7 +246,7 @@ It focuses on security (TPM chips) and logs. The *assessment* function allows yo
 </br>
 
 <p align="center">
-  <img src="device-health-assessment.webp" alt="Device Health assessment" width="500"/>
+  {{< img src="/posts/technique/windows-server-features/device-health-assessment.webp" alt="Device Health assessment" align="center" width="500" >}}
   <p style="text-align: center;"><i>A <a href="https://www.oscc.be/sccm/configmgr/tp/intune/hybrid/aad/azure/windows%2010/TP-1706-DHA">Tom Degreef</a> assessment</i></p>
 </p>
 

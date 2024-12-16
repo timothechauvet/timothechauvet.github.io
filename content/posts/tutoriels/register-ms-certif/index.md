@@ -4,7 +4,6 @@ date: 2024-02-11
 hero: badge.webp
 description: S'inscrire pour un examen Microsoft en ligne n'est pas forcément évident, voici les étapes en images pour le faire
 theme: Toha
-tags: ["Non traduit", "MCT", "Microsoft", "Certification"]
 ---
 
 Lorsque je fais des formations Microsoft, je donne comme objectif à mes élèves qu'ils passent la formation associée dans les 2 semaines qui suivent. Mais pour l'inscription à un examen, c'est une autre paire de manches. Voici, en images, les étapes pour le faire en ligne. J'ai ici pris l'exemple d'une inscription à la certification AZ-900, mais le processus est fondamentalement le même pour les autres certifications Microsoft.
@@ -21,7 +20,7 @@ Recherchez sur internet votre certification. Dans notre exemple, nous irons sur 
 </br>
 
 <p align="center">
-  <img src="1.webp" alt="Une capture d'écran indiquant qu'il faut cliquer sur Schedule with Pearson VUE" width="600"/>
+  {{< img src="/posts/tutoriels/register-ms-certif/1.webp" align="center" alt="Une capture d'écran indiquant qu'il faut cliquer sur Schedule with Pearson VUE" width="600" >}}
   <p style="text-align: center;"><i>Screen 1 : Commencer la démarche avec Pearson VUE</i></p>
 </p>
 
@@ -36,14 +35,14 @@ Cochez la case des conditions d'utilisation et continuez.
 </br>
 
 <p align="center">
-  <img src="2.webp" alt="Une capture d'écran remplissant les champs du formulaire" width="600"/>
+  {{< img src="/posts/tutoriels/register-ms-certif/2.webp" align="center" alt="Une capture d'écran remplissant les champs du formulaire" width="600" >}}
   <p style="text-align: center;"><i>Screen 2 : Remplir les champs avec votre mail perso</i></p>
 </p>
 
 Et voilà, votre profil de certification est créé et à jour !
 
 <p align="center">
-  <img src="3.webp" alt="Une capture d'écran où l'utilisateur a mis à jour son profil d'examen" width="600"/>
+  {{< img src="/posts/tutoriels/register-ms-certif/3.webp" align="center" alt="Une capture d'écran où l'utilisateur a mis à jour son profil d'examen" width="600" >}}
   <p style="text-align: center;"><i>Screen 3 : Le profil a été mis à jour, cliquer sur Suivant</i></p>
 </p>
 
@@ -58,7 +57,7 @@ Pour cela il faudra **associer votre mail pro à votre profil de certification**
 </br>
 
 <p align="center">
-  <img src="4.webp" alt="Une capture d'écran où l'utilisateur rentre son mail professionnel et clique sur Vérifier les remises" width="600"/>
+  {{< img src="/posts/tutoriels/register-ms-certif/4.webp" align="center" alt="Une capture d'écran où l'utilisateur rentre son mail professionnel et clique sur Vérifier les remises" width="600" >}}
   <p style="text-align: center;"><i>Screen 4 : Remplir votre mail entreprise et vérifiez les remises</i></p>
 </p>
 
@@ -69,28 +68,28 @@ Notez bien que **ce mail prend beaucoup de temps à arriver**. Il peut prendre e
 </br>
 
 <p align="center">
-  <img src="5.webp" alt="Une capture d'écran du mail à recevoir avec un code à 6 chiffres" width="600"/>
+  {{< img src="/posts/tutoriels/register-ms-certif/5.webp" align="center" alt="Une capture d'écran du mail à recevoir avec un code à 6 chiffres" width="600" >}}
   <p style="text-align: center;"><i>Screen 5 : Copier le code à 6 chiffres</i></p>
 </p>
 
 </br>
 
 <p align="center">
-  <img src="6.webp" alt="Une capture d'écran du code à rentrer pour vérifier les remises" width="600"/>
+  {{< img src="/posts/tutoriels/register-ms-certif/6.webp" align="center" alt="Une capture d'écran du code à rentrer pour vérifier les remises" width="600" >}}
   <p style="text-align: center;"><i>Screen 6 : Rentrer le code et vérifier le mot de passe</i></p>
 </p>
 
 </br>
 
 <p align="center">
-  <img src="7.webp" alt="Une capture d'écran pour lier le mail pro au profil de certification" width="600"/>
+  {{< img src="/posts/tutoriels/register-ms-certif/7.webp" align="center" alt="Une capture d'écran pour lier le mail pro au profil de certification" width="600" >}}
   <p style="text-align: center;"><i>Screen 7 : Accepter d'associer ce mail au profil de certification ; vous pouvez en ajouter autant que vous voulez</i></p>
 </p>
 
 </br>
 
 <p align="center">
-  <img src="8.webp" alt="Une capture d'écran pour ajouter les 50% de remise" width="600"/>
+  {{< img src="/posts/tutoriels/register-ms-certif/8.webp" align="center" alt="Une capture d'écran pour ajouter les 50% de remise" width="600" >}}
   <p style="text-align: center;"><i>Screen 8 : Appliquer la remise de 50%</i></p>
 </p>
 
@@ -103,7 +102,7 @@ Vous pouvez maintenant planifier votre examen sur le site de Pearson. Nous allon
 </br>
 
 <p align="center">
-  <img src="9.webp" alt="Une capture d'écran pour choisir l'examen en ligne" width="600"/>
+  {{< img src="/posts/tutoriels/register-ms-certif/9.webp" align="center" alt="Une capture d'écran pour choisir l'examen en ligne" width="600" >}}
   <p style="text-align: center;"><i>Screen 9 : Choisir l'examen en ligne avec VUE</i></p>
 </p>
 
@@ -129,7 +128,7 @@ Pour passer l'examen en ligne, [**vous devez vous munir d'un Mac ou d'un Windows
 </br>
 
 <p align="center">
-  <img src="10.webp" alt="Une capture d'écran des modalités d'examen : un ordinateur personnel avec webcam et internet fiable, un lieu privé, une pièce d'identité et l'enregistrement 30min avant" width="600"/>
+  {{< img src="/posts/tutoriels/register-ms-certif/10.webp" align="center" alt="Une capture d'écran des modalités d'examen : un ordinateur personnel avec webcam et internet fiable, un lieu privé, une pièce d'identité et l'enregistrement 30min avant" width="600" >}}
   <p style="text-align: center;"><i>Screen 10 : Les modalités d'examen de Pearson VUE</i></p>
 </p>
 
@@ -162,7 +161,7 @@ Déjà, choisissez de le passer en anglais. C'est plus simple, car les questions
 </br>
 
 <p align="center">
-  <img src="11.webp" alt="Une capture d'écran des langues disponibles pour l'examen" width="600"/>
+  {{< img src="/posts/tutoriels/register-ms-certif/11.webp" align="center" alt="Une capture d'écran des langues disponibles pour l'examen" width="600" >}}
   <p style="text-align: center;"><i>Screen 11 : Je vous invite vraiment à passer l'examen en anglais</i></p>
 </p>
 
@@ -171,7 +170,7 @@ Prenez ensuite la date qui vous convient. Vous avez la possibilité de **replani
 </br>
 
 <p align="center">
-  <img src="12.webp" alt="Une capture d'écran du calendrier de réservation" width="600"/>
+  {{< img src="/posts/tutoriels/register-ms-certif/12.webp" align="center" alt="Une capture d'écran du calendrier de réservation" width="600" >}}
   <p style="text-align: center;"><i>Screen 12 : Les modalités d'examen de Pearson VUE</i></p>
 </p>
 
@@ -180,7 +179,7 @@ Pearson va ensuite vous proposer une heure de rendez-vous. Des fois l'horaire pr
 </br>
 
 <p align="center">
-  <img src="13.webp" alt="Une capture d'écran pour sélectionner l'heure de l'examen" width="600"/>
+  {{< img src="/posts/tutoriels/register-ms-certif/13.webp" align="center" alt="Une capture d'écran pour sélectionner l'heure de l'examen" width="600" >}}
   <p style="text-align: center;"><i>Screen 13 : Cliquer sur Découvrir plus d'heures pour sélectionner un rendez-vous</i></p>
 </p>
 
@@ -191,7 +190,7 @@ Si vous avez un code de réduction ou "voucher", vous pouvez l'appliquer ici. Si
 </br>
 
 <p align="center">
-  <img src="14.webp" alt="Une capture d'écran du panier pour payer l'examen" width="600"/>
+  {{< img src="/posts/tutoriels/register-ms-certif/14.webp" align="center" alt="Une capture d'écran du panier pour payer l'examen" width="600" >}}
   <p style="text-align: center;"><i>Screen 14 : Cliquer sur Passer à la caisse</i></p>
 </p>
 
@@ -200,7 +199,7 @@ Effectivement, il est possible de financer le reste de l'examen si vous avez ou 
 </br>
 
 <p align="center">
-  <img src="15.webp" alt="Une capture d'écran pour ajouter un voucher" width="600"/>
+  {{< img src="/posts/tutoriels/register-ms-certif/15.webp" align="center" alt="Une capture d'écran pour ajouter un voucher" width="600" >}}
   <p style="text-align: center;"><i>Screen 15 : Ajouter le voucher dans le champ</i></p>
 </p>
 
@@ -213,7 +212,7 @@ Dans les mails avec l'objet "Votre examen OneVUE est confirmé !", vous aurez un
 </br>
 
 <p align="center">
-  <img src="16.webp" alt="Une capture d'écran du mail avec le lien" width="600"/>
+  {{< img src="/posts/tutoriels/register-ms-certif/16.webp" align="center" alt="Une capture d'écran du mail avec le lien" width="600" >}}
   <p style="text-align: center;"><i>Screen 16 : Cliquer sur le lien du mail pour commencer l'examen le jour J</i></p>
 </p>
 

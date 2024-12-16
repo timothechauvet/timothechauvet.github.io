@@ -4,10 +4,8 @@ date: 2024-02-04
 hero: facebook.webp
 description: Facebook a renoncé aux technos traditionnelles pour faire sa stack maison
 theme: Toha
-tags: ["Traduit", "Stack", "Facebook"]
 ---
 
-[*Read this article in english*](https://timothechau.vet/en/posts/technique/facebook-stack)
 
 J'adorais Facebook pendant mon enfance. Aujourd'hui élu pire réseau social par ma génération, il n'en reste pas moins le réseau social le plus populaire au monde. Avec ses 2 milliards d'utilisateurs actifs **quotidiennement**, Facebook n'est "pas mort, ni mourrant" selon son directeur en mars 2023.
 

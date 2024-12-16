@@ -1,16 +1,23 @@
 ---
-title: "Kubernetes mono-node avec reverse proxy ☸️"
-date: 2024-12-14
-hero: catch-all.webp
-description: La manière dont je me suis pris pour avoir mon propre Kubernetes
+title: "Kubernetes mono-node avec ingress ☸️"
+date: 2024-12-16
+hero: k3s.webp
+description: Comment j'ai fait pour avoir mon propre mono-Kubernetes
 theme: Toha
 ---
 
 Pour un ami, j'avais [codé un bot Telegram et conteneurisé l'appli avec Docker](../telegram-bot-python/). En réalité, c'était le début d'un long calvaire pour garder uniquement Docker et configurer un reverse proxy, car je suis trop mauvais pour ça.
 
-À la place, **j'ai installé k3s qui m'a permis d'avoir Kubernetes en single-node**, c'est-à-dire sur une seule VM. Kubernetes permet d'orchestrer les conteneurs, et donc de résoudre pas mal de mes soucis.
+À la place, **j'ai installé [k3s](https://k3s.io/) qui m'a permis d'avoir Kubernetes en single-node**, c'est-à-dire sur une seule VM. Kubernetes permet d'orchestrer les conteneurs, et donc de résoudre pas mal de mes soucis.
 
-{{< vs 4>}}
+{{< vs 4 >}}
+
+<p align="center">
+  {{< img src="/posts/tutoriels/k3s/k3s-illu.webp" width="400" align="center" alt="Illustration rouge-orange d'un écran d'ordinateur avec le logo k3s devant" >}}
+  <p style="text-align: center;"><i>Bannière "k3s" générée par Flux avec Perplexity</i></p>
+</p>
+
+{{< vs 4 >}}
 
 ## Comment s'y prendre
 
@@ -25,15 +32,15 @@ Ce tutoriel n'a rien de mirobolant. Mais j'ai fait ce tutoriel car k3s n'arrive 
     - Note : en cas de problème, vous pouvez agrandir les permissions du fichier k3s avec `sudo chmod 644 /etc/rancher/k3s/k3s.yaml` (pas recommandé)
 1. Installer ingress-nginx pour vos ressources ingress (ici si vous passez par un cloud provider) `kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.11.3/deploy/static/provider/cloud/deploy.yaml`
 1. Installer cert-manager pour activer HTTPS par la suite avec `kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.16.1/cert-manager.yaml`
-1. Installer MetalLB pour créer des LoadBalancer avec `kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.14.8/config/manifests/metallb-native.yaml`
+1. Installer MetalLB pour créer des LoadBalancer/Ingresses avec `kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.14.8/config/manifests/metallb-native.yaml`
 
-{{< vs 2>}}
+{{< vs 2 >}}
 
 {{< alert type="info" >}}
 Pour tous les fichiers `.yaml` qui suivent, vous pourrez les appliquer avec la commande `kubectl apply -f monfichier.yaml`
 {{< /alert >}}
 
-{{< vs 4>}}
+{{< vs 4 >}}
 
 ### Configurer MetalLB 
 
@@ -64,7 +71,7 @@ spec:
   - first-pool
 ```
 
-{{< vs 4>}}
+{{< vs 4 >}}
 
 ### Configurer Let's Encrypt
 
@@ -84,8 +91,10 @@ spec:
     solvers:
     - http01:
         ingress:
-          class: traefik
+          class: traefik # remplacez si vous voulez nginx
 ```
+
+{{< vs 2 >}}
 
 Comme ça, si vous avez besoin d'un certificat, vous pourrez en créer un avec un fichier `certificate-yourls.yaml` par exemple : 
 
@@ -103,6 +112,8 @@ spec:
   dnsNames:
   - tmth.fr
 ```
+
+{{< vs 4 >}}
 
 ## Héberger mes applis
 
@@ -135,29 +146,63 @@ spec:
             secretKeyRef:
               name: telebot-secrets
               key: TELEGRAM_BOT_TOKEN
-        - name: HASHED_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: telebot-secrets
-              key: HASHED_PASSWORD
       imagePullSecrets:
       - name: ghcr-secret
 ```
-
-Je ne vais évidemment pas vous envoyer mes secrets en clair.
-
-
-{{< img src="https://risibank.fr/cache/medias/0/23/2399/239915/full.gif" height="200" align="left" title="Néanmoins !!" >}}
-
-**Néanmoins !!**
-
-J'ai pris la peine de publier la configuration de mes secrets que vous pouvez [retrouver sur mon GitHub](https://github.com/timothechauvet/mes-yaml-de-kube/tree/main/secrets). Donc n'hésitez pas à les prendre comme exemple si jamais !
+{{< vs 4 >}}
 
 ### Une appli HTTP
 
+J'avais envie d'un racourcisseur d'URLs. Vous l'avez d'ailleurs sûrement inauguré en cliquant sur [tmth.fr/k3s](https://tmth.fr/k3s) pour venir ici ! [Yourls](https://yourls.org/), que j'ai utilisé pour ça, a besoin d'une base MySQL. C'est ce qui a été le plus compliqué à mettre en place pour moi. 
 
+Pour Yourls, j'ai eu besoin de 
+- Un ConfigMap avec config.php
+- Un Certificate pour mon domaine tmth.fr
+- Un Ingress Traefik (je préfère ça car Nginx est fait pour les gens intelligents) 😭
+- Le Service pour mapper avec l'Ingress
+- Un PersistentVolume et son claim pour la base MySQL
+- Le déploiement, bien évidemment.
 
+Je pense que le plus important ici est l'Ingress qui crée les règles lorsqu'une requête vers tmth.fr est reçue
 
+```yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: yourls-ingress
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    traefik.ingress.kubernetes.io/router.entrypoints: "web,websecure"
+spec:
+  ingressClassName: traefik
+  tls:
+  - hosts:
+    - tmth.fr
+    secretName: yourls-tls
+  rules:
+  - host: tmth.fr
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: yourls
+            port: 
+              number: 80
+```
+
+{{< vs 2 >}}
+
+Je ne vais évidemment pas décrire ici TOUTES mes configurations.
+
+{{< img src="https://risibank.fr/cache/medias/0/23/2399/239915/full.gif" height="200" align="left" title="Cependant !!" >}}
+
+{{< vs 2 >}}
+
+**Cependant !!**
+
+J'ai pris la peine de publier mes configurations que vous pouvez [retrouver sur mon GitHub](https://github.com/timothechauvet/mes-yaml-de-kube/). Donc n'hésitez pas à les prendre comme exemple !
 
 ---
 

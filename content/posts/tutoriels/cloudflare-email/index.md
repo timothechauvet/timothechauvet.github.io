@@ -1,6 +1,6 @@
 ---
 title: "Découverte des Cloudflare Workers"
-date: 2025-04-13
+date: 2025-04-21
 hero: email.webp
 description: J'ai développé une petite appli web avec les Cloudflare Workers qui récupère les codes reçus par mail
 theme: Toha
@@ -14,10 +14,12 @@ Il semblerait que non.
 
 Dans cet article je vous présente comment j'ai utilisé les Cloudflare Workers pour créer une appli qui récupère les codes temporaires envoyés par mail et 2FA, pour les exposer sur un site tout simple.
 
+Cet article assume que vous avez déjà intégré votre domaine sur Cloudflare.
+
 {{< vs 4 >}}
 
 <p align="center">
-  {{< img src="/posts/tutoriels/cloudflare-email/schema.webp" width="500" align="center" alt="Schéma du service avec Cloudflare Email Routing allant vers les Workers qui enregistre le code 2FA dans KV puis l'expose sur Pages" >}}
+  {{< img src="/posts/tutoriels/cloudflare-email/schema.webp" width="700" align="center" alt="Schéma du service avec Cloudflare Email Routing allant vers les Workers qui enregistre le code 2FA dans KV puis l'expose sur Pages" >}}
   <p style="text-align: center;"><i>Schéma de mon application</i></p>
 </p>
 
@@ -34,7 +36,7 @@ Une fois le Worker de base créé, j'ai pu l'associer à mes mails reçus. En re
 {{< vs 4 >}}
 
 <p align="center">
-  {{< img src="/posts/tutoriels/cloudflare-email/send-to-worker.webp" width="600" align="center" alt="Capture d'écran avec les infos remplies pour renvoyer les mails reçus depuis example@timothechau.vet vers un Worker" >}}
+  {{< img src="/posts/tutoriels/cloudflare-email/send-to-worker.webp" width="700" align="center" alt="Capture d'écran avec les infos remplies pour renvoyer les mails reçus depuis example@timothechau.vet vers un Worker" >}}
   <p style="text-align: center;"><i>Les mails reçus à cette adresse seront renvoyés au Worker</i></p>
 </p>
 
@@ -60,6 +62,7 @@ export default {
     // Si ça matche, je lance mon programme
     if (
       message.to === "example@timothechau.vet" &&
+      message.from === "noreply@linkedin.com" &&
       subject.startsWith("Your code is ")
     ) {
       // Regex pour récupérer le code dans le titre
@@ -75,6 +78,8 @@ export default {
 }
 ```
 
+{{< vs 4 >}}
+
 Il faut cliquer sur "Deploy" pour que ce soit en ligne.
 
 Le truc avec mon code c'est que j'ai besoin qu'il soit sauvegardé quelque-part pour pouvoir le distribuer. J'ai utilisé la base KV de Cloudflare pour ça. Il suffit juste de créer un "namespace" et c'est bon.
@@ -82,7 +87,7 @@ Le truc avec mon code c'est que j'ai besoin qu'il soit sauvegardé quelque-part 
 {{< vs 4 >}}
 
 <p align="center">
-  {{< img src="/posts/tutoriels/cloudflare-email/kv.webp" width="600" align="center" alt="Capture d'écran de la base kv sur Cloudflare" >}}
+  {{< img src="/posts/tutoriels/cloudflare-email/kv.webp" width="800" align="center" alt="Capture d'écran de la base kv sur Cloudflare" >}}
   <p style="text-align: center;"><i>Les codes seront sauvegardés ici</i></p>
 </p>
 
@@ -110,13 +115,13 @@ async function generateTOTP(key, secs = 30, digits = 6){
 }
 async function hotp(key, counter, digits){
   let y = self.crypto.subtle;
-	if(!y) throw Error('no self.crypto.subtle object available');
-	let k = await y.importKey('raw', key, {name: 'HMAC', hash: 'SHA-1'}, false, ['sign']);
-	return hotp_truncate(await y.sign('HMAC', k, counter), digits);
+  if(!y) throw Error('no self.crypto.subtle object available');
+  let k = await y.importKey('raw', key, {name: 'HMAC', hash: 'SHA-1'}, false, ['sign']);
+  return hotp_truncate(await y.sign('HMAC', k, counter), digits);
 }
 function hotp_truncate(buf, digits){
   let a = new Uint8Array(buf), i = a[19] & 0xf;
-	return fmt(10, digits, ((a[i]&0x7f)<<24 | a[i+1]<<16 | a[i+2]<<8 | a[i+3]) % 10**digits);
+  return fmt(10, digits, ((a[i]&0x7f)<<24 | a[i+1]<<16 | a[i+2]<<8 | a[i+3]) % 10**digits);
 }
 function fmt(base, width, num){
   return num.toString(base).padStart(width, '0')
@@ -124,17 +129,17 @@ function fmt(base, width, num){
 function unbase32(s){
   let t = (s.toLowerCase().match(/\S/g)||[]).map(c => {
     let i = 'abcdefghijklmnopqrstuvwxyz234567'.indexOf(c);
-		if(i < 0) throw Error(`bad char '${c}' in key`);
-		return fmt(2, 5, i);
-	}).join('');
-	if(t.length < 8) throw Error('key too short');
-	return new Uint8Array(t.match(/.{8}/g).map(d => parseInt(d, 2)));
+    if(i < 0) throw Error(`bad char '${c}' in key`);
+    return fmt(2, 5, i);
+  }).join('');
+  if(t.length < 8) throw Error('key too short');
+  return new Uint8Array(t.match(/.{8}/g).map(d => parseInt(d, 2)));
 }
 function pack64bu(v){
   let b = new ArrayBuffer(8), d = new DataView(b);
-	d.setUint32(0, v / 2**32);
-	d.setUint32(4, v);
-	return b;
+  d.setUint32(0, v / 2**32);
+  d.setUint32(4, v);
+  return b;
 }
 ```
 
@@ -185,17 +190,16 @@ export default {
 - `env.BINDING_KV` : la connexion à la base Cloudflare KV, déjà provisionnée
 - `env.TOKEN_OTP` : Le token servant à générer un code 2FA
 
-Hormis BINDING_KV qui est déjà implémenté, il reste les deux autres valeurs à compléter.
+Hormis BINDING_KV qui est déjà implémenté, il reste les deux autres valeurs à compléter en tant que variables d'environnement.
 
 Pour ça je reviens dans mon Worker puis dans Settings. 
 
-Dans "Variables and Secrets" je peux facilement rajouter mes valeurs. Qu'elles soient en "Secret" ou en "Texte" ça revient à la même chose, du coup j'ai mis les deux en mode secret. Il faut cliquer sur "Deploy" quand c'est bon.
-
+Dans "Variables and Secrets" je peux facilement rajouter mes valeurs. Qu'elles soient en "Secret" ou en "Texte" ça revient à la même chose, du coup j'ai mis les deux en mode secret (C'est chiffré et invisible sur le dashboard après sauvegarde). Il faut cliquer sur "Deploy" quand c'est bon.
 
 {{< vs 4 >}}
 
 <p align="center">
-  {{< img src="/posts/tutoriels/cloudflare-email/environment-variables.webp" width="600" align="center" alt="Capture d'écran pour rentrer une variable d'environnement" >}}
+  {{< img src="/posts/tutoriels/cloudflare-email/environment-variables.webp" width="700" align="center" alt="Capture d'écran pour rentrer une variable d'environnement" >}}
   <p style="text-align: center;"><i>Les variables d'environnement peuvent facilement être modifiées</i></p>
 </p>
 
@@ -211,11 +215,11 @@ Pour ça, je vais déployer une autre variable d'environnement, cette fois en JS
 
 - Type : JSON
 - Variable name : AUTHORIZED_URLS
-- Value : ["a1b2c3d4","z9y8x7w6"]
+- Value : `["a1b2c3d4","z9y8x7w6"]`
 
 Comme ça, j'ai juste à retirer le code que je ne veux plus fonctionnel.
 
-Pour l'implémenter dans le code, je récupère l'URL accédé et ce qu'il y après le www.monsite.fr/**lecode** pour vérifier que ce soit bien dans ma liste.
+Pour l'implémenter dans le code, je récupère l'URL accédé et ce qu'il y après le domaine (www.monsite.fr/**lecode**) pour vérifier que ce soit bien dans ma liste.
 
 {{< vs 4 >}}
 
@@ -260,7 +264,7 @@ Je fais "Custom domain", je rajoute le domaine "code.timothechau.vet" et c'est b
 {{< vs 4 >}}
 
 <p align="center">
-  {{< img src="/posts/tutoriels/cloudflare-email/custom-domain.webp" width="600" align="center" alt="Capture d'écran pour rajouter un domaine personnalisé" >}}
+  {{< img src="/posts/tutoriels/cloudflare-email/custom-domain.webp" width="700" align="center" alt="Capture d'écran pour rajouter un domaine personnalisé" >}}
   <p style="text-align: center;"><i>Mon domaine timothechau.vet est déjà dans Cloudflare. Sinon il aurait fallu le rajouter manuellement</i></p>
 </p>
 
@@ -276,9 +280,9 @@ Les étapes étaient donc
 3. Ajouter une règle dans mon domaine / Email / Email routing / Routing rules / Send to Worker
 4. Créer une base key-value vide dans Storage & Databases / KV / Create
 5. Rattacher la base KV dans le Worker / Settings / Bindings
-6. Créer les variables d'environnement MAIL_FORWARD, TOKEN_OTP, AUTHORIZED_URLS (json)
+6. Créer les variables d'environnement `MAIL_FORWARD`, `TOKEN_OTP`, `AUTHORIZED_URLS` (json)
 7. Déployer le code en dessous
-8. Rattacher un domaine code.mondomaine.com dans le Worker / Settings / Domains & Routes
+8. Rattacher un domaine `code.mondomaine.com` dans le Worker / Settings / Domains & Routes
 
 Voici un récap du code. [Je l'ai aussi mis dans ce repo](https://github.com/timothechauvet/workers-code-cloudflare/blob/main/worker.js)
 
@@ -331,13 +335,13 @@ async function generateTOTP(key, secs = 30, digits = 6){
 }
 async function hotp(key, counter, digits){
   let y = self.crypto.subtle;
-	if(!y) throw Error('no self.crypto.subtle object available');
-	let k = await y.importKey('raw', key, {name: 'HMAC', hash: 'SHA-1'}, false, ['sign']);
-	return hotp_truncate(await y.sign('HMAC', k, counter), digits);
+  if(!y) throw Error('no self.crypto.subtle object available');
+  let k = await y.importKey('raw', key, {name: 'HMAC', hash: 'SHA-1'}, false, ['sign']);
+  return hotp_truncate(await y.sign('HMAC', k, counter), digits);
 }
 function hotp_truncate(buf, digits){
   let a = new Uint8Array(buf), i = a[19] & 0xf;
-	return fmt(10, digits, ((a[i]&0x7f)<<24 | a[i+1]<<16 | a[i+2]<<8 | a[i+3]) % 10**digits);
+  return fmt(10, digits, ((a[i]&0x7f)<<24 | a[i+1]<<16 | a[i+2]<<8 | a[i+3]) % 10**digits);
 }
 function fmt(base, width, num){
   return num.toString(base).padStart(width, '0')
@@ -345,17 +349,17 @@ function fmt(base, width, num){
 function unbase32(s){
   let t = (s.toLowerCase().match(/\S/g)||[]).map(c => {
     let i = 'abcdefghijklmnopqrstuvwxyz234567'.indexOf(c);
-		if(i < 0) throw Error(`bad char '${c}' in key`);
-		return fmt(2, 5, i);
-	}).join('');
-	if(t.length < 8) throw Error('key too short');
-	return new Uint8Array(t.match(/.{8}/g).map(d => parseInt(d, 2)));
+    if(i < 0) throw Error(`bad char '${c}' in key`);
+    return fmt(2, 5, i);
+  }).join('');
+  if(t.length < 8) throw Error('key too short');
+  return new Uint8Array(t.match(/.{8}/g).map(d => parseInt(d, 2)));
 }
 function pack64bu(v){
   let b = new ArrayBuffer(8), d = new DataView(b);
-	d.setUint32(0, v / 2**32);
-	d.setUint32(4, v);
-	return b;
+  d.setUint32(0, v / 2**32);
+  d.setUint32(4, v);
+  return b;
 }
 ```
 

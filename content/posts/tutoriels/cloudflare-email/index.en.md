@@ -33,6 +33,7 @@ It's basically Cloudflare's "functions" or "serverless" service. Using JavaScrip
 
 Once the basic Worker is created, I linked it to my incoming emails. Going back to "Routing rules" from the "Emails", then "custom addresses", I set up thoses sent to `my-account@whitemail.fr`, with the action set to "Send to a Worker", targeting the Worker I just created. Then I need to develop my app.
 
+
 {{< vs 4 >}}
 
 <p align="center">
@@ -312,7 +313,6 @@ export default {
       const response = `Code received by email: ${codeMail}\n\n 2FA Code (valid 30s):\n\n${codeTotp}`
       return new Response(response || "Error building the response");
     }
-
     return new Response("Unauthorized", { status: 401 });
   },
 };

@@ -1,7 +1,7 @@
 ---
 title: "Ma config sur Mac 🍎"
-date: 2024-12-16
-hero: k3s.webp
+date: 2025-04-22
+hero: mac_neuf.webp
 description: Ce que je configure à chaque fois que je réinitialise mon mac
 theme: Toha
 ---
@@ -11,6 +11,12 @@ J'adore configurer mes ordinateurs. Si bien que je réinitialise tout, 2 ou 3 fo
 J'aurais pu utiliser [Nix](https://nix.dev/) pour avoir une config-as-code, mais je trouve la courbe d'apprentissage trop pentue. Alors je me rabats sur le bon vieux [Homebrew](https://brew.sh) pour tout réinstaller manuellement.
 
 Peut-être qu'un jour j'aurai la foi d'utiliser Nix correctement, qui sait ?
+
+{{< vs 4 >}}
+
+<p align="center">
+  {{< img src="/posts/vie-perso/config-mac/mac_neuf.webp" width="700" align="center" alt="Illustration d'un mac et d'un personnage enfantin à droite sur fenêtre Firefox Windows XP" >}}
+</p>
 
 {{< vs 4 >}}
 
@@ -29,71 +35,164 @@ Je nomme TOUJOURS mon ordinateur avec un nom de pates. Un petit hommage à :
 
 il me faut un gestionnaire de packages. Homebrew étant le + populaire, c'est celui que j'utilise systématiquement. Je lance donc `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"` pour l'installer.
 
-Puis j'installe mes essentiels que voici :
+Puis j'installe mes essentiels que voici dans un brewfile :
 
 ```bash
-packages=(
-  # Logiciels pour bosser
-  ansible 
-  azure-cli 
-  kubectx 
-  kubelogin 
-  kubernetes-cli 
-  mongosh 
-  # Codé en rust, supprime les doublons photos/vidéos
-  czkawka 
-  # Détaille les données exif d'un fichier
-  exiftool 
-  # Remplace ls et ll
-  eza 
-  # Remplace neofetch pour imprimer les specs de mon ordinateur
-  fastfetch 
-  # Convertisseur vidéo/audio
-  ffmpeg 
-  # Formatteur
-  fmt 
-  # Sélectionner dans une liste
-  fzf 
-  # Mon blog
-  go 
-  hugo 
-  # Pour coder
-  node 
-  pipx 
-  rust 
-  # Lister les fichiers récursivement
-  tree 
-  # Rafraichir toutes les 2s une commande
-  watch 
-  # Télécharger des vidéos YouTube
-  yt-dlp
-)
+echo '
+  tap "azure/kubelogin"
+  tap "hashicorp/tap"
+  tap "homebrew/services"
+  tap "kreuzwerker/taps"
+  tap "mongodb/brew"
+  tap "oven-sh/bun"
 
-cask_packages=(
-  # Stoppe le chargement à 80% pour protéger la batterie
-  aldente 
-  # Pour bosser 
-  docker 
-  # Permet de choisir le navigateur selon le site qu'on clique
-  finicky 
-  # .Zip
-  keka 
-  # Capture d'écran
-  obs 
-  # Pour remplacer les commandes par défaut de gestion des fenêtres
-  rectangle 
-  # Pour avoir une souris et un trackpad et scroller naturellement
-  scroll-reverser 
-  # Chat
-  signal 
-  # Vidéos
-  vlc 
-  # Alternative OSS et bloat-less de VSCode
-  vscodium
-)
+  # Automate deployment, configuration, and upgrading
+  brew "ansible"
+  # Automatic configure script builder
+  brew "autoconf"
+  # Collection of over 500 reusable autoconf macros
+  brew "autoconf-archive"
+  # Tool for generating GNU Standards-compliant Makefiles
+  brew "automake"
+  # Text processing scripting language
+  brew "awk"
+  # Azure Storage data transfer utility
+  brew "azcopy"
+  # Microsoft Azure CLI 2.0
+  brew "azure-cli"
+  # Open-source formatting library for C++
+  brew "fmt"
+  # Object-file caching compiler wrapper
+  brew "ccache"
+  # Cross-platform make
+  brew "cmake"
+  # Play, record, convert, and stream audio and video
+  brew "ffmpeg"
+  # Package compiler and linker metadata toolkit
+  brew "pkgconf"
+  # Duplicate file utility
+  brew "czkawka"
+  # Perl lib for reading and writing EXIF metadata
+  brew "exiftool"
+  # Modern, maintained replacement for ls
+  brew "eza"
+  # Like neofetch, but much faster because written mostly in C
+  brew "fastfetch"
+  # Command-line fuzzy finder written in Go
+  brew "fzf"
+  # Open source programming language to build simple/reliable/efficient software
+  brew "go"
+  # Kubernetes package manager
+  brew "helm"
+  # Deploy Kubernetes Helm Charts
+  brew "helmfile"
+  # Configurable static site generator
+  brew "hugo"
+  # Kubernetes CLI To Manage Your Clusters In Style!
+  brew "k9s"
+  # Kubernetes command-line interface
+  brew "kubernetes-cli"
+  # Tool that can switch between kubectl contexts easily and create aliases
+  brew "kubectx"
+  # Platform built on V8 to build network applications
+  brew "node"
+  # MongoDB Shell to connect, configure, query, and work with your MongoDB database
+  brew "mongosh"
+  # Netwide Assembler (NASM) is an 80x86 assembler
+  brew "nasm"
+  # Small build system for use with gyp or CMake
+  brew "ninja"
+  # Development kit for the Java programming language
+  brew "openjdk"
+  # Execute binaries from Python packages in isolated environments
+  brew "pipx"
+  # PDF rendering library (based on the xpdf-3.0 code base)
+  brew "poppler"
+  # Object-relational database system
+  brew "postgresql@14"
+  # Safe, concurrent, practical language
+  brew "rust"
+  # Terminal multiplexer with VT100/ANSI terminal emulation
+  brew "screen"
+  # Display directories as trees (with optional color/HTML output)
+  brew "tree"
+  # Subversion-like utility to work with Jackrabbit FileVault
+  brew "vault-cli"
+  # Executes a program periodically, showing output fullscreen
+  brew "watch"
+  # Command-line tool to help build, run, and test web extensions
+  brew "web-ext"
+  # Linter for YAML files
+  brew "yamllint"
+  # Feature-rich command-line audio/video downloader
+  brew "yt-dlp"
+  # Shell extension to navigate your filesystem faster
+  brew "zoxide"
+  # A Kubernetes credential (exec) plugin implementing azure authentication
+  brew "azure/kubelogin/kubelogin"
+  # Terraform
+  brew "hashicorp/tap/terraform"
+  # Vault
+  brew "hashicorp/tap/vault"
+  # High-performance, schema-free, document-oriented database
+  brew "mongodb/brew/mongodb-community"
+  # Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
+  brew "oven-sh/bun/bun"
+  # Menu bar tool to limit maximum charging percentage
+  cask "aldente"
+  # Android SDK component
+  cask "android-platform-tools"
+  # Server and cloud storage browser
+  cask "cyberduck"
+  # App to build and share containerised applications and microservices
+  cask "docker"
+  # Utility for customizing which browser to start
+  cask "finicky"
+  # File archiver
+  cask "keka"
+  # Open-source software for live streaming and screen recording
+  cask "obs"
+  # Retro video game emulation
+  cask "openemu"
+  # Move and resize windows using keyboard shortcuts or snap areas
+  cask "rectangle"
+  # Tool to reverse the direction of scrolling
+  cask "scroll-reverser"
+  # Instant messaging application focusing on security
+  cask "signal"
+  # Remote access and connectivity software focused on security
+  cask "teamviewer"
+  # Multimedia player
+  cask "vlc"
+  # Binary releases of VS Code without MS branding/telemetry/licensing
+  cask "vscodium"
 
-brew install "${packages[@]}"
-brew install --cask "${cask_packages[@]}"
+  # Extensions vscode
+  vscode "bradlc.vscode-tailwindcss"
+  vscode "burkeholland.simple-react-snippets"
+  vscode "eamodio.gitlens"
+  vscode "github.copilot"
+  vscode "github.copilot-chat"
+  vscode "mightbesimon.emoji-icons"
+  vscode "ms-python.debugpy"
+  vscode "ms-python.python"
+  vscode "pascalreitermann93.vscode-yaml-sort"
+  vscode "usernamehw.errorlens"
+  vscode "vscode-icons-team.vscode-icons"
+  vscode "yunduo.color-highlight-css-color-4"
+' > ./Brewfile
+
+brew bundle install --file=./Brewfile
+```
+
+{{< vs 4 >}}
+
+Faites votre propre `Brewfile` en lançant cette commande :
+
+{{< vs 4 >}}
+
+```bash
+brew bundle dump --describe --file=./Brewfile
 ```
 
 {{< vs 4 >}}
@@ -159,11 +258,20 @@ Comme ça il
 - change les icônes
 - quand je fais `export STREAM=true`, il cache le namespace (si jamais je dois partager mon écran)
 
-{{< img src="/posts/vie-perso/config-mac/fino-time.webp" width="400" align="left" alt="Le rendu de mon prompt" >}}
+{{< vs 4 >}}
+
+<p align="center">
+  {{< img src="/posts/vie-perso/config-mac/fino-time.webp" width="700" align="center" alt="Screenshot du prompt avec le thème fino time" >}}
+  <p style="text-align: center;"><i>Le rendu de mon prompt</i></p>
+</p>
 
 {{< vs 4 >}}
 
-## .zshrc
+## Fichiers de configuration
+
+{{< vs 2 >}}
+
+### .zshrc
 
 Votre fichier `rc` doit déjà être bien rempli avec tous ces logiciels (pipx, oh-my-zsh, fzf). J'ai aussi besoin de mes petits raccourcis pour aller + vite
 
@@ -278,7 +386,7 @@ Donc dans mon dossier de scripts ZSH on retrouve kubectl_aliases.sh [disponible 
 
 {{< vs 4 >}}
 
-## ~/.ssh/config
+### ~/.ssh/config
 
 Je ne vais pas vous détailler tout ce qu'il y a dedans, mais ça c'est plutôt utile. C'est pour ne pas se faire déconnecter toutes les 2 minutes sans interaction ssh :
 
@@ -291,7 +399,7 @@ Host *
 
 {{< vs 4 >}}
 
-## ~/.gitconfig
+### ~/.gitconfig
 
 C'est plus simple d'utiliser Git avec une configuration globale !
 

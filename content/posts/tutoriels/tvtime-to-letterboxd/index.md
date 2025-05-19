@@ -13,9 +13,7 @@ Le truc c'est que je viens de TV Time. L'appli est notoire pour [empêcher d'acc
 
 {{< vs 4 >}}
 
-<p align="center">
-  {{< img src="/posts/tutoriels/tvtime-to-letterboxd/banner.webp" width="700" align="center" >}}
-</p>
+{{< youtube m1DBFvwMAWU >}}
 
 {{< vs 4 >}}
 

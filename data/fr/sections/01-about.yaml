@@ -9,9 +9,10 @@ section:
 # Professional informations
 designation: Ingénieur DevOps
 summary: |
-  Je suis diplômé de [l'Efrei](https://efrei.fr/), l'école du numérique, avec un diplôme d'ingénieur informatique (2022) 🎓 
+  Je suis diplômé de [l'Efrei](https://efrei.fr/), l'école du numérique, avec un diplôme d'ingénieur informatique (2022). 
 
-  J'adore partager ma passion d'Azure autour de formations et j'aspire à devenir Architecte Cloud
+  J'adore coder durant mon temps libre et les petits projets, et des fois je poste sur mon blog ce que je fais au cas-où ça aide quelqu'un un jour
+
 socialLinks:
 - name: Email
   icon: fas fa-envelope
@@ -24,10 +25,6 @@ socialLinks:
 - name: LinkedIn
   icon: fab fa-linkedin
   url: https://www.linkedin.com/in/timothechauvet
-
-- name: Twitter
-  icon: fab fa-twitter
-  url: https://twitter.com/TimotheChauvet
 
 badges:
 - type: certification

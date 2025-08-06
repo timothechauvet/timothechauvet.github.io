@@ -29,6 +29,6 @@ skills:
   logo: /images/skills/iac.webp
   summary: "Je maîtrise les technologies d'IaC depuis que j'ai commencé ma carrière. Terraform pour commencer, puis Helm et Ansible un an après. J'ai récemment compris le fonctionnement de Vault en passant la certif associée."
 
-- name: Formation pour adultes
+- name: Formateur professionnel
   logo: /images/skills/mct.webp 
   summary: "En tant que formateur Microsoft certifié (MCT), j'ai dispensé des formations sur Azure. J'ai aussi accompagné des collègues, des stagiaires et des étudiants dans leur développement professionnel."

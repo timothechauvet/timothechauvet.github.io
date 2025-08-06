@@ -10,15 +10,7 @@ image: images/author/photo.webp
 contactInfo:
   email: timothe@chauvet.cloud
   linkedin: timothechauvet
-  twitter: 
-    icon: twitter
-    url: https://twitter.com/timothechauvet
-    text: "@TimotheChauvet"
   github: timothechauvet
-  mastodon:
-    icon: mastodon
-    url: https://h4.io/@timothechauvet
-    text: "@TimotheChauvet"
 
 # Blinking text
 summary:
@@ -26,6 +18,5 @@ summary:
   - ❤️ Cloud
   - ❤️ Open Source Software
   - ❤️ Electronic music
-  - ❤️ Train people
-  - ❤️ Azure
+  - ❤️ Kubernetes
   - ❤️ Design

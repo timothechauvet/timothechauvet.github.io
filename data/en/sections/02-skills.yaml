@@ -29,6 +29,6 @@ skills:
   logo: /images/skills/iac.webp
   summary: "I have mastered IaC technologies since I started my career. Terraform to begin with, then Helm and Ansible a year later. I recently understood the operation of Vault by passing the associate certification."
 
-- name: Adult Training
+- name: Professional trainer
   logo: /images/skills/mct.webp 
   summary: "As a certified Microsoft trainer (MCT), I have delivered training sessions on Azure. I have also mentored colleagues, interns, and students in their professional development."

@@ -18,17 +18,17 @@ socialLinks:
   icon: fas fa-envelope
   url: timothe@chauvet.cloud
 
-- name: Github
-  icon: fab fa-github
-  url: https://www.github.com/timothechauvet
-
 - name: LinkedIn
   icon: fab fa-linkedin
   url: https://www.linkedin.com/in/timothechauvet/?locale=en_US
 
-- name: Twitter
-  icon: fab fa-twitter
-  url: https://twitter.com/TimotheChauvet
+- name: Github
+  icon: fab fa-github
+  url: https://www.github.com/timothechauvet
+
+- name: GitLab
+  icon: fab fa-gitlab
+  url: https://gitlab.com/timothe_chauvet
 
 badges:
 - type: certification

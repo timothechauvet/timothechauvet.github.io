@@ -33,7 +33,9 @@ On va donc devoir manœuvrer autrement.
 
 ## L'onglet Network
 
-Dans la console développeur (`Ctrl/Cmd + Shift + C`), aller dans l'onglet `Network`. 
+Dans la console développeur (`Ctrl/Cmd + Shift + C`), aller dans l'onglet `Network`.
+
+Naviguer sur le profil puis aller dans la liste des films.
 
 En faisant un [hard refresh](https://sensorstechforum.com/fr/hard-refresh-browsers-force-clear-cache/) un json assez gros est récupéré. 
 

@@ -36,6 +36,8 @@ We need to think outside the box.
 
 In the developer console (`Ctrl/Cmd + Shift + C`), go to the `Network` tab. 
 
+Go to the profile, then the movie list.
+
 By doing a [hard refresh](https://www.howtogeek.com/672607/how-to-hard-refresh-your-web-browser-to-bypass-your-cache/) a pretty big json is fetched. 
 
 The json is fetched from `https://app.tvtime.com/sidecar?o=https%3A%2F%2Fmsapi.tvtime.com%2Fprod%2Fv1%2Ftracking%2Fcgw%2Ffollows%2Fuser%2F<user_id>&entity_type=movie&sort=watched_date%2Cdesc`. It weights ~400kb for ~200 movies.

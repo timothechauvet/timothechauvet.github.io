@@ -94,6 +94,8 @@ params:
       services:
         goatCounter:
           code: timothechauvet
+    embedpdf:
+      enable: true
 
   # Footer
   footer:

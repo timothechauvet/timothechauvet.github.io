@@ -49,7 +49,7 @@ jobs:
       - name: Install node modules
         run: |
           npm install
-          npm audit fix --force
+          npm audit fix --force || true
 
       - name: Build with Hugo
         env:

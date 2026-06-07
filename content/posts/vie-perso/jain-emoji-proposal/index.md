@@ -10,7 +10,7 @@ J'ai été récemment accueilli par la famille de mon ami en Inde. C'est un pays
 
 Mon ami et sa famille sont Jain. C'est une religion ancienne qui promeut notamment la non-violence, et ça se traduit par un végétarisme très rigoureux. J'ai vite pris goût à ces coûtumes, mais je me suis aperçu que malgré le nombre de +5M de Jains, ils n'ont pas le droit à leur propre emoji. Rendez-vous dans vos emojis dans la rubrique des religions: il n'y a rien de dédié aux Jains.
 
-C'est pourquoi j'ai rédigé une proposition pour inclure un emoji Jain, le *trilok Jain* officiellement reconnu comme le symbole universel des Jains. Celle-ci doit être hébergée et disponible publiquement pour être ensuite revue par le consortium Unicode.
+C'est pourquoi j'ai rédigé une proposition pour inclure un emoji Jain dans la librairie Unicode Emoji. Celle-ci doit être hébergée et disponible publiquement pour être ensuite revue par le consortium Unicode.
 
 Cette page sert surtout à héberger cette proposition. Le temps de récupérer certaines validations nécessaires auprès d'authorités Jain pour amplifier les chances de cet emoji d'être accepté, celui-ci n'est pas complet. Mais j'ai jusqu'à Juillet 2026 pour la compléter et la mettre à jour, donc cet article de blog n'est pas définitif
 

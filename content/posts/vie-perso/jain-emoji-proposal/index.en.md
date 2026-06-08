@@ -1,12 +1,12 @@
 ---
 title: "Jain emoji proposal"
-date: 2026-04-16
+date: 2026-06-08
 hero: jain_symbol_hero.webp
 description: My proposition for the Unicode consortium to integrate the Jain emoji
 theme: Toha
 ---
 
-In April I was welcomed by my friend's family in India. It's a beautiful country in which I love many aspects, but this short blog post isn't a travel guide.
+In April I was welcomed by my friend Dr. Adarsh Jain's family in India. It's a beautiful country in which I love many aspects, but this short blog post isn't a travel guide.
 
 My friend and his family are Jain. It's an ancient religion that promotes non-violence, which translates to a rigorous vegeterianism. I really enjoy their customs (and became myself vegetarian). However, I found out that despite +5M Jains, they don't have their own emoji. In the religion category for emojis, nothing's dedicated for Jains.
 

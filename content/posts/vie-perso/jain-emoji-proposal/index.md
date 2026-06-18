@@ -1,6 +1,6 @@
 ---
 title: "Proposition d'emoji Jain"
-date: 2026-06-08
+date: 2026-06-16
 hero: jain_symbol_hero.webp
 description: Ma proposition au consortium Unicode d'un emoji Jain
 theme: Toha

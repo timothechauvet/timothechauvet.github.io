@@ -12,9 +12,9 @@ Mon ami et sa famille sont Jain. C'est une religion ancienne qui promeut notamme
 
 C'est pourquoi j'ai rédigé une proposition pour inclure un emoji Jain dans la librairie Unicode Emoji. Celle-ci doit être hébergée et disponible publiquement pour être ensuite revue par le consortium Unicode.
 
-Cette page sert surtout à héberger cette proposition. Le temps de récupérer certaines validations nécessaires auprès d'authorités Jain pour amplifier les chances de cet emoji d'être accepté, celui-ci n'est pas complet. Mais j'ai jusqu'à Juillet 2026 pour la compléter et la mettre à jour, donc cet article de blog n'est pas définitif
+Cette page sert surtout à héberger cette proposition. L'Institute of Jainology et Bharatiya Jain Milan ont validé et soutenu la proposition. Elle a été soumise le 16 Juin 2026.
 
-Ci-dessous la proposition:
+Ci-dessous la proposition :
 
 {{< embed-pdf src="/files/jain_proposal.pdf" height="1200px" >}}
 

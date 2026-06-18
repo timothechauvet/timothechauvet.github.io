@@ -12,7 +12,7 @@ My friend and his family are Jain. It's an ancient religion that promotes non-vi
 
 Which is the reason why I wrote a proposal for having a Jain symbol featured in the Unicode Emoji library. This proposal needs to be publicly hosted and available online to then be reviewed by the Unicode consortium.
 
-This blog post mainly serves as hosting this proposal. I am currently hosting an uncompleted version while waiting for some Jain authorities to approve it. I need this in order to maximize the chances of it to be approved. I have until July 2026 to update it, therefore this blog post isn't definitive.
+This blog post mainly serves as hosting this proposal. The Institute of Jainology and Bharatiya Jain Milan endorsed and approved it. The proposal was submitted on June 16, 2026.
 
 Here is the proposal:
 

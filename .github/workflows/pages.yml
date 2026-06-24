@@ -29,21 +29,27 @@ jobs:
           submodules: true
           fetch-depth: 0
 
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v5
-
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3.0.0
         with:
           hugo-version: '0.160.1'
           extended: true
+            
+      - name: Update hugo modules
+        run: |
+          # update to latest version of all modules
+          hugo mod get -u
 
-      - name: Prepare Hugo module package manifest
-        run: hugo mod npm pack
+          # update the npm dependencies
+          hugo mod npm pack
 
-      - name: Install node modules from lockfile
-        run: npm ci
+          # cleanup go.sum file
+          hugo mod tidy
+      
+      - name: Install node modules
+        run: |
+          npm install
+          npm audit fix --force 
 
       - name: Build with Hugo
         env:

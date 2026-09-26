@@ -1,6 +1,6 @@
 [tools]
 hugo-extended = '0.163.3'
-node = 'latest'
+node = '24'
 go = 'latest'
 
 [tasks.install]

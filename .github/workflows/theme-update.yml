@@ -17,6 +17,12 @@ jobs:
       - uses: jdx/mise-action@v3
 
 
+      - name: Setup Dart Sass
+        run: |
+          V=1.108.2
+          curl -sL https://github.com/sass/dart-sass/releases/download/$V/dart-sass-$V-linux-x64.tar.gz | tar xz -C "$RUNNER_TEMP"
+          echo "$RUNNER_TEMP/dart-sass" >> "$GITHUB_PATH"
+
       - name: Install dependencies
         run: |
           mise run install # install theme dependency
